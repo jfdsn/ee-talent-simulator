@@ -2,65 +2,65 @@ import React from "react";
 
 
 type Dependency = {
-    from: string;
-    to: string;
+  from: string;
+  to: string;
 };
 
 type Talent = {
-    id: string;
-    row: number;
-    col: number;
-    dependency?: Dependency;
+  id: string;
+  row: number;
+  col: number;
+  dependency?: Dependency;
 };
 
 type Props = {
-    talentList: Talent[];
+  talentList: Talent[];
 };
 
 export const TalentArrow: React.FC<Props> = ({ talentList }) => {
+  const cellW = 50, cellH = 100, colGap = 24, rowGap = 10;
+  const totalX = cellW + colGap, totalY = cellH + rowGap;
+
   return (
-    <svg
-      width="100%"
-      height="100%"
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        pointerEvents: "none",
-        overflow: "visible",
-      }}
-    >
-      {talentList.map((talent, i) => {
-        const { from, to } = talent.dependency ?? {};
-        const fromTalent = talentList.find(t => t.id === from);
-        const toTalent = talentList.find(t => t.id === to);
-        if (!fromTalent || !toTalent) return null;
+    <>
+      {talentList.map((t) => {
+        if (!t.dependency) return null;
+        const { from, to } = t.dependency;
+        const fromTalent = talentList.find(x => x.id === from)!;
+        const toTalent = talentList.find(x => x.id === to)!;
 
-        const cellSize = 80;
-        const gap = 10;
-        const totalSize = cellSize + gap;
+        const xStart = (fromTalent.col - 1) * totalX + cellW;   // borda direita de “from”
+        const xEnd   = (toTalent.col - 1) * totalX;           // borda esquerda de “to”
+        const y      = (fromTalent.row - 1) * totalY + cellH/2; // centro vertical
 
-        const halfHeight = cellSize / 2;
+        const delta = toTalent.col - fromTalent.col;
 
-        // Começa na borda direita do talento "from"
-        const x1 = (fromTalent.col - 1) * totalSize + cellSize;
-        // Termina na borda esquerda do talento "to"
-        const x2 = (toTalent.col - 1) * totalSize;
+        // Escolhe a imagem e define width fixo
+        const isShort = delta === 1;
+        const imgSrc  = isShort ? "/arrow-short.webp" : "/arrow-long.webp";
+        const imgW    = isShort ? 24 : cellW + colGap + 36;  // largura fixa da seta pequena ou grande
+        const imgH    = 24;   // altura fixa da seta
 
-        // Ambos na mesma linha
-        const y = (fromTalent.row - 1) * totalSize + halfHeight;
-
-
+        const leftPos = isShort
+          ? xEnd - imgW / 2
+          : xStart;
+        
         return (
-          <g key={i}>
-            <line x1={x1 + 2} y1={y} x2={x2 - 2} y2={y} stroke="gray" strokeWidth="2" />
-            <polygon
-            points={`${x2},${y} ${x2 - 6},${y - 4} ${x2 - 6},${y + 4}`}
-            fill="gray"
-            />
-          </g>
+          <img
+            key={`${from}->${to}`}
+            src={imgSrc}
+            alt=""
+            style={{
+              position: "absolute",
+              top:  y - imgH/2,
+              left: leftPos, 
+              width:  imgW,
+              height: imgH,
+              pointerEvents: "none",
+            }}
+          />
         );
       })}
-    </svg>
+    </>
   );
 };
