@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const TreeContainer = styled.div`
     position: relative;
-    background-color: #f0f0f0;
+    border: 6px solid transparent;
+    border-image: url("/tree-border.webp") 6 fill stretch;
+    background-color: rgb(246, 242, 234);
 `;
 
 export const TalentGrid = styled.div`

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TooltipWrapper } from "../Tooltip/Tooltip";
 import { Btn, BtnContainer, Display, IconContainer, TalentContainer } from "./style";
 
 type Props = {
@@ -6,13 +7,16 @@ type Props = {
     icon: string;
     row: number;
     col: number;
+    maxLevel: number;
+    description: string;
 }
 
-export const Talent: React.FC<Props> = (props) => {
-    const { id, icon, row, col } = props;
-    let [ talentLevel, setTalentLevel ] = useState(0);
-    const maxLevel = 10;
+export const Talent: React.FC<Props> = ( props ) => {
+    const { icon, row, col } = props;
+    const maxLevel = props.maxLevel;
     const minLevel = 0;
+    
+    let [ talentLevel, setTalentLevel ] = useState(0);
 
     const increment = () => {
         if (talentLevel < maxLevel) {
@@ -28,9 +32,11 @@ export const Talent: React.FC<Props> = (props) => {
     
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
-            <IconContainer style={{backgroundImage: `url("/assets/${icon}")`}}>
-                <Display>{talentLevel}</Display>
-            </IconContainer>
+            <TooltipWrapper data={props}>
+                <IconContainer style={{backgroundImage: `url("/assets/${icon}")`}}>
+                    <Display>{talentLevel}</Display>
+                </IconContainer>
+            </TooltipWrapper>
             <BtnContainer>
                 <Btn onClick={decrement} disabled={talentLevel == minLevel}>-</Btn>
                 <Btn onClick={increment} disabled={talentLevel == maxLevel}>+</Btn>
