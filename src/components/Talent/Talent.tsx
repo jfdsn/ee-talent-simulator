@@ -8,7 +8,8 @@ type Props = {
     col: number;
 }
 
-export const Talent: React.FC<Props> = ({id, icon, row, col }) => {
+export const Talent: React.FC<Props> = (props) => {
+    const { id, icon, row, col } = props;
     let [ talentLevel, setTalentLevel ] = useState(0);
     const maxLevel = 10;
     const minLevel = 0;
@@ -27,7 +28,7 @@ export const Talent: React.FC<Props> = ({id, icon, row, col }) => {
     
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
-            <IconContainer style={{backgroundImage: 'url("/assets/knight/placeholder.webp")'}}>
+            <IconContainer style={{backgroundImage: `url("/assets/${icon}")`}}>
                 <Display>{talentLevel}</Display>
             </IconContainer>
             <BtnContainer>

@@ -20,19 +20,19 @@ export const IconContainer = styled.div`
 `;
 
 export const Display = styled.span`
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    font-size: 13px;
-    border-radius: 5px;
-    background-color: rgba(60, 60, 60, 0.9);
-    color: #fff;
-    shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: rgba(60, 60, 60, 0.8);
+    color: #fff;
+    border: 0.5px solid rgba(240, 240, 240, 1);
 `;
 
 export const BtnContainer = styled.div`
