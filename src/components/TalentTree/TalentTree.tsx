@@ -1,6 +1,7 @@
 import { TalentArrow } from "../TalentArrow/TalentArrow";
 import { Talent } from "../Talent/Talent";
 import { TalentGrid, TreeContainer } from "./style";
+import { useState } from "react";
 
 const talents = [
     { id: "Strike", icon: "knight/placeholder.webp", row: 1, col: 1, maxLevel: 5, description: "For each level up, apenas testando +5%."},
@@ -18,6 +19,10 @@ const talents = [
 ]
 
 export const TalentTree = () => {
+    const [talentLevel, setTalentLevel] = useState<Record<string, number>>(
+        () => Object.fromEntries(talents.map((talent) => [talent.id, 0])) // Initialize all talents to level 0
+    );
+
     return (
         <>
             <h1>Talent Tree</h1>
@@ -25,7 +30,13 @@ export const TalentTree = () => {
                 <TalentArrow talentList={talents} />
                 <TalentGrid>
                         {talents.map((talent) => (
-                            <Talent key={talent.id} {...talent} />
+                            <Talent 
+                                key={talent.id}
+                                {...talent} 
+                                talentLevel={talentLevel[talent.id]}
+                                setTalentLevel={(newLevel: number) => {setTalentLevel(prev => ({ ...prev, [talent.id]: newLevel }));}}
+                                getTalentLevel={(id: string) => talentLevel[id] ?? 0}
+                            />
                         ))}
                 </TalentGrid>
             </TreeContainer>

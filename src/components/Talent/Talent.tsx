@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TooltipWrapper } from "../Tooltip/Tooltip";
 import { Btn, BtnContainer, Display, IconContainer, TalentContainer } from "./style";
 import { usePoints } from "../../context/PointsContext";
@@ -10,20 +9,28 @@ type Props = {
     col: number;
     maxLevel: number;
     description: string;
+    dependency?: {
+        level: number;
+        from: string;
+        to: string;
+    };
+    talentLevel: number;
+    setTalentLevel: (level: number) => void;
+    getTalentLevel: (id: string) => number;
 }
 
 export const Talent: React.FC<Props> = ( props ) => {
-    const { icon, row, col } = props;
+    const { icon, row, col, talentLevel, setTalentLevel, getTalentLevel } = props;
     const talentMaxLevel = props.maxLevel;
     const talentMinLevel = 0;
     
-    const [ talentLevel, setTalentLevel ] = useState(0);
     const { globalPoints, setPoints, globalMaxPoints } = usePoints();
 
    
     const isMaxLevel = talentLevel === talentMaxLevel;
     const isInserting = talentLevel > 0 && talentLevel < talentMaxLevel;
-    const isTalentRequirement = checkTalentRequirements(col, globalPoints, globalMaxPoints);
+    const isTalentRequirement = checkGlobalRequirements(col, globalPoints, globalMaxPoints) 
+        && checkDirectDependency(props.dependency ?? {level: 0, from: "", to: ""}, getTalentLevel);
 
     const increment = () => {
         if (isMaxLevel) return;
@@ -77,7 +84,7 @@ export const Talent: React.FC<Props> = ( props ) => {
     )
 }
 
-const checkTalentRequirements = (col: number, points: number, maxPoints: number): boolean => {
+const checkGlobalRequirements = (col: number, points: number, maxPoints: number): boolean => {
     if (col <= 3) return true; // No requirements for first 3 columns
     
     const requiredPoints = maxPoints - points; 
@@ -96,4 +103,12 @@ const checkTalentRequirements = (col: number, points: number, maxPoints: number)
         default:
             return false;
     }
+}
+
+const checkDirectDependency = (dependency: {level: number, from: string, to: string}, getTalentLevel: (id: string) => number): boolean => {
+    if(dependency.from === "") return true; // No dependency
+
+    const fromLevel = getTalentLevel(dependency.from);
+
+    return fromLevel >= dependency.level; 
 }
