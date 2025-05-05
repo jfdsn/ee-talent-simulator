@@ -65,15 +65,14 @@ export const Talent: React.FC<Props> = ( props ) => {
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
             <TooltipWrapper data={props} getLevel={getLevel}>
-                <IconContainer isTalentRequirements={isTalentRequirement} icon={icon}>
-                    <Display isInserting={isInserting} isMaxLevel={isMaxLevel}>{talentLevel}</Display>
+                <IconContainer $isTalentRequirements={isTalentRequirement} $icon={icon}>
+                    <Display $isInserting={isInserting} $isMaxLevel={isMaxLevel}>{talentLevel}</Display>
                 </IconContainer>
             </TooltipWrapper>
             <BtnContainer>
                 <Btn onClick={decrement} disabled={talentLevel == talentMinLevel || !isTalentRequirement}>-</Btn>
                 <Btn onClick={increment} disabled={talentLevel == talentMaxLevel || !isTalentRequirement}>+</Btn>
             </BtnContainer>
-            {globalPoints}
         </TalentContainer>
     )
 }

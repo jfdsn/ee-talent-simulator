@@ -11,12 +11,12 @@ export const TalentContainer = styled.div`
     height: auto;
 `;
 
-export const IconContainer = styled.div<{ isTalentRequirements: boolean; icon: string }>`
+export const IconContainer = styled.div<{ $isTalentRequirements: boolean; $icon: string }>`
     position: relative;
     width: 50px;
     height: 50px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    background-image: ${({ icon }) => `url("/assets/${icon}")`};
+    background-image: ${({ $icon }) => `url("/assets/${$icon}")`};
     background-size: cover;
 
     &:after {
@@ -26,11 +26,11 @@ export const IconContainer = styled.div<{ isTalentRequirements: boolean; icon: s
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: ${({ isTalentRequirements }) => isTalentRequirements ? "transparent" : "rgba(0, 0, 0, 0.5)"};
+        background-color: ${({ $isTalentRequirements }) => $isTalentRequirements ? "transparent" : "rgba(0, 0, 0, 0.5)"};
     }
 `;
 
-export const Display = styled.span<{ isInserting: boolean; isMaxLevel: boolean }>`
+export const Display = styled.span<{ $isInserting: boolean; $isMaxLevel: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +43,8 @@ export const Display = styled.span<{ isInserting: boolean; isMaxLevel: boolean }
     border-radius: 4px;
     background-color: rgba(20, 20, 20, 0.9);
     border: 0.5px solid rgba(240, 240, 240, 1);
-    color: ${({ isInserting, isMaxLevel }) =>
-    isMaxLevel ? '#FFD700' : isInserting ? '#32CD32' : '#FFF'};
+    color: ${({ $isInserting, $isMaxLevel }) =>
+    $isMaxLevel ? '#FFD700' : $isInserting ? '#32CD32' : '#FFF'};
 `;
 
 export const BtnContainer = styled.div`
