@@ -19,7 +19,7 @@ export const IconContainer = styled.div`
     background-size: cover;
 `;
 
-export const Display = styled.span`
+export const Display = styled.span<{ isInserting: boolean; isMaxLevel: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,9 +30,10 @@ export const Display = styled.span`
     height: 22px;
     font-size: 14px;
     border-radius: 4px;
-    background-color: rgba(60, 60, 60, 0.8);
-    color: #fff;
+    background-color: rgba(20, 20, 20, 0.9);
     border: 0.5px solid rgba(240, 240, 240, 1);
+    color: ${({ isInserting, isMaxLevel }) =>
+    isMaxLevel ? '#FFD700' : isInserting ? '#32CD32' : '#FFF'};
 `;
 
 export const BtnContainer = styled.div`

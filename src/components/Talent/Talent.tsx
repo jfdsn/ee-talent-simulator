@@ -16,7 +16,10 @@ export const Talent: React.FC<Props> = ( props ) => {
     const maxLevel = props.maxLevel;
     const minLevel = 0;
     
-    let [ talentLevel, setTalentLevel ] = useState(0);
+    const [ talentLevel, setTalentLevel ] = useState(0);
+   
+    const isMaxLevel = talentLevel === maxLevel;
+    const isInserting = talentLevel > 0 && talentLevel < maxLevel;
 
     const increment = () => {
         if (talentLevel < maxLevel) {
@@ -29,12 +32,13 @@ export const Talent: React.FC<Props> = ( props ) => {
             setTalentLevel(talentLevel - 1);
         }
     }
+
     
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
             <TooltipWrapper data={props}>
                 <IconContainer style={{backgroundImage: `url("/assets/${icon}")`}}>
-                    <Display>{talentLevel}</Display>
+                    <Display isInserting={isInserting} isMaxLevel={isMaxLevel}>{talentLevel}</Display>
                 </IconContainer>
             </TooltipWrapper>
             <BtnContainer>
