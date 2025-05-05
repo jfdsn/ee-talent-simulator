@@ -5,6 +5,7 @@ import { Alert, Description, MaxLevel, Requirements, Title, TooltipContainer, To
 type Props = {
     children: React.ReactNode;
     data: TooltipData;
+    getLevel: () => number;
 }
 
 type TooltipData = {
@@ -19,9 +20,7 @@ type TooltipData = {
     }
 }
 
-export const TooltipWrapper: React.FC<Props> = ({ children, data }) => {
-    const points = 1; //TODO: Get this value from the state or props
-
+export const TooltipWrapper: React.FC<Props> = ({ children, data, getLevel }) => {
     const minKP = (() => {
         switch (data.col) {
             case 4:
@@ -58,7 +57,7 @@ export const TooltipWrapper: React.FC<Props> = ({ children, data }) => {
                     </Requirements>
                 )}
                 <Alert>
-                    Learning the next knowledge level will cost you {points} Knowledge Points!
+                    Learning the next knowledge level will cost you {getLevel()} Knowledge Points!
                 </Alert>
             </TooltipText>
         </TooltipContainer>
