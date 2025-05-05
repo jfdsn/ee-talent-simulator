@@ -1,9 +1,9 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 
 type PointsContextType = {
-    points: number; // Current points available
+    globalPoints: number; // Current points available
     setPoints: (points: number) => void;
-    maxPoints: number; // Maximum points available
+    globalMaxPoints: number; // Maximum points available
     setMaxPoints: (maxPoints: number) => void;
     resetPoints: () => void;
     resetCounter: number;
@@ -12,17 +12,17 @@ type PointsContextType = {
 const PointsContext = createContext<PointsContextType | undefined>(undefined);
 
 export const PointsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [maxPoints, setMaxPoints] = useState(65);
-    const [points, setPoints] = useState(maxPoints); // Initialize points with maxPoints value
+    const [globalMaxPoints, setMaxPoints] = useState(65);
+    const [globalPoints, setPoints] = useState(globalMaxPoints); // Initialize points with maxPoints value
     const [resetCounter, setResetCounter] = useState(0); // State to help all Talents to re-render when resetPoints is called
 
     const resetPoints = () => {
-        setPoints(maxPoints);
+        setPoints(globalMaxPoints);
         setResetCounter((prev) => prev + 1);
     };
 
     return (
-        <PointsContext.Provider value={{ points, setPoints, resetPoints, maxPoints, setMaxPoints, resetCounter }}>
+        <PointsContext.Provider value={{ globalPoints, setPoints, resetPoints, globalMaxPoints, setMaxPoints, resetCounter }}>
             {children}
         </PointsContext.Provider>
     );

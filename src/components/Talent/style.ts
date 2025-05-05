@@ -11,12 +11,23 @@ export const TalentContainer = styled.div`
     height: auto;
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.div<{ isTalentRequirements: boolean; icon: string }>`
     position: relative;
     width: 50px;
     height: 50px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-image: ${({ icon }) => `url("/assets/${icon}")`};
     background-size: cover;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: ${({ isTalentRequirements }) => isTalentRequirements ? "transparent" : "rgba(0, 0, 0, 0.5)"};
+    }
 `;
 
 export const Display = styled.span<{ isInserting: boolean; isMaxLevel: boolean }>`
