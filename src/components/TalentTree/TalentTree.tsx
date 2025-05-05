@@ -1,7 +1,8 @@
 import { TalentArrow } from "../TalentArrow/TalentArrow";
 import { Talent } from "../Talent/Talent";
 import { TalentGrid, TreeContainer } from "./style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePoints } from "../../context/PointsContext";
 
 const talents = [
     { id: "Strike", icon: "knight/placeholder.webp", row: 1, col: 1, maxLevel: 5, description: "For each level up, apenas testando +5%."},
@@ -22,6 +23,12 @@ export const TalentTree = () => {
     const [talentLevel, setTalentLevel] = useState<Record<string, number>>(
         () => Object.fromEntries(talents.map((talent) => [talent.id, 0])) // Initialize all talents to level 0
     );
+
+    const { resetObserver } = usePoints();
+
+    useEffect(() => {
+        setTalentLevel(() => Object.fromEntries(talents.map((talent) => [talent.id, 0]))); // Reset all talents to level 0 every time resetObserver changes
+    }, [resetObserver]);
 
     return (
         <>
