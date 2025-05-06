@@ -15,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img, picture, video, canvas, svg {
+picture, video, canvas, svg {
   display: block;
   max-width: 100%;
   margin-left: auto;

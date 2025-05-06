@@ -51,7 +51,7 @@ export const TooltipWrapper: React.FC<Props> = ({ children, data, getLevel }) =>
                         {minKP && <span>Total Knowledge Points: {minKP}</span>}
                         {data.dependency && (
                             <span>
-                            {data.dependency.to} LV {data.dependency.level}
+                            {data.dependency.from} LV {data.dependency.level}
                             </span>
                         )}
                     </Requirements>

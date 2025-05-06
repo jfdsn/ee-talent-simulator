@@ -13,6 +13,10 @@ export const Container = styled.div`
     padding: 1rem;
     border: 6px solid transparent;
     border-image: url("/tree-border.webp") 6 fill stretch;
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 `;
 
 export const Button = styled.button`
