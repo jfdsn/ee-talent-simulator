@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 type PointsContextType = {
     globalPoints: number; // Current points available
@@ -20,6 +20,10 @@ export const PointsProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         setPoints(globalMaxPoints);
         setResetCounter((prev) => prev + 1);
     };
+
+    useEffect(() => {
+        setPoints(globalMaxPoints);
+    }, [globalMaxPoints]);
 
     return (
         <PointsContext.Provider value={{ globalPoints, setPoints, resetPoints, globalMaxPoints, setMaxPoints, resetObserver }}>

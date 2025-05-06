@@ -1,4 +1,5 @@
 import { usePoints } from "../../context/PointsContext";
+import { CapLevelSelector } from "../CapLevelSelector/CapLevelSelector";
 import { Container, Button, Display } from "./style";
 
 export const TalentToolBox: React.FC = () => {
@@ -15,6 +16,7 @@ export const TalentToolBox: React.FC = () => {
             <Button onClick={handleReset}>
                 Refresh
             </Button>
+                <CapLevelSelector />
         </Container>
     );
 }
