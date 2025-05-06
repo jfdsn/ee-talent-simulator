@@ -10,15 +10,11 @@ export const TalentToolBox: React.FC = () => {
    
     return (
         <Container>
+            <Display>{globalPoints} KPs Remain</Display>
+            <Display>{globalMaxPoints - globalPoints} KPs Entered</Display>
             <Button onClick={handleReset}>
-                Reset
+                Refresh
             </Button>
-            <Display>
-                Points: {globalMaxPoints - globalPoints}
-            </Display>
-            <Display>
-                Max Points: {globalMaxPoints}
-            </Display>
         </Container>
     );
 }
