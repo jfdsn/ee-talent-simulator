@@ -13,7 +13,6 @@ export const Container = styled.div`
     padding: 1rem;
     border: 6px solid transparent;
     border-image: url("/tree-border.webp") 6 fill stretch;
-    background-color: rgb(246, 242, 234);
 `;
 
 export const Button = styled.button`

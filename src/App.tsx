@@ -1,17 +1,25 @@
+import styled from 'styled-components'
 import './App.css'
-import { TalentToolBox } from './components/TalentToolBox/TalentToolBox'
-import { TalentTree } from './components/TalentTree/TalentTree'
-import { PointsProvider } from './context/PointsContext'
+import { TalentSimulator } from './components/TalentSimulator/TalentSimulator'
+
+import { Header } from './Layout/Header'
 
 function App() {
   return (
-    <>
-    <PointsProvider>
-      <TalentTree />
-      <TalentToolBox />
-    </PointsProvider>
-    </>
+    <AppContainer>
+      <Header />
+      <TalentSimulator />
+    </AppContainer>
   )
 }
 
 export default App
+
+
+
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+`

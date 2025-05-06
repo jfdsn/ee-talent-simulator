@@ -31,22 +31,19 @@ export const TalentTree = () => {
     }, [resetObserver]);
 
     return (
-        <>
-            <h1>Talent Tree</h1>
-            <TreeContainer>
-                <TalentArrow talentList={talents} />
-                <TalentGrid>
-                        {talents.map((talent) => (
-                            <Talent 
-                                key={talent.id}
-                                {...talent} 
-                                talentLevel={talentLevel[talent.id]}
-                                setTalentLevel={(newLevel: number) => {setTalentLevel(prev => ({ ...prev, [talent.id]: newLevel }));}}
-                                getTalentLevel={(id: string) => talentLevel[id] ?? 0}
-                            />
-                        ))}
-                </TalentGrid>
-            </TreeContainer>
-        </>
+        <TreeContainer>
+            <TalentArrow talentList={talents} />
+            <TalentGrid>
+                    {talents.map((talent) => (
+                        <Talent 
+                            key={talent.id}
+                            {...talent} 
+                            talentLevel={talentLevel[talent.id]}
+                            setTalentLevel={(newLevel: number) => {setTalentLevel(prev => ({ ...prev, [talent.id]: newLevel }));}}
+                            getTalentLevel={(id: string) => talentLevel[id] ?? 0}
+                        />
+                    ))}
+            </TalentGrid>
+        </TreeContainer>
     )
 }
