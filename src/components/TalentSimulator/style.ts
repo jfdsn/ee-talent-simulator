@@ -7,9 +7,13 @@ export const TalentSimulatorContainer = styled.div`
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
+    border: 6px solid transparent;
+    border-image: url('/window-border.webp') 6 fill stretch;
+    padding: 0.5rem;
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
+        border: none;
     }
 `
     
