@@ -77,8 +77,14 @@ export const Talent: React.FC<Props> = ( props ) => {
                 </IconContainer>
             </TooltipWrapper>
             <BtnContainer>
-                <Btn onClick={decrement} disabled={talentLevel == talentMinLevel || !isTalentRequirement}>-</Btn>
-                <Btn onClick={increment} disabled={talentLevel == talentMaxLevel || !isTalentRequirement}>+</Btn>
+                <Btn onClick={decrement} disabled={talentLevel == talentMinLevel || !isTalentRequirement}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style={{fill: "rgba(255, 255, 255, 0.87)"}}>
+                    <path d="M5 11h14v2H5z"></path></svg>
+                </Btn>
+                <Btn onClick={increment} disabled={talentLevel == talentMaxLevel || !isTalentRequirement}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24   " style={{fill: "rgba(255, 255, 255, 0.87)"}}>
+                    <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+                </Btn>
             </BtnContainer>
         </TalentContainer>
     )
