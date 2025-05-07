@@ -27,6 +27,15 @@ export const TooltipText = styled.span`
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+
+    @media (max-width: 460px) {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        bottom: auto;
+        margin-left: 0;
+        transform: translate(-50%, -50%);
+    }
 `;
 
 export const Title = styled.span`
