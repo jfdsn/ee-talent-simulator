@@ -1,4 +1,26 @@
-{
+{   
+    "warrior": [
+        { "id": "Precise Defense", "icon": "warrior/precise-defense.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "Endurance Training", "icon": "warrior/endurance-training.webp", "row": 1, "col": 2, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "Precise Defense", "to": "Endurance Training" } },
+        { "id": "Weapons Mastery", "icon": "warrior/weapons-mastery.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "Rapid Healing", "icon": "warrior/rapid-healing.webp", "row": 1, "col": 4, "maxLevel": 10, "description": "For each level up, apenas testando +5%." },
+        { "id": "Resilient", "icon": "warrior/resilient.webp", "row": 1, "col": 6, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Rapid Healing", "to": "Resilient" } },
+        { "id": "Physically Prepared", "icon": "warrior/physically-prepared.webp", "row": 1, "col": 7, "maxLevel": 10, "description": "For each level up, apenas testando +5%." },
+        { "id": "Sarcasm Skills", "icon": "warrior/sarcasm-skills.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Physically Prepared", "to": "Sarcasm Skills" } },
+        { "id": "Self-Defense", "icon": "warrior/self-defense.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "CQC Training", "icon": "warrior/cqc-training.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "Weapon Master", "icon": "warrior/weapon-master.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "CQC Training", "to": "Weapon Master" } },
+        { "id": "Strength Training", "icon": "warrior/strength-training.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Weapon Master", "to": "Strength Training" } },
+        { "id": "Lower Body Training", "icon": "warrior/lower-body-training.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Madman", "icon": "warrior/madman.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", 
+        "dependency": { "level": 5, "from": "Lower Body Training", "to": "Madman" } },
+        { "id": "War Technology", "icon": "warrior/war-technology.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "Avenger", "icon": "warrior/avenger.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
+        { "id": "Hatred Release", "icon": "warrior/hatred-release.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", 
+        "dependency": { "level": 10, "from": "Avenger", "to": "Hatred Release" } },
+        { "id": "Suvival Training", "icon": "warrior/survival-training.webp", "row": 3, "col": 6, "maxLevel": 10, "description": "For each level up, apenas testando +5%."},
+        { "id": "Sense of Fear", "icon": "warrior/sense-of-fear.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%."}
+    ],
     "knight": [
         { "id": "Strike", "icon": "knight/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
         { "id": "Power", "icon": "knight/placeholder.webp", "row": 1, "col": 2, "maxLevel": 10, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Strike", "to": "Power" } },
@@ -14,8 +36,127 @@
         { "id": "Shield9", "icon": "knight/placeholder.webp", "row": 3, "col": 7, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 2, "from": "Shield8", "to": "Shield9" } }
     ],
     "templar": [
-        { "id": "Strike", "icon": "knight/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
-        { "id": "Power", "icon": "knight/placeholder.webp", "row": 1, "col": 2, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Strike", "to": "Power" } },
-        { "id": "Shield", "icon": "knight/placeholder.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "Power", "to": "Shield" } }
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Power", "icon": "templar/placeholder.webp", "row": 1, "col": 2, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Strike", "to": "Power" } },
+        { "id": "Shield", "icon": "temaplar/placeholder.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "Power", "to": "Shield" } },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "templar/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "dragon knight": [
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "dk/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "thief": [
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "thief/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+
+    ],
+    "martial artist": [
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
+        { "id": "Strike", "icon": "martial/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "blade dancer": [
+        { "id": "Strike", "icon": "blade/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "samurai": [
+        { "id": "Strike", "icon": "samurai/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "hunter": [
+        { "id": "Strike", "icon": "hunter/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "engineer": [
+        { "id": "Strike", "icon": "engineer/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "ranger": [
+        { "id": "Strike", "icon": "ranger/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "inquisitor": [
+        { "id": "Strike", "icon": "inquisitor/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "cleric": [
+        { "id": "Strike", "icon": "cleric/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "bard": [
+        { "id": "Strike", "icon": "bard/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "shaman": [
+        { "id": "Strike", "icon": "shaman/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "sage": [
+        { "id": "Strike", "icon": "sage/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "magician": [
+        { "id": "Strike", "icon": "magician/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "illusionist": [
+        { "id": "Strike", "icon": "illusionist/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "warlock": [
+        { "id": "Strike", "icon": "warlock/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+    ],
+    "luminary": [
+        { "id": "Strike", "icon": "luminary/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
     ]
 }

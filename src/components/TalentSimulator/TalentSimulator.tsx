@@ -9,7 +9,7 @@ import rawData from '../../data/talent-data.json'
 
 export const TalentSimulator = () => {
     const data = rawData as TalentsData;
-    const [talents, setTalents] = useState<Talents>(data.knight);
+    const [talents, setTalents] = useState<Talents>(data.warrior); // Default to warrior talents
     
     const setClassChange = (className: string) => {
         const newTalents = data[className as keyof TalentsData];
