@@ -16,6 +16,7 @@ export const IconContainer = styled.div<{ $isTalentRequirements: boolean; $icon:
     width: 50px;
     height: 50px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
     background-image: ${({ $icon }) => `url("/assets/${$icon}")`};
     background-size: cover;
 
@@ -27,6 +28,7 @@ export const IconContainer = styled.div<{ $isTalentRequirements: boolean; $icon:
         width: 100%;
         height: 100%;
         background-color: ${({ $isTalentRequirements }) => $isTalentRequirements ? "transparent" : "rgba(0, 0, 0, 0.5)"};
+        border-radius: 4px;
     }
 `;
 
@@ -40,8 +42,9 @@ export const Display = styled.span<{ $isInserting: boolean; $isMaxLevel: boolean
     width: 22px;
     height: 22px;
     font-size: 14px;
+    font-weight: 500;
     border-radius: 4px;
-    background-color: rgba(20, 20, 20, 0.9);
+    background-color: rgba(50, 50, 50, 0.6);
     border: 0.5px solid rgba(240, 240, 240, 1);
     color: ${({ $isInserting, $isMaxLevel }) =>
     $isMaxLevel ? '#FFD700' : $isInserting ? '#32CD32' : '#FFF'};
