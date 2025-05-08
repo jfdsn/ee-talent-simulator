@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { usePoints } from "../../context/PointsContext";
 import { ClassItem, ClassListContainer } from "./style";
 
@@ -32,14 +33,18 @@ type Props = {
 export const ClassList: React.FC<Props> = ({onClassChange}) => {
     const { resetPoints } = usePoints();
 
+    const [active, setActive] = useState<string>('warrior');
+
     const handleClassChange = (className: string) => {
         onClassChange(className);
         resetPoints();
+        setActive(className);
     }
     return (
         <ClassListContainer>
             {classes.map((classItem) => (
-                <ClassItem key={classItem.id} onClick={() => handleClassChange(classItem.name)}>
+                <ClassItem key={classItem.id} $active={active} $className={classItem.name} 
+                 onClick={() => handleClassChange(classItem.name)}>
                     <img src={classItem.icon} alt={classItem.name} />
                     <span>{classItem.name}</span>
                 </ClassItem>

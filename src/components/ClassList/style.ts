@@ -48,7 +48,8 @@ export const ClassListContainer = styled.div`
     }
 `;
 
-export const ClassItem = styled.div`
+export const ClassItem = styled.button<{ $active: string, $className: string }>`
+    all: unset;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -59,15 +60,16 @@ export const ClassItem = styled.div`
     border-image: url("/class-border.webp") 6 fill stretch;
     cursor: pointer;
     transition: background-color 0.3s;
-
+    
     &:hover {
         opacity: 0.9;
-    }
-    
+        }
+        
     span {
         text-transform: capitalize;
         margin-left: 10px;
-        color: #fff;
+        color: ${({ $active, $className }) => ($active === $className ? "#fff000" : "#fff")};
+
     }
 
     img {
