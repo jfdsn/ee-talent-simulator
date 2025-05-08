@@ -28,6 +28,8 @@ export const TalentArrow: React.FC<Props> = ({ talentList }) => {
         const { from, to } = t.dependency;
         const fromTalent = talentList.find(x => x.id === from)!;
         const toTalent = talentList.find(x => x.id === to)!;
+        
+        if (!fromTalent || !toTalent) return null;
 
         const xStart = (fromTalent.col - 1) * totalX + cellW;   // borda direita de “from”
         const xEnd   = (toTalent.col - 1) * totalX;           // borda esquerda de “to”
