@@ -76,4 +76,9 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
         width: 36px;
         height: 36px;
     }
+
+    @media (max-width: 768px) {
+        min-width: fit-content;
+        gap: 2px;
+    }
 `;
