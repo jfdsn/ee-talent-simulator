@@ -170,10 +170,44 @@
         { "id": "Stumbling Feet", "icon": "samurai/stumbling-feet.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "hunter": [
-        { "id": "Strike", "icon": "hunter/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+        { "id": "Biology", "icon": "hunter/biology.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Potent Anesthesia", "icon": "hunter/potent-anesthesia.webp", "row": 1, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Biology", "to": "Potent Anesthesia" } },
+        { "id": "Crossbow String", "icon": "hunter/crossbow-string.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon" },
+        { "id": "Enhanced Fletching", "icon": "hunter/enhanced-fletching.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Crossbow String", "to": "Enhanced Fletching" } },
+        { "id": "Wild Nature", "icon": "hunter/wild-nature.webp", "row": 1, "col": 6, "maxLevel": 10, "description": "Soon" },
+        { "id": "Sharpened Arrows", "icon": "hunter/sharpened-arrows.webp", "row": 1, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Wild Nature", "to": "Sharpened Arrows" } },
+        { "id": "Stargazer", "icon": "hunter/stargazer.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Enhanced Bowstring", "icon": "hunter/enhanced-bowstring.webp", "row": 2, "col": 2, "maxLevel": 3, "description": "Soon", "dependency": { "level": 10, "from": "Stargazer", "to": "Enhanced Bowstring" } },
+        { "id": "Stealth Knowledge", "icon": "hunter/stealth-knowledge.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
+        { "id": "Enhanced Flash", "icon": "hunter/enhanced-flash.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Stealth Knowledge", "to": "Enhanced Flash" } },
+        { "id": "Bestial Breath", "icon": "hunter/bestial-breath.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon" },
+        { "id": "Beast Recovery", "icon": "hunter/beast-recovery.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
+        { "id": "Bestial Wrath", "icon": "hunter/bestial-wrath.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Beast Recovery", "to": "Bestial Wrath" } },
+        { "id": "Master Archery", "icon": "hunter/master-archery.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Poison Arrow Science", "icon": "hunter/poison-arrow-science.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Hunting Knowledge", "icon": "hunter/hunting-knowledge.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
+        { "id": "Nature Spirit", "icon": "hunter/nature-spirit.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon" },
+        { "id": "Lethal Toxin", "icon": "hunter/lethal-toxin.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "engineer": [
-        { "id": "Strike", "icon": "engineer/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+        { "id": "Gun Training", "icon": "engineer/gun-training.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Forging Knowledge", "icon": "engineer/forging-knowledge.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Alloy Knowledge", "icon": "engineer/alloy-knowledge.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
+        { "id": "Improved Armor", "icon": "engineer/improved-armor.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Alloy Knowledge", "to": "Improved Armor" } },
+        { "id": "Improved Output System", "icon": "engineer/improved-output-system.webp", "row": 1, "col": 6, "maxLevel": 6, "description": "Soon" },
+        { "id": "Condensed Oil", "icon": "engineer/condensed-oil.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Improved Output System", "to": "Condensed Oil" } },
+        { "id": "Smelter", "icon": "engineer/smelter.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Improved Firing System", "icon": "engineer/improved-firing-system.webp", "row": 2, "col": 2, "maxLevel": 6, "description": "Soon" },
+        { "id": "Modified Artillery", "icon": "engineer/modified-artillery.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Improved Firing System", "to": "Modified Artillery" } },
+        { "id": "Signal Research", "icon": "engineer/signal-research.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Modified Artillery", "to": "Signal Research" } },
+        { "id": "Chemical Engineering", "icon": "engineer/chemical-engineering.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon" },
+        { "id": "Energetics", "icon": "engineer/energetics.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
+        { "id": "Material Research", "icon": "engineer/material-research.webp", "row": 2, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Energetics", "to": "Material Research" } },
+        { "id": "Wave Mechanics", "icon": "engineer/wave-mechanics.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Electromagnetism", "icon": "engineer/electromagnetism.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Improved Radar", "icon": "engineer/improved-radar.webp", "row": 3, "col": 4, "maxLevel": 6, "description": "Soon" },
+        { "id": "Gunpowder Research", "icon": "engineer/gunpowder-research.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Improved Radar", "to": "Gunpowder Research" } },
+        { "id": "Improved Motor", "icon": "engineer/improved-motor.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "ranger": [
         { "id": "Strike", "icon": "ranger/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
