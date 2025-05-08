@@ -210,10 +210,45 @@
         { "id": "Improved Motor", "icon": "engineer/improved-motor.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "ranger": [
-        { "id": "Strike", "icon": "ranger/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+        { "id": "Survival", "icon": "ranger/survival.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Sophistication", "icon": "ranger/sophistication.webp", "row": 1, "col": 2, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Survival", "to": "Sophistication" } },
+        { "id": "First Aid", "icon": "ranger/first-aid.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
+        { "id": "Calm Posture", "icon": "ranger/calm-posture.webp", "row": 1, "col": 5, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "First Aid", "to": "Calm Posture" } },
+        { "id": "Focused Shot", "icon": "ranger/focused-shot.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon" },
+        { "id": "Advanced Stances", "icon": "ranger/advanced-stances.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Flexible Posture", "icon": "ranger/flexible-posture.webp", "row": 2, "col": 3, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Advanced Stances", "to": "Flexible Posture" } },
+        { "id": "Vulnability Check", "icon": "ranger/vulnability-check.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon" },
+        { "id": "Shotgun Knowledge", "icon": "ranger/shotgun-knowledge.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Vulnability Check", "to": "Shotgun Knowledge" } },
+        { "id": "Ballistics", "icon": "ranger/ballistics.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", 
+        "dependency": { "level": 5, "from": "Shotgun Knowledge", "to": "Ballistics" } },
+        { "id": "Art of the Sniper", "icon": "ranger/art-of-the-sniper.webp", "row": 2, "col": 7, "maxLevel": 20, "description": "Soon" },
+        { "id": "Threatening Posture", "icon": "ranger/threatening-posture.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Art of the Sniper", "to": "Threatening Posture" } },
+        { "id": "Luring", "icon": "ranger/luring.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Elimination", "icon": "ranger/elimination.webp", "row": 3, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Luring", "to": "Elimination" } },
+        { "id": "Geographical Knowledge", "icon": "ranger/geographical-knowledge.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
+        { "id": "Mind Pool", "icon": "ranger/mind-pool.webp", "row": 3, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Geographical Knowledge", "to": "Mind Pool" } },
+        { "id": "Stability Training", "icon": "ranger/stability-training.webp", "row": 3, "col": 6, "maxLevel": 10, "description": "Soon" },
+        { "id": "Tracking Posture", "icon": "ranger/tracking-posture.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Stability Training", "to": "Tracking Posture" } }
     ],
     "inquisitor": [
-        { "id": "Strike", "icon": "inquisitor/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
+        { "id": "Sickleshot Expert", "icon": "inquisitor/sickleshot-expert.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Death Foretold", "icon": "inquisitor/death-foretold.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Soul Chain", "icon": "inquisitor/soul-chain.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Death Foretold", "to": "Soul Chain" } },
+        { "id": "Bloodthirster", "icon": "inquisitor/bloodthirster.webp", "row": 1, "col": 4, "maxLevel": 20, "description": "Soon" },
+        { "id": "Profane Protection", "icon": "inquisitor/profane-protection.webp", "row": 1, "col": 6, "maxLevel": 20, "description": "Soon" },
+        { "id": "Sign of Death", "icon": "inquisitor/sign-of-death.webp", "row": 1, "col": 7, "maxLevel": 5, "description": "Soon" },
+        { "id": "Inevitable Doom", "icon": "inquisitor/inevitable-doom.webp", "row": 1, "col": 8, "maxLevel": 5, "description": "Soon" },
+        { "id": "Sickle Enhancement", "icon": "inquisitor/sickle-enhancement.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Rampaging Soul", "icon": "inquisitor/rampaging-soul.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Sickle Dance", "icon": "inquisitor/sickle-dance.webp", "row": 2, "col": 4, "maxLevel": 20, "description": "Soon" },
+        { "id": "Cutthroat", "icon": "inquisitor/cutthroat.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Sickle Dance", "to": "Cutthroat" } },
+        { "id": "Flame Burst", "icon": "inquisitor/flame-burst.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Cutthroat", "to": "Flame Burst" } },
+        { "id": "Shot Enhancement", "icon": "inquisitor/shot-enhancement.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
+        { "id": "Shadowsnare", "icon": "inquisitor/shadowsnare.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Shapeless", "icon": "inquisitor/shapeless.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon", "dependency": { "level": 5, "from": "Shadowsnare", "to": "Shapeless" } },
+        { "id": "Doomwave", "icon": "inquisitor/doomwave.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "Soon" },
+        { "id": "Soul Scorch", "icon": "inquisitor/soul-scorch.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Doomwave", "to": "Soul Scorch" } },
+        { "id": "Dark Specter", "icon": "inquisitor/dark-specter.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "cleric": [
         { "id": "Strike", "icon": "cleric/placeholder.webp", "row": 1, "col": 1, "maxLevel": 5, "description": "For each level up, apenas testando +5%." }
