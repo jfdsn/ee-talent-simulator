@@ -325,7 +325,7 @@
         { "id": "Soul Stimulation", "icon": "sage/soul-stimulation.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Secramental Make Up", "to": "Soul Stimulation" } },
         { "id": "Soul King Ritual", "icon": "sage/soul-king-ritual.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Soul Stimulation", "to": "Soul King Ritual" } },
         { "id": "Harsh Soul Training", "icon": "sage/harsh-soul-training.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Art of Hammer", "icon": "sage/art-of-hammer.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
+        { "id": "Art of Hammer", "icon": "sage/art-of-hammer.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
         { "id": "Silence Trial", "icon": "sage/silence-trial.webp", "row": 3, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Art of Hammer", "to": "Silence Trial" } },
         { "id": "Shadower Skill", "icon": "sage/shadower-skill.webp", "row": 3, "col": 5, "maxLevel": 9, "description": "Soon" },
         { "id": "Guardian Tome", "icon": "sage/guardian-tome.webp", "row": 3, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Shadower Skill", "to": "Guardian Tome" } },
