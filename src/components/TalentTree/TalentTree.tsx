@@ -15,7 +15,7 @@ export const TalentTree: React.FC<Props> =  ({talents}) => {
         () => Object.fromEntries(talents.map((talent) => [talent.id, 0])) // Initialize all talents to level 0
     );
 
-    const { resetObserver, setPoints, globalPoints, globalMaxPoints } = usePoints();
+    const { resetObserver, setPoints, globalPoints } = usePoints();
 
     useEffect(() => {
         // Reset all talents to level 0 every time resetObserver changes
@@ -49,10 +49,23 @@ export const TalentTree: React.FC<Props> =  ({talents}) => {
             // Verifica requisito global de pontos gastos
             if (talent.col > 3) {
                 const colGlobalRequisite = (5 * (talent.col - 3)) + 10;
-                const currentSpentPoints = globalMaxPoints - (globalPoints + refundedTotal);
                 const currentTalentLevel = newTalentLevels[talent.id];
+                let validSpentPointsBeforeColumn = 0; //Só pode contar pontos de colunas anteriores
+
+                // Soma os pontos gastos em talentos anteriores
+                talents.forEach((tlt) => {
+                    if (tlt.col < talent.col) {
+                        if (newTalentLevels[tlt.id] > 15) {
+                            validSpentPointsBeforeColumn += (newTalentLevels[tlt.id]- 15) * 3 + 10 * 2 + 5 * 1;
+                        } else if (newTalentLevels[tlt.id] > 5) {
+                            validSpentPointsBeforeColumn += (newTalentLevels[tlt.id] - 5) * 2 + 5 * 1;
+                        } else {
+                            validSpentPointsBeforeColumn += newTalentLevels[tlt.id] * 1;
+                        }
+                    }
+                })
     
-                if (currentSpentPoints < colGlobalRequisite && currentTalentLevel > 0) {
+                if (validSpentPointsBeforeColumn < colGlobalRequisite && currentTalentLevel > 0) {
                     newTalentLevels[talent.id] = 0;
     
                     if (currentTalentLevel > 15) {
