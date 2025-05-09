@@ -11,13 +11,18 @@ export const TalentContainer = styled.div`
     height: auto;
 `;
 
-export const IconContainer = styled.div<{ $isTalentRequirements: boolean; $icon: string }>`
+export const IconContainer = styled.div.attrs<{ $isTalentRequirements: boolean; $icon: string }>(
+    (props) => ({
+        style: {
+          backgroundImage: `url("/assets/${props.$icon}")`,
+        },
+      })
+)`
     position: relative;
     width: 50px;
     height: 50px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-    background-image: ${({ $icon }) => `url("/assets/${$icon}")`};
     background-size: cover;
 
     &:after {
@@ -32,7 +37,13 @@ export const IconContainer = styled.div<{ $isTalentRequirements: boolean; $icon:
     }
 `;
 
-export const Display = styled.span<{ $isInserting: boolean; $isMaxLevel: boolean }>`
+export const Display = styled.span.attrs<{ $isInserting: boolean; $isMaxLevel: boolean }>(
+    (props) => ({
+        style: {
+            color: props.$isMaxLevel ? '#FFD700' : props.$isInserting ? '#32CD32' : '#FFF',
+        },
+    })  
+)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,8 +57,6 @@ export const Display = styled.span<{ $isInserting: boolean; $isMaxLevel: boolean
     border-radius: 4px;
     background-color: rgba(50, 50, 50, 0.6);
     border: 0.5px solid rgba(240, 240, 240, 1);
-    color: ${({ $isInserting, $isMaxLevel }) =>
-    $isMaxLevel ? '#FFD700' : $isInserting ? '#32CD32' : '#FFF'};
 `;
 
 export const BtnContainer = styled.div`
