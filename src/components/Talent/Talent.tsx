@@ -26,20 +26,22 @@ export const Talent: React.FC<Props> = ( props ) => {
     
     const { globalPoints, setPoints, globalMaxPoints } = usePoints();
 
-   
     const isMaxLevel = talentLevel === talentMaxLevel;
     const isInserting = talentLevel > 0 && talentLevel < talentMaxLevel;
     const isTalentRequirement = checkGlobalRequirements(col, globalPoints, globalMaxPoints) 
         && checkDirectDependency(props.dependency ?? {level: 0, from: "", to: ""}, getTalentLevel);
     const isMaxPointsSpent = globalPoints === 0;
-
+   
+    
     const increment = () => {
         if (isMaxLevel) return;
         
         if (talentLevel >= 15) {
+            if (globalPoints < 3) return; // Prevents from spending points if not enough
             setTalentLevel(talentLevel + 1);
             setPoints(globalPoints - 3);         
         } else if (talentLevel >= 5) {
+            if (globalPoints < 2) return; // Prevents from spending points if not enough
             setTalentLevel(talentLevel + 1);
             setPoints(globalPoints - 2);
         } else {
@@ -69,7 +71,7 @@ export const Talent: React.FC<Props> = ( props ) => {
         if (talentLevel >= 5) return 2
         return 1
     }
-    
+
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
             <TooltipWrapper data={props} getLevel={getLevel}>
@@ -79,11 +81,13 @@ export const Talent: React.FC<Props> = ( props ) => {
             </TooltipWrapper>
             <BtnContainer>
                 <Btn onClick={decrement} disabled={talentLevel == talentMinLevel || !isTalentRequirement}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style={{fill: "rgba(255, 255, 255, 0.87)"}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
+                    style={{fill: "rgba(255, 255, 255, 0.87)"}}>
                     <path d="M5 11h14v2H5z"></path></svg>
                 </Btn>
                 <Btn onClick={increment} disabled={talentLevel == talentMaxLevel || !isTalentRequirement || isMaxPointsSpent}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24   " style={{fill: "rgba(255, 255, 255, 0.87)"}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24   " 
+                    style={{fill: "rgba(255, 255, 255, 0.87)"}}>
                     <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
                 </Btn>
             </BtnContainer>
