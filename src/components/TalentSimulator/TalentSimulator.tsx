@@ -10,11 +10,13 @@ import rawData from '../../data/talent-data.json'
 export const TalentSimulator = () => {
     const data = rawData as TalentsData;
     const [talents, setTalents] = useState<Talents>(data.warrior); // Default to warrior talents
+    const [classId, setClassId] = useState<string>("warrior");
     
     const setClassChange = (className: string) => {
         const newTalents = data[className as keyof TalentsData];
         if (newTalents) {
             setTalents(newTalents);
+            setClassId(className);
         } else {
             console.error(`Class ${className} not found in data.`);
         }
@@ -27,7 +29,7 @@ export const TalentSimulator = () => {
                 <TalentSimulatorContainer>
                     <ClassList onClassChange={setClassChange} />
                     <div style={{display: "flex", flexDirection: "column"}}>
-                        <TalentTree talents={talents}/>
+                        <TalentTree talents={talents} classId={classId}/>
                         <TalentToolBox />
                     </div> 
                 </TalentSimulatorContainer>

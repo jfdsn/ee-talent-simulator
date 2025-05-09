@@ -3,18 +3,20 @@ import { Talent } from "../Talent/Talent";
 import { TalentGrid, TreeContainer } from "./style";
 import { useEffect, useState } from "react";
 import { usePoints } from "../../context/PointsContext";
+import { motion } from "framer-motion";
 
 import { Talents } from "../../types/types";
 
 type Props = {
     talents: Talents;
+    classId: string;
 }
 
-export const TalentTree: React.FC<Props> =  ({talents}) => {
+export const TalentTree: React.FC<Props> =  ({talents, classId}) => {
     const [talentLevel, setTalentLevel] = useState<Record<string, number>>(
         () => Object.fromEntries(talents.map((talent) => [talent.id, 0])) // Initialize all talents to level 0
     );
-
+   
     const { resetObserver, setPoints, globalPoints } = usePoints();
 
     useEffect(() => {
@@ -88,18 +90,24 @@ export const TalentTree: React.FC<Props> =  ({talents}) => {
 
     return (
         <TreeContainer>
-            <TalentArrow talentList={talents} />
-            <TalentGrid>
-                    {talents.map((talent) => (
-                        <Talent 
-                            key={talent.id}
-                            {...talent} 
-                            talentLevel={talentLevel[talent.id]}
-                            setTalentLevel={(newLevel: number) => {setTalentLevel(prev => ({ ...prev, [talent.id]: newLevel }));}}
-                            getTalentLevel={(id: string) => talentLevel[id] ?? 0}
-                        />
-                    ))}
-            </TalentGrid>
+            <motion.div
+                key={classId}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}>
+                <TalentArrow talentList={talents} />
+                <TalentGrid>
+                        {talents.map((talent, index) => (
+                            <Talent 
+                                key={index}
+                                {...talent} 
+                                talentLevel={talentLevel[talent.id]}
+                                setTalentLevel={(newLevel: number) => {setTalentLevel(prev => ({ ...prev, [talent.id]: newLevel }));}}
+                                getTalentLevel={(id: string) => talentLevel[id] ?? 0}
+                            />
+                        ))}
+                </TalentGrid>
+            </motion.div>
         </TreeContainer>
     )
 }
