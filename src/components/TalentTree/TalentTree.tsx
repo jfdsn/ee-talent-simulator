@@ -94,7 +94,7 @@ export const TalentTree: React.FC<Props> =  ({talents, classId}) => {
                 key={classId}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}>
+                transition={{ duration: 0.5 }}>
                 <TalentArrow talentList={talents} />
                 <TalentGrid>
                         {talents.map((talent, index) => (

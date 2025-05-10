@@ -33,7 +33,7 @@ export const TalentArrow: React.FC<Props> = ({ talentList }) => {
 
         const xStart = (fromTalent.col - 1) * totalX + cellW;   // borda direita de “from”
         const xEnd   = (toTalent.col - 1) * totalX;           // borda esquerda de “to”
-        const y      = (fromTalent.row - 1) * totalY + cellH/2; // centro vertical
+        const y      = (fromTalent.row - 1) * totalY + cellH/2.3; // centro vertical
 
         const delta = toTalent.col - fromTalent.col;
 
