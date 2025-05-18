@@ -849,23 +849,184 @@
         }
     ],
     "luminary": [
-        { "id": "Glowburst", "icon": "luminary/glowburst.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Light Wisdom", "icon": "luminary/light-wisdom.webp", "row": 1, "col": 2, "maxLevel": 10, "description": "Soon" },
-        { "id": "Lightgaze", "icon": "luminary/lightgaze.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Diseased Slash", "icon": "luminary/diseased-slash.webp", "row": 1, "col": 4, "maxLevel": 20, "description": "Soon", "dependency": { "level": 5, "from": "Lightgaze", "to": "Diseased Slash" } },
-        { "id": "Sacred Light Scar", "icon": "luminary/sacred-light-scar.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon" },
-        { "id": "Gnawing Solitude", "icon": "luminary/gnawing-solitude.webp", "row": 1, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Sacred Light Scar", "to": "Gnawing Solitude" } },
-        { "id": "Light Summon", "icon": "luminary/light-summon.webp", "row": 1, "col": 8, "maxLevel": 3, "description": "Soon" },
-        { "id": "Twin Lightshadow Blade", "icon": "luminary/twin-lightshadow-blade.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Martial Blade Mastery", "icon": "luminary/martial-blade-mastery.webp", "row": 2, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Twin Lightshadow Blade", "to": "Martial Blade Mastery" } },
-        { "id": "Dimension Control", "icon": "luminary/dimension-control.webp", "row": 2, "col": 7, "maxLevel": 3, "description": "Soon" },
-        { "id": "Chaos Windstorm", "icon": "luminary/chaos-windstorm.webp", "row": 2, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Dimension Control", "to": "Chaos Windstorm" } },
-        { "id": "Deadly Shadow", "icon": "luminary/deadly-shadow.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Nocturnal Friend", "icon": "luminary/nocturnal-friend.webp", "row": 3, "col": 2, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Deadly Shadow", "to": "Nocturnal Friend" } },
-        { "id": "Dazed Moon", "icon": "luminary/dazed-moon.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Blackout Blast", "icon": "luminary/blackout-blast.webp", "row": 3, "col": 4, "maxLevel": 10, "description": "Soon", "dependency": { "level": 5, "from": "Dazed Moon", "to": "Blackout Blast" } },
-        { "id": "Midnight Boomerang", "icon": "luminary/midnight-boomerang.webp", "row": 3, "col": 5, "maxLevel": 5, "description": "Soon" },
-        { "id": "Flame Radiance", "icon": "luminary/flame-radiance.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Midnight Boomerang", "to": "Flame Radiance" } },
-        { "id": "Dark Rage", "icon": "luminary/dark-rage.webp", "row": 3, "col": 8, "maxLevel": 3, "description": "Soon" }
+        {
+            "id": "Diseased Slash",
+            "icon": "luminary/diseased-slash.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Cast SPD +1%."
+        },
+        {
+            "id": "Light Wisdom",
+            "icon": "luminary/light-wisdom.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Light Split, receive 2 stacks of \"Holy Affinity\".",
+            "dependency": {
+                "level": 5,
+                "from": "Diseased Slash",
+                "to": "Light Wisdom"
+            }
+        },
+        {
+            "id": "Lightgaze",
+            "icon": "luminary/lightgaze.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Dazed Moon",
+            "icon": "luminary/dazed-moon.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Aurora Stigma",
+            "icon": "luminary/sacred-light-scar.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Aurora Light Destruction +3%."
+        },
+        {
+            "id": "Gnawing Solitude",
+            "icon": "luminary/gnawing-solitude.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Dead Silence Formation +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Aurora Stigma",
+                "to": "Gnawing Solitude"
+            }
+        },
+        {
+            "id": "Call of Light",
+            "icon": "luminary/light-summon.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 3,
+            "description": "For each level up, Holy Prayer cooldown time -5%."
+        },
+        {
+            "id": "Twin Lightshadow Blade",
+            "icon": "luminary/twin-lightshadow-blade.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with Sword or Rapier, weapon's M-ATK +1%. When equipped with a Greatsword, weapon's M-ATK +2%."
+        },
+        {
+            "id": "Light Mastery",
+            "icon": "luminary/light-mastery.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Light Split +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Twin Lightshadow Blade",
+                "to": "Light Mastery"
+            }
+        },
+        {
+            "id": "Dimension Control",
+            "icon": "luminary/dimension-control.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Gateway to Darkness cooldown time -6%."
+        },
+        {
+            "id": "Chaos Windstorm",
+            "icon": "luminary/chaos-windstorm.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Move SPD +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Dimension Control",
+                "to": "Chaos Windstorm"
+            }
+        },
+        {
+            "id": "Deadly Shadow",
+            "icon": "luminary/deadly-shadow.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Kingdom of the Night",
+            "icon": "luminary/nocturnal-friend.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Black Cut, receive 2 stacks of \"Shroud of Darkness\".",
+            "dependency": {
+                "level": 5,
+                "from": "Deadly Shadow",
+                "to": "Kingdom of the Night"
+            }
+        },
+        {
+            "id": "Burst of Light",
+            "icon": "luminary/glowburst.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Blackout Blast",
+            "icon": "luminary/blackout-blast.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Black Cut +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Burst of Light",
+                "to": "Blackout Blast"
+            }
+        },
+        {
+            "id": "Dark Night Rewind",
+            "icon": "luminary/midnight-boomerang.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shadow Cross +3%."
+        },
+        {
+            "id": "Flame Radiance",
+            "icon": "luminary/flame-radiance.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Bursting Light +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Dark Night Rewind",
+                "to": "Flame Radiance"
+            }
+        },
+        {
+            "id": "Dark Fury",
+            "icon": "luminary/dark-rage.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 3,
+            "description": "For each level up, Dark Shadow Sacrifice cooldown time -5%."
+        }
     ]
 }
