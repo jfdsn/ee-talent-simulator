@@ -487,24 +487,185 @@
         }
     ],
     "illusionist": [
-        { "id": "Pyrotechnics", "icon": "illusionist/pyrotechnics.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Psychology", "icon": "illusionist/psychology.webp", "row": 1, "col": 2, "maxLevel": 10, "description": "Soon" },
-        { "id": "Cold Front", "icon": "illusionist/cold-front.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Psychology", "to": "Cold Front" } },
-        { "id": "Physical Domination", "icon": "illusionist/physical-domination.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Transformation", "icon": "illusionist/transformation.webp", "row": 1, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Compressed Gravity", "icon": "illusionist/compressed-gravity.webp", "row": 1, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Avid Reader", "icon": "illusionist/avid-reader.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Legerdemain", "icon": "illusionist/legerdemain.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Latent Energy", "icon": "illusionist/latent-energy.webp", "row": 2, "col": 4, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Legerdemain", "to": "Latent Energy" } },
-        { "id": "Mind Domination", "icon": "illusionist/mind-domination.webp", "row": 2, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Expanded Consciousness", "icon": "illusionist/expanded-consciousness.webp", "row": 2, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Mind Domination", "to": "Expanded Consciousness" } },
-        { "id": "Spiritual Domination", "icon": "illusionist/spiritual-domination.webp", "row": 2, "col": 7, "maxLevel": 10, "description": "Soon" },
-        { "id": "Magic Backlash", "icon": "illusionist/magic-backlash.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Spiritual Domination", "to": "Magic Backlash" } },
-        { "id": "Showmanship", "icon": "illusionist/showmanship.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "High Level Illusion", "icon": "illusionist/high-level-illusion.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Read Minds", "icon": "illusionist/read-minds.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Hypnotism", "icon": "illusionist/hypnotism.webp", "row": 3, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Read Minds", "to": "Hypnostism" } },
-        { "id": "Awakening", "icon": "illusionist/awakening.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Pyrotechnics",
+            "icon": "illusionist/pyrotechnics.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Psychology",
+            "icon": "illusionist/psychology.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, INT +1%."
+        },
+        {
+            "id": "Cold Front",
+            "icon": "illusionist/cold-front.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Deadly Icicle +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Psychology",
+                "to": "Cold Front"
+            }
+        },
+        {
+            "id": "Mind Domination",
+            "icon": "illusionist/mind-domination.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Jester's Frenzy, Deadly Icicle's damage reduction decreased to 25%.",
+            "dependency": {
+                "level": 5,
+                "from": "Cold Front",
+                "to": "Mind Domination"
+            }
+        },
+        {
+            "id": "Compressed Gravity",
+            "icon": "illusionist/compressed-gravity.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Aerolite +2%."
+        },
+        {
+            "id": "Avid Reader",
+            "icon": "illusionist/avid-reader.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Grimoire, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Legerdemain",
+            "icon": "illusionist/legerdemain.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Latent Energy",
+            "icon": "illusionist/latent-energy.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Stimulation's duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Legerdemain",
+                "to": "Latent Energy"
+            }
+        },
+        {
+            "id": "Instance Domination",
+            "icon": "illusionist/instance-domination.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Chrono Rewind's cooldown time -4%."
+        },
+        {
+            "id": "Echo of Ages",
+            "icon": "illusionist/echo-of-ages.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Ancient Call's duration +1 sec."
+        },
+        {
+            "id": "Magic Backlash",
+            "icon": "illusionist/magic-backlash.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Ineffective Magic, received M-DMG and M-DMG reflection bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Echo of Ages",
+                "to": "Magic Backlash"
+            }
+        },
+        {
+            "id": "Showmanship",
+            "icon": "illusionist/showmanship.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "High Level Illusion",
+            "icon": "illusionist/high-level-illusion.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Expanded Consciousness",
+            "icon": "illusionist/expanded-consciousness.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 1,
+            "description": "When using Psionic Focus, Move SPD +10%, M-CRIT Rate bonus +20% and duration +5 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "High Level Illusion",
+                "to": "Expanded Consciousness"
+            }
+        },
+        {
+            "id": "Read Minds",
+            "icon": "illusionist/read-minds.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Hypnotism",
+            "icon": "illusionist/hypnotism.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Hypnotic Eye, DMG received bonus +20% and duration +2 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Read Minds",
+                "to": "Hypnotism"
+            }
+        },
+        {
+            "id": "Spiritual Domination",
+            "icon": "illusionist/spiritual-domination.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Max MP +1%."
+        },
+        {
+            "id": "Awakening",
+            "icon": "illusionist/awakening.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Mind Surge, MP recovery +20% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Spiritual Domination",
+                "to": "Awakening"
+            }
+        }
     ],
     "warlock": [
         { "id": "Devil Contract", "icon": "warlock/devil-contract.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
