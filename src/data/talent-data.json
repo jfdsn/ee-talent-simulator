@@ -668,24 +668,185 @@
         }
     ],
     "warlock": [
-        { "id": "Devil Contract", "icon": "warlock/devil-contract.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Dark Magic", "icon": "warlock/dark-magic.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Prolonged Nightmare", "icon": "warlock/prolonged-nightmare.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Dark Magic", "to": "Prolonged Nightmare" } },
-        { "id": "Heretic Control", "icon": "warlock/heretic-control.webp", "row": 1, "col": 4, "maxLevel": 10, "description": "Soon" },
-        { "id": "Breath of Lost Souls", "icon": "warlock/breath-of-lost-souls.webp", "row": 1, "col": 7, "maxLevel": 1, "description": "Soon" },
-        { "id": "Cursed Aura", "icon": "warlock/cursed-aura.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Blood Feast", "icon": "warlock/blood-feast.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Blood Contract", "icon": "warlock/blood-contract.webp", "row": 2, "col": 4, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Blood Feast", "to": "Blood Contract" } },
-        { "id": "Evil Embodiment", "icon": "warlock/evil-embodiment.webp", "row": 2, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 1, "from": "Blood Contract", "to": "Evil Embodiment" } },
-        { "id": "Demonic Control", "icon": "warlock/demonic-control.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Catastrophe", "icon": "warlock/catastrophe.webp", "row": 2, "col": 7, "maxLevel": 10, "description": "Soon" },
-        { "id": "Poisonous Parasites", "icon": "warlock/poisonous-parasites.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Catastrophe", "to": "Poisonous Parasites" } },
-        { "id": "Life and Death", "icon": "warlock/life-and-death.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Cohesive Shadow", "icon": "warlock/cohesive-shadow.webp", "row": 3, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Life and Death", "to": "Cohesive Shadow" } },
-        { "id": "Spirit Blink", "icon": "warlock/spirit-blink.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Spiritual Source", "icon": "warlock/spiritual-source.webp", "row": 3, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Mystical Gaze", "icon": "warlock/mystical-gaze.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Magic Spree", "icon": "warlock/magic-spree.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Mystical Gaze", "to": "Magic Spree" } }
+        {
+            "id": "Devil Contract",
+            "icon": "warlock/devil-contract.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Dark Magic",
+            "icon": "warlock/dark-magic.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Nightmare Extension",
+            "icon": "warlock/prolonged-nightmare.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Nightmare Attack +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Dark Magic",
+                "to": "Nightmare Extension"
+            }
+        },
+        {
+            "id": "Long Term Agreement",
+            "icon": "warlock/long-term-agreement.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Wicked Pact duration +1 sec."
+        },
+        {
+            "id": "Damnation",
+            "icon": "warlock/damnation.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Death Sentence +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Long Term Agreement",
+                "to": "Damnation"
+            }
+        },
+        {
+            "id": "Breath of Lost Souls",
+            "icon": "warlock/breath-of-lost-souls.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Death Threats, P-Healing penalty +20% and duration +2 sec."
+        },
+        {
+            "id": "Cursed Aura",
+            "icon": "warlock/cursed-aura.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Blood Feast",
+            "icon": "warlock/blood-feast.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Blood Contract",
+            "icon": "warlock/blood-contract.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, Blood Conversion cooldown time -3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Blood Feast",
+                "to": "Blood Contract"
+            }
+        },
+        {
+            "id": "Evil Incarnation",
+            "icon": "warlock/evil-embodiment.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Tribute, M-CRIT Rate and Dark bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Blood Contract",
+                "to": "Evil Incarnation"
+            }
+        },
+        {
+            "id": "Epidemic",
+            "icon": "warlock/catastrophe.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Plague Carrier duration +1 sec."
+        },
+        {
+            "id": "Poisonous Parasites",
+            "icon": "warlock/poisonous-parasites.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Dark Parasites, area of effect +6 meters.",
+            "dependency": {
+                "level": 5,
+                "from": "Epidemic",
+                "to": "Poisonous Parasites"
+            }
+        },
+        {
+            "id": "Study of Life and Death",
+            "icon": "warlock/study-of-life-and-death.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Grimoire, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Shadow Condensation",
+            "icon": "warlock/cohesive-shadow.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shadow Arrow +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Study of Life and Death",
+                "to": "Shadow Condensation"
+            }
+        },
+        {
+            "id": "Spirit Blink",
+            "icon": "warlock/spirit-blink.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Spiritual Source",
+            "icon": "warlock/spiritual-source.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Max MP +2%."
+        },
+        {
+            "id": "Monster Gaze",
+            "icon": "warlock/mystical-gaze.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Magic Spree",
+            "icon": "warlock/magic-spree.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Wild Shout, M-ATK bonus +10% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Monster Gaze",
+                "to": "Magic Spree"
+            }
+        }
     ],
     "luminary": [
         { "id": "Glowburst", "icon": "luminary/glowburst.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
