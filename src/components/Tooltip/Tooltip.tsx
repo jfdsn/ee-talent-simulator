@@ -21,22 +21,9 @@ type TooltipData = {
 }
 
 export const TooltipWrapper: React.FC<Props> = ({ children, data, getLevel }) => {
-    const minKP = (() => {
-        switch (data.col) {
-            case 4:
-                return 15;
-            case 5:
-                return 20;
-            case 6:
-                return 25;
-            case 7:
-                return 30;
-            case 8: 
-                return 35; 
-            default:
-                return null;
-        }
-    })();
+    const minKP = data.col > 3 ? (5 * (data.col - 3)) + 10 : null;
+
+    const talentPointsAlert = getLevel();
 
     return (
         <TooltipContainer>
@@ -57,7 +44,11 @@ export const TooltipWrapper: React.FC<Props> = ({ children, data, getLevel }) =>
                     </Requirements>
                 )}
                 <Alert>
-                    Learning the next knowledge level will cost you {getLevel()} Knowledge Points!
+                    {(talentPointsAlert > 0) && (
+                        <>
+                            Learning the next knowledge level will cost you {talentPointsAlert} Knowledge Points!
+                        </>
+                    )}
                 </Alert>
             </TooltipText>
         </TooltipContainer>

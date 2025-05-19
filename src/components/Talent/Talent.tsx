@@ -67,6 +67,7 @@ export const Talent: React.FC<Props> = ( props ) => {
 
     //Inform Tooltip how many points a talent costs based on current level
     const getLevel = () :number => {
+        if (isMaxLevel) return 0;
         if (talentLevel >= 15) return 3
         if (talentLevel >= 5) return 2
         return 1
