@@ -432,46 +432,371 @@
         }
     ],
     "bard": [
-        { "id": "Music Theory", "icon": "bard/music-theory.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Soothing Chords", "icon": "bard/soothing-chords.webp", "row": 1, "col": 2, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Music Theory", "to": "Soothing Chords" } },
-        { "id": "Folklore", "icon": "bard/folklore.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Moving Performance", "icon": "bard/moving-performance.webp", "row": 1, "col": 5, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Folklore", "to": "Moving Performance" } },
-        { "id": "Lively Beat", "icon": "bard/lively-beat.webp", "row": 1, "col": 7, "maxLevel": 1, "description": "Soon", 
-        "dependency": { "level": 5, "from": "Moving Performance", "to": "Lively Beat" } },
-        { "id": "Missing Name", "icon": "bard/missing-icon.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon" },
-        { "id": "Musical Knowledge", "icon": "bard/musical-knowledge.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "High Pitch", "icon": "bard/high-pitch.webp", "row": 2, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Musical Knowledge", "to": "High Pitch" } },
-        { "id": "Composing", "icon": "bard/composing.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Conductor", "icon": "bard/conductor.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Marching Song", "icon": "bard/marching-song.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Conductor", "to": "Marching Song" } },
-        { "id": "Folk Music", "icon": "bard/folk-music.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Missing Name2", "icon": "bard/missing-icon2.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Folk Music", "to": "Missing Name2" } },
-        { "id": "Lyrics & Poetry", "icon": "bard/lyrics-poetry.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Guitar Tuning", "icon": "bard/guitar-tuning.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Heavy Metal", "icon": "bard/heavy-metal.webp", "row": 3, "col": 4, "maxLevel": 1, "description": "Soon", 
-        "dependency": { "level": 10, "from": "Guitar Tuning", "to": "Heavy Metal" } },
-        { "id": "Moody Style", "icon": "bard/moody-style.webp", "row": 3, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "Pop Style", "icon": "bard/pop-style.webp", "row": 3, "col": 7, "maxLevel": 10, "description": "Soon" }
+        {
+            "id": "Music Theory",
+            "icon": "bard/music-theory.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Soothing Chords",
+            "icon": "bard/soothing-chords.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Music of Life, healing over time +20%.",
+            "dependency": {
+                "level": 10,
+                "from": "Music Theory",
+                "to": "Soothing Chords"
+            }
+        },
+        {
+            "id": "Folklore",
+            "icon": "bard/folklore.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Moving Performance",
+            "icon": "bard/moving-performance.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Spirited Melody's duration +1 sec."
+        },
+        {
+            "id": "Lively Beat",
+            "icon": "bard/lively-beat.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Poem of Wind, Move SPD bonus +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Moving Performance",
+                "to": "Lively Beat"
+            }
+        },
+        {
+            "id": "Solemn Music",
+            "icon": "bard/solemn-music.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Holy Concerto, G-Healing & P-Healing bonuses +20% and duration +2 sec."
+        },
+        {
+            "id": "Musical Knowledge",
+            "icon": "bard/musical-knowledge.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "High Pitch",
+            "icon": "bard/high-pitch.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Vocal Bomb +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Musical Knowledge",
+                "to": "High Pitch"
+            }
+        },
+        {
+            "id": "Composing",
+            "icon": "bard/composing.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Conductor",
+            "icon": "bard/conductor.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, M-ATK +2%."
+        },
+        {
+            "id": "Blues",
+            "icon": "bard/blues.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Demonic Symphony's duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Conductor",
+                "to": "Blues"
+            }
+        },
+        {
+            "id": "Folk Music",
+            "icon": "bard/folk-music.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Max MP +2%."
+        },
+        {
+            "id": "Marching Song",
+            "icon": "bard/marching-song.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, War Rhyme's duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Folk Music",
+                "to": "Marching Song"
+            }
+        },
+        {
+            "id": "Lyrics & Poetry",
+            "icon": "bard/lyrics-poetry.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, G-Healing +1%."
+        },
+        {
+            "id": "Guitar Tuning",
+            "icon": "bard/guitar-tuning.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Guitar, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Heavy Metal",
+            "icon": "bard/heavy-metal.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 1,
+            "description": "When using Burning Metal, Fire DMG per sec and DEF penalty +10%.",
+            "dependency": {
+                "level": 10,
+                "from": "Guitar Tuning",
+                "to": "Heavy Metal"
+            }
+        },
+        {
+            "id": "Moody Style",
+            "icon": "bard/moody-style.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Songs of Illusion's duration +1 sec."
+        },
+        {
+            "id": "Pop Style",
+            "icon": "bard/pop-style.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Musical Encouragement's duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Moody Style",
+                "to": "Pop Style"
+            }
+        }
     ],
     "shaman": [
-        { "id": "Geology", "icon": "shaman/geology.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Astrology", "icon": "shaman/astrology.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Nature Worship", "icon": "shaman/nature-worship.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Astrology", "to": "Nature Worship" } },
-        { "id": "Rainmaker", "icon": "shaman/rainmaker.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon" },
-        { "id": "Awakening of Grace", "icon": "shaman/awakening-of-grace.webp", "row": 1, "col": 7, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Rainmaker", "to": "Awakening of Grace" } },
-        { "id": "Supernatural Lore", "icon": "shaman/supernatural-lore.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Thunder Master", "icon": "shaman/thunder-master.webp", "row": 2, "col": 2, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Supernatural Lore", "to": "Thunder Master" } },
-        { "id": "Ancient Knowledge", "icon": "shaman/ancient-knowledge.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Awakening of Fire Spirit", "icon": "shaman/awakening-of-fire-spirit.webp", "row": 2, "col": 4, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Ancient Knowledge", "to": "Awakening of Fire Spirit" } },
-        { "id": "Spring of Life", "icon": "shaman/spring-of-life.webp", "row": 2, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Woven Thorns", "icon": "shaman/woven-thorns.webp", "row": 2, "col": 6, "maxLevel": 10, "description": "Soon", "dependency": { "level": 5, "from": "Spring of Life", "to": "Woven Thorns" } },
-        { "id": "Carving Knowledge", "icon": "shaman/carving-knowledge.webp", "row": 2, "col": 7, "maxLevel": 10, "description": "Soon" },
-        { "id": "Hunting Ritual", "icon": "shaman/hunting-ritual.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Carving Knowledge", "to": "Hunting Ritual" } },
-        { "id": "Medical Specialization", "icon": "shaman/medical-specialization.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Scrying Knowledge", "icon": "shaman/scrying-knowledge.webp", "row": 3, "col": 2, "maxLevel": 9, "description": "Soon", "dependency": { "level": 10, "from": "Medical Specialization", "to": "Scrying Knowledge" } },
-        { "id": "Natural Science", "icon": "shaman/natural-science.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Harvest", "icon": "shaman/harvest.webp", "row": 3, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Natural Science", "to": "Harvest" } },
-        { "id": "Animal Scar", "icon": "shaman/animal-scar.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Geology",
+            "icon": "shaman/geology.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Astrology",
+            "icon": "shaman/astrology.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Nature Reverence",
+            "icon": "shaman/nature-worship.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Natural Punishment +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Astrology",
+                "to": "Nature Reverence"
+            }
+        },
+        {
+            "id": "Rainmaker",
+            "icon": "shaman/rainmaker.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, healing effect of Drops of Heaven +3%."
+        },
+        {
+            "id": "Awakened Grace",
+            "icon": "shaman/awakened-grace.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Nature Blessing's duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Rainmaker",
+                "to": "Awakened Grace"
+            }
+        },
+        {
+            "id": "Psychicism",
+            "icon": "shaman/supernatural-lore.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Cast SPD +1%."
+        },
+        {
+            "id": "Thunder Master",
+            "icon": "shaman/thunder-master.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Rage of Storms +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Psychicism",
+                "to": "Thunder Master"
+            }
+        },
+        {
+            "id": "Ancient Knowledge",
+            "icon": "shaman/ancient-knowledge.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Staff, weapon's P-ATK & M-ATK +0.8%."
+        },
+        {
+            "id": "Breath of Nature",
+            "icon": "shaman/breath-of-nature.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Verdant Cyclone +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Ancient Knowledge",
+                "to": "Breath of Nature"
+            }
+        },
+        {
+            "id": "Spring of Life",
+            "icon": "shaman/spring-of-life.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Woven Thorns",
+            "icon": "shaman/woven-thorns.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Thorn Shield's duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Spring of Life",
+                "to": "Woven Thorns"
+            }
+        },
+        {
+            "id": "Soul Knowledge",
+            "icon": "shaman/soul-knowledge.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Callback cooldown time -3% sec."
+        },
+        {
+            "id": "Hunting Ritual",
+            "icon": "shaman/hunting-ritual.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Marks of Wind, AGI & LCK bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Soul Knowledge",
+                "to": "Hunting Ritual"
+            }
+        },
+        {
+            "id": "Medical Specialization",
+            "icon": "shaman/medical-specialization.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, G-Healing +1%."
+        },
+        {
+            "id": "Scrying Knowledge",
+            "icon": "shaman/scrying-knowledge.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, WIS +1%.",
+            "dependency": {
+                "level": 10,
+                "from": "Medical Specialization",
+                "to": "Scrying Knowledge"
+            }
+        },
+        {
+            "id": "Natural Science",
+            "icon": "shaman/natural-science.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, all Elemental Resistances +1%."
+        },
+        {
+            "id": "Harvest",
+            "icon": "shaman/harvest.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Earth Energy, STR & INT bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Natural Science",
+                "to": "Harvest"
+            }
+        },
+        {
+            "id": "Reforestation",
+            "icon": "shaman/reforestation.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Tree of Life, G-Healing bonus +15% & Move SPD bonus +50%."
+        }
     ],
     "sage": [
         { "id": "Holy Book Training", "icon": "sage/holy-book-training.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
