@@ -80,5 +80,9 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
     @media (max-width: 768px) {
         min-width: fit-content;
         gap: 2px;
+
+        span {
+            display: none;
+        }
     }
 `;

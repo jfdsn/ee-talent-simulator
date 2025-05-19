@@ -21,7 +21,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     color: #000;
-    padding: 8px 16px;
+    padding: 2px 12px;
     cursor: pointer;
     font-size: 16px;
     border: 6px solid transparent;
