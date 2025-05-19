@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import './App.css'
 import { TalentSimulator } from './components/TalentSimulator/TalentSimulator'
 
-import { Header } from './Layout/Header'
+//import { Header } from './Layout/Header'
 
 function App() {
   return (
