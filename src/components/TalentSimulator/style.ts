@@ -20,7 +20,7 @@ export const TalentSimulatorContainer = styled.div`
     
 export const ReponsiveContainer = styled.div`
     flex: 1;
-    padding-top: 1.5rem;
+    padding-top: 5vw;
     overflow-x: auto;
     overflow-y: auto;
 `

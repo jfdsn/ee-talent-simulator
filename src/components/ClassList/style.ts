@@ -81,8 +81,11 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
         min-width: fit-content;
         gap: 2px;
 
+        transform: ${({ $active, $className }) => ($active === $className ? "scale(1.05)" : "scale(1)")};
+
         span {
             display: none;
         }
+        
     }
 `;
