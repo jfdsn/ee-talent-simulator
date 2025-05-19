@@ -799,24 +799,180 @@
         }
     ],
     "sage": [
-        { "id": "Holy Book Training", "icon": "sage/holy-book-training.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Spiritual Prayer", "icon": "sage/spiritual-prayer.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Holy Spirit Reconcile", "icon": "sage/holy-spirit-reconcile.webp", "row": 1, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Spiritual Prayer", "to": "Holy Spirit Reconcile" } },
-        { "id": "Spirit Affusion", "icon": "sage/spirit-affusion.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Holy Spirit Reconcile", "to": "Spirit Affusion" } },
-        { "id": "Light Guardian Tome", "icon": "sage/light-guardian-tome.webp", "row": 1, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Spirit Affusion", "to": "Light Guardian Tome" } },
-        { "id": "Ancient Sage Ruin", "icon": "sage/ancient-sage-ruin.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon" },
-        { "id": "Sage Tactic", "icon": "sage/sage-tactic.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Seasoned Veteran", "icon": "sage/seasoned-veteran.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Secramental Make Up", "icon": "sage/sacramental-make-up.webp", "row": 2, "col": 4, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Seasoned Veteran", "to": "Secramental Make Up" } },
-        { "id": "Soul Stimulation", "icon": "sage/soul-stimulation.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Secramental Make Up", "to": "Soul Stimulation" } },
-        { "id": "Soul King Ritual", "icon": "sage/soul-king-ritual.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Soul Stimulation", "to": "Soul King Ritual" } },
-        { "id": "Harsh Soul Training", "icon": "sage/harsh-soul-training.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Art of Hammer", "icon": "sage/art-of-hammer.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Silence Trial", "icon": "sage/silence-trial.webp", "row": 3, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Art of Hammer", "to": "Silence Trial" } },
-        { "id": "Shadower Skill", "icon": "sage/shadower-skill.webp", "row": 3, "col": 5, "maxLevel": 9, "description": "Soon" },
-        { "id": "Guardian Tome", "icon": "sage/guardian-tome.webp", "row": 3, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Shadower Skill", "to": "Guardian Tome" } },
-        { "id": "Reliance Tome", "icon": "sage/reliance-tome.webp", "row": 3, "col": 7, "maxLevel": 1, "description": "Soon", "dependency": { "level": 1, "from": "Guardian Tome", "to": "Reliance Tome" } },
-        { "id": "Hammer Blessed", "icon": "sage/hammer-blessed.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 1, "from": "Reliance Tome", "to": "Hammer Blessed" } }
+        {
+            "id": "Sacred Code Training",
+            "icon": "sage/holy-book-training.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD & Cast SPD +1%."
+        },
+        {
+            "id": "Prayer Devotion",
+            "icon": "sage/spiritual-prayer.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, G-Healing +1%."
+        },
+        {
+            "id": "Holy Spirit Reconciliation",
+            "icon": "sage/holy-spirit-reconcile.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, WIS +1%."
+        },
+        {
+            "id": "Sacred Infusion",
+            "icon": "sage/spirit-affusion.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Healing Hammer +2%. When equipped with Healing Hammer Glyph, healing effect +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Holy Spirit Reconciliation",
+                "to": "Sacred Infusion"
+            }
+        },
+        {
+            "id": "Reliance Tome",
+            "icon": "sage/reliance-tome.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Aura: Raise Spirits duration +1 sec."
+        },
+        {
+            "id": "Ancient Sage Ruin",
+            "icon": "sage/ancient-sage-ruin.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, Aura: Singularity duration +1 sec."
+        },
+        {
+            "id": "Sage Tactic",
+            "icon": "sage/sage-tactic.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
+        },
+        {
+            "id": "Seasoned Veteran",
+            "icon": "sage/seasoned-veteran.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Light Guardian Tome",
+            "icon": "sage/light-guardian-tome.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Aura: Protective Shield duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Seasoned Veteran",
+                "to": "Light Guardian Tome"
+            }
+        },
+        {
+            "id": "Community Construction",
+            "icon": "sage/sacramental-make-up.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +2%."
+        },
+        {
+            "id": "Soul King Ritual",
+            "icon": "sage/soul-king-ritual.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using True Grit, increases caster's Move SPD +20% for 2 sec. Also increases Max HP & MP bonuses +10%.",
+            "dependency": {
+                "level": 5,
+                "from": "Community Construction",
+                "to": "Soul King Ritual"
+            }
+        },
+        {
+            "id": "Harsh Soul Training",
+            "icon": "sage/harsh-soul-training.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG & M-CRIT DMG +2%."
+        },
+        {
+            "id": "Art of Hammer",
+            "icon": "sage/art-of-hammer.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Hammer, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Soul Stimulation",
+            "icon": "sage/soul-stimulation.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Hammer of Inspiration +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Art of Hammer",
+                "to": "Soul Stimulation"
+            }
+        },
+        {
+            "id": "Silent Penance",
+            "icon": "sage/silent-penance.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, Blessed Arrival healing effect +2%."
+        },
+        {
+            "id": "Silent Skills",
+            "icon": "sage/shadower-skill.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Aura: Invisibility duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Silent Penance",
+                "to": "Silent Skills"
+            }
+        },
+        {
+            "id": "Guardian Tome",
+            "icon": "sage/guardian-tome.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Aura: Heavy Hammer Protection duration +1 sec."
+        },
+        {
+            "id": "Blessed Hammer",
+            "icon": "sage/hammer-blessed.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Earth Smash +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Guardian Tome",
+                "to": "Blessed Hammer"
+            }
+        }
     ],
     "magician": [
         {
