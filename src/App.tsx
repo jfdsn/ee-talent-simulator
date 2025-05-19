@@ -7,7 +7,6 @@ import { Header } from './Layout/Header'
 function App() {
   return (
     <AppContainer>
-      <Header />
       <TalentSimulator />
     </AppContainer>
   )
