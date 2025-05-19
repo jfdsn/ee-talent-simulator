@@ -5,6 +5,8 @@ import { Container, Button, Display } from "./style";
 export const TalentToolBox: React.FC = () => {
     const { globalPoints, globalMaxPoints, resetPoints  } = usePoints();
     
+    const enteredPoints = globalMaxPoints - globalPoints;
+    
     const handleReset = () => {
         resetPoints();
     };
@@ -12,11 +14,11 @@ export const TalentToolBox: React.FC = () => {
     return (
         <Container>
             <Display>{globalPoints} KPs Remain</Display>
-            <Display>{globalMaxPoints - globalPoints} KPs Entered</Display>
+            <Display>{enteredPoints} KPs Entered</Display>
             <Button onClick={handleReset}>
                 Refresh
             </Button>
-                <CapLevelSelector />
+            <CapLevelSelector />
         </Container>
     );
 }
