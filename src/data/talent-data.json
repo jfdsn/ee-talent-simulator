@@ -532,45 +532,376 @@
         }
     ],
     "ranger": [
-        { "id": "Survival", "icon": "ranger/survival.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Sophistication", "icon": "ranger/sophistication.webp", "row": 1, "col": 2, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Survival", "to": "Sophistication" } },
-        { "id": "First Aid", "icon": "ranger/first-aid.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Calm Posture", "icon": "ranger/calm-posture.webp", "row": 1, "col": 5, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "First Aid", "to": "Calm Posture" } },
-        { "id": "Focused Shot", "icon": "ranger/focused-shot.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon" },
-        { "id": "Advanced Stances", "icon": "ranger/advanced-stances.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Flexible Posture", "icon": "ranger/flexible-posture.webp", "row": 2, "col": 3, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Advanced Stances", "to": "Flexible Posture" } },
-        { "id": "Vulnability Check", "icon": "ranger/vulnability-check.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Shotgun Knowledge", "icon": "ranger/shotgun-knowledge.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Vulnability Check", "to": "Shotgun Knowledge" } },
-        { "id": "Ballistics", "icon": "ranger/ballistics.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", 
-        "dependency": { "level": 5, "from": "Shotgun Knowledge", "to": "Ballistics" } },
-        { "id": "Art of the Sniper", "icon": "ranger/art-of-the-sniper.webp", "row": 2, "col": 7, "maxLevel": 20, "description": "Soon" },
-        { "id": "Threatening Posture", "icon": "ranger/threatening-posture.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Art of the Sniper", "to": "Threatening Posture" } },
-        { "id": "Luring", "icon": "ranger/luring.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Elimination", "icon": "ranger/elimination.webp", "row": 3, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Luring", "to": "Elimination" } },
-        { "id": "Geographical Knowledge", "icon": "ranger/geographical-knowledge.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Mind Pool", "icon": "ranger/mind-pool.webp", "row": 3, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Geographical Knowledge", "to": "Mind Pool" } },
-        { "id": "Stability Training", "icon": "ranger/stability-training.webp", "row": 3, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "Tracking Posture", "icon": "ranger/tracking-posture.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Stability Training", "to": "Tracking Posture" } }
+        {
+            "id": "Survival",
+            "icon": "ranger/survival.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Flexible Posture",
+            "icon": "ranger/flexible-posture.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Dodging Leap, restores +500 HP.",
+            "dependency": {
+                "level": 10,
+                "from": "Survival",
+                "to": "Flexible Posture"
+            }
+        },
+        {
+            "id": "Elimination",
+            "icon": "ranger/elimination.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, increase P-ATK based on the equipped ranged weapon: Bow P-ATK +1%, Sickleshot P-ATK +0.8%, Artillery Gun P-ATK +0.5%."
+        },
+        {
+            "id": "First Aid",
+            "icon": "ranger/first-aid.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Calm Posture",
+            "icon": "ranger/calm-posture.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Serenity's duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "First Aid",
+                "to": "Calm Posture"
+            }
+        },
+        {
+            "id": "Focused Shot",
+            "icon": "ranger/focused-shot.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Sniper's Heart, LCK and Malice Reduction bonuses +20%."
+        },
+        {
+            "id": "Advanced Stances",
+            "icon": "ranger/advanced-stances.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Sophistication",
+            "icon": "ranger/sophistication.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Keen Gaze's duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Advanced Stances",
+                "to": "Sophistication"
+            }
+        },
+        {
+            "id": "Vulnerability Check",
+            "icon": "ranger/vulnability-check.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Concussive Shot +3%."
+        },
+        {
+            "id": "Ballistics",
+            "icon": "ranger/ballistics.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Bombard +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Vulnerability Check",
+                "to": "Ballistics"
+            }
+        },
+        {
+            "id": "Art of the Sniper",
+            "icon": "ranger/art-of-the-sniper.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Threatening Posture",
+            "icon": "ranger/threatening-posture.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Arrow of Fear, duration +2 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Art of the Sniper",
+                "to": "Threatening Posture"
+            }
+        },
+        {
+            "id": "Luring",
+            "icon": "ranger/luring.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Shotgun Knowledge",
+            "icon": "ranger/shotgun-knowledge.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Meteor Shower +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Luring",
+                "to": "Shotgun Knowledge"
+            }
+        },
+        {
+            "id": "Geographical Knowledge",
+            "icon": "ranger/geographical-knowledge.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Mind Pool",
+            "icon": "ranger/mind-pool.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Charging, P-ATK bonus +20%.",
+            "dependency": {
+                "level": 10,
+                "from": "Geographical Knowledge",
+                "to": "Mind Pool"
+            }
+        },
+        {
+            "id": "Stability Training",
+            "icon": "ranger/stability-training.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, STR +2%."
+        },
+        {
+            "id": "Tracking Posture",
+            "icon": "ranger/tracking-posture.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Eagle Pursuit, inflicts Double Hit damage if the target's HP is below 40% of their Max HP.",
+            "dependency": {
+                "level": 5,
+                "from": "Stability Training",
+                "to": "Tracking Posture"
+            }
+        }
     ],
     "inquisitor": [
-        { "id": "Sickleshot Expert", "icon": "inquisitor/sickleshot-expert.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Death Foretold", "icon": "inquisitor/death-foretold.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Soul Chain", "icon": "inquisitor/soul-chain.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Death Foretold", "to": "Soul Chain" } },
-        { "id": "Bloodthirster", "icon": "inquisitor/bloodthirster.webp", "row": 1, "col": 4, "maxLevel": 20, "description": "Soon" },
-        { "id": "Profane Protection", "icon": "inquisitor/profane-protection.webp", "row": 1, "col": 6, "maxLevel": 20, "description": "Soon" },
-        { "id": "Sign of Death", "icon": "inquisitor/sign-of-death.webp", "row": 1, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Inevitable Doom", "icon": "inquisitor/inevitable-doom.webp", "row": 1, "col": 8, "maxLevel": 5, "description": "Soon" },
-        { "id": "Sickle Enhancement", "icon": "inquisitor/sickle-enhancement.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Rampaging Soul", "icon": "inquisitor/rampaging-soul.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Sickle Dance", "icon": "inquisitor/sickle-dance.webp", "row": 2, "col": 4, "maxLevel": 20, "description": "Soon" },
-        { "id": "Cutthroat", "icon": "inquisitor/cutthroat.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Sickle Dance", "to": "Cutthroat" } },
-        { "id": "Flame Burst", "icon": "inquisitor/flame-burst.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Cutthroat", "to": "Flame Burst" } },
-        { "id": "Shot Enhancement", "icon": "inquisitor/shot-enhancement.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Shadowsnare", "icon": "inquisitor/shadowsnare.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Shapeless", "icon": "inquisitor/shapeless.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon", "dependency": { "level": 5, "from": "Shadowsnare", "to": "Shapeless" } },
-        { "id": "Doomwave", "icon": "inquisitor/doomwave.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Soul Scorch", "icon": "inquisitor/soul-scorch.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Doomwave", "to": "Soul Scorch" } },
-        { "id": "Dark Specter", "icon": "inquisitor/dark-specter.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Sickleshot Expert",
+            "icon": "inquisitor/sickleshot-expert.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Sickleshot, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Flame Burst",
+            "icon": "inquisitor/flame-burst.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Inferno Impact +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Sickleshot Expert",
+                "to": "Flame Burst"
+            }
+        },
+        {
+            "id": "Death Foretold",
+            "icon": "inquisitor/death-foretold.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +1%."
+        },
+        {
+            "id": "Soul Chain",
+            "icon": "inquisitor/soul-chain.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Soul Shackle +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Death Foretold",
+                "to": "Soul Chain"
+            }
+        },
+        {
+            "id": "Inevitable Doom",
+            "icon": "inquisitor/inevitable-doom.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Final Verdict's cooldown -5%."
+        },
+        {
+            "id": "Sign of Death",
+            "icon": "inquisitor/sign-of-death.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Devastate, decreases enemie's DEF -10%.",
+            "dependency": {
+                "level": 5,
+                "from": "Inevitable Doom",
+                "to": "Sign of Death"
+            }
+        },
+        {
+            "id": "Sickle Enhancement",
+            "icon": "inquisitor/sickle-enhancement.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Rampaging Soul",
+            "icon": "inquisitor/rampaging-soul.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Cutthroat",
+            "icon": "inquisitor/cutthroat.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Garrote +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Rampaging Soul",
+                "to": "Cutthroat"
+            }
+        },
+        {
+            "id": "Maddening",
+            "icon": "inquisitor/maddening.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, Carnage's cooldown -3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Cutthroat",
+                "to": "Maddening"
+            }
+        },
+        {
+            "id": "Bloodthirster",
+            "icon": "inquisitor/bloodthirster.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Profane Protection",
+            "icon": "inquisitor/profane-protection.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "Bloodthirster",
+                "to": "Profane Protection"
+            }
+        },
+        {
+            "id": "Shot Enhancement",
+            "icon": "inquisitor/shot-enhancement.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Shadowsnare",
+            "icon": "inquisitor/shadowsnare.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Sickle Dance",
+            "icon": "inquisitor/sickle-dance.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, AGI +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Shadowsnare",
+                "to": "Sickle Dance"
+            }
+        },
+        {
+            "id": "Doomwave",
+            "icon": "inquisitor/doomwave.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, Piercing Spiral's area +4 meters."
+        },
+        {
+            "id": "Soul Scorch",
+            "icon": "inquisitor/soul-scorch.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Twin Flames +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Doomwave",
+                "to": "Soul Scorch"
+            }
+        },
+        {
+            "id": "Dark Specter",
+            "icon": "inquisitor/dark-specter.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Hunting Stance,  P-ATK & Move SPD bonuses +20%."
+        }
     ],
     "cleric": [
         {
