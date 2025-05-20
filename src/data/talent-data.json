@@ -170,24 +170,185 @@
         { "id": "Stumbling Feet", "icon": "samurai/stumbling-feet.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
     ],
     "hunter": [
-        { "id": "Biology", "icon": "hunter/biology.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Potent Anesthesia", "icon": "hunter/potent-anesthesia.webp", "row": 1, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Biology", "to": "Potent Anesthesia" } },
-        { "id": "Crossbow String", "icon": "hunter/crossbow-string.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Enhanced Fletching", "icon": "hunter/enhanced-fletching.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Crossbow String", "to": "Enhanced Fletching" } },
-        { "id": "Wild Nature", "icon": "hunter/wild-nature.webp", "row": 1, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "Sharpened Arrows", "icon": "hunter/sharpened-arrows.webp", "row": 1, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Wild Nature", "to": "Sharpened Arrows" } },
-        { "id": "Stargazer", "icon": "hunter/stargazer.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Enhanced Bowstring", "icon": "hunter/enhanced-bowstring.webp", "row": 2, "col": 2, "maxLevel": 3, "description": "Soon", "dependency": { "level": 10, "from": "Stargazer", "to": "Enhanced Bowstring" } },
-        { "id": "Stealth Knowledge", "icon": "hunter/stealth-knowledge.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Enhanced Flash", "icon": "hunter/enhanced-flash.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Stealth Knowledge", "to": "Enhanced Flash" } },
-        { "id": "Bestial Breath", "icon": "hunter/bestial-breath.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Beast Recovery", "icon": "hunter/beast-recovery.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Bestial Wrath", "icon": "hunter/bestial-wrath.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Beast Recovery", "to": "Bestial Wrath" } },
-        { "id": "Master Archery", "icon": "hunter/master-archery.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Poison Arrow Science", "icon": "hunter/poison-arrow-science.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Hunting Knowledge", "icon": "hunter/hunting-knowledge.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Nature Spirit", "icon": "hunter/nature-spirit.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Lethal Toxin", "icon": "hunter/lethal-toxin.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Beastology",
+            "icon": "hunter/biology.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
+        },
+        {
+            "id": "Potent Anesthesia",
+            "icon": "hunter/potent-anesthesia.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Dazing Pierce +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Beastology",
+                "to": "Potent Anesthesia"
+            }
+        },
+        {
+            "id": "Crossbow String",
+            "icon": "hunter/crossbow-string.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, STR +2%."
+        },
+        {
+            "id": "Enhanced Fletching",
+            "icon": "hunter/enhanced-fletching.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Chain Shot +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Crossbow String",
+                "to": "Enhanced Fletching"
+            }
+        },
+        {
+            "id": "Wild Nature",
+            "icon": "hunter/wild-nature.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Sharpened Arrows",
+            "icon": "hunter/sharpened-arrows.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Painful Stab +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Wild Nature",
+                "to": "Sharpened Arrows"
+            }
+        },
+        {
+            "id": "Stargazer",
+            "icon": "hunter/stargazer.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, LCK +1%."
+        },
+        {
+            "id": "Enhanced Bowstring",
+            "icon": "hunter/enhanced-bowstring.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Piercing Wound +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Stargazer",
+                "to": "Enhanced Bowstring"
+            }
+        },
+        {
+            "id": "Stealth Knowledge",
+            "icon": "hunter/stealth-knowledge.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Enhanced Flash",
+            "icon": "hunter/enhanced-flash.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Flash Bomb +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Stealth Knowledge",
+                "to": "Enhanced Flash"
+            }
+        },
+        {
+            "id": "Clout Shooting",
+            "icon": "hunter/clout-shooting.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Disruptive Arrow +2%."
+        },
+        {
+            "id": "Mana Break",
+            "icon": "hunter/mana-break.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Mana Piercer +3%."
+        },
+        {
+            "id": "Enhanced Fuel",
+            "icon": "hunter/enhanced-fuel.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Burning Arrow, P-ATK and Fira DMG bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Mana Break",
+                "to": "Enhanced Fuel"
+            }
+        },
+        {
+            "id": "Archery Mastery",
+            "icon": "hunter/master-archery.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Bow, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Poison Arrow Knowledge",
+            "icon": "hunter/poison-arrow-science.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG & M-CRIT DMG +2%."
+        },
+        {
+            "id": "Hunting Knowledge",
+            "icon": "hunter/hunting-knowledge.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Hunting Mentality",
+            "icon": "hunter/hunting-mentality.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Hunter Stance duration +1 sec."
+        },
+        {
+            "id": "Lethal Toxin",
+            "icon": "hunter/lethal-toxin.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Poison Arrow Rain, skill damage +10% and DoT +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Hunting Mentality",
+                "to": "Lethal Toxin"
+            }
+        }
     ],
     "engineer": [
         { "id": "Gun Training", "icon": "engineer/gun-training.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
