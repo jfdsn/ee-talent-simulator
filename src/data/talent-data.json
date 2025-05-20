@@ -264,25 +264,190 @@
         }
     ],
     "martial artist": [
-        { "id": "Art of Boxing", "icon": "martial/art-of-boxing.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Martial Art", "icon": "martial/martial-art.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "God of War", "icon": "martial/god-of-war.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", 
-        "dependency": { "level": 10, "from": "Martial Art", "to": "God of War" } },
-        { "id": "Adjusted Pace", "icon": "martial/adjusted-pace.webp", "row": 1, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Defense Technique", "icon": "martial/defense-technique.webp", "row": 1, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Adjusted Pace", "to": "Defense Technique" } },
-        { "id": "Physical Martial Art", "icon": "martial/physical-martial-art.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Charging Technique", "icon": "martial/charging-technique.webp", "row": 2, "col": 2, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Physical Martial Art", "to": "Charging Technique" } },
-        { "id": "Silky Soft", "icon": "martial/silky-soft.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Strength Technique", "icon": "martial/strength-technique.webp", "row": 2, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Silky Soft", "to": "Strength Technique" } },
-        { "id": "Aikido", "icon": "martial/aikido.webp", "row": 2, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "One Mind", "icon": "martial/one-mind.webp", "row": 2, "col": 7, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Aikido", "to": "One Mind" } },
-        { "id": "Controlled Breathing", "icon": "martial/controlled-breathing.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon" },
-        { "id": "Rock Hard", "icon": "martial/rock-hard.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Strike Weakness", "icon": "martial/strike-weakness.webp", "row": 3, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Rock Hard", "to": "Strike Weakness" } },
-        { "id": "Martial Art Mind Game", "icon": "martial/martial-art-mind-game.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Fierce Power", "icon": "martial/fierce-power.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Martial Art Mind Game", "to": "Fierce Power" } },
-        { "id": "Fighting Technique", "icon": "martial/fighting-technique.webp", "row": 3, "col": 7, "maxLevel": 10, "description": "Soon" },
-        { "id": "Power and Mind", "icon": "martial/power-and-mind.webp", "row": 3, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Fighting Technique", "to": "Power and Mind" } }
+        {
+            "id": "Boxing",
+            "icon": "martial/art-of-boxing.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Cestus, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Military Fighting Technology",
+            "icon": "martial/martial-art.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "God of War",
+            "icon": "martial/god-of-war.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Charging Assault +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Military Fighting Technology",
+                "to": "God of War"
+            }
+        },
+        {
+            "id": "Adjusted Pace",
+            "icon": "martial/adjusted-pace.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Defense Technique",
+            "icon": "martial/defense-technique.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Defensive Strength's duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Adjusted Pace",
+                "to": "Defense Technique"
+            }
+        },
+        {
+            "id": "Martial Art",
+            "icon": "martial/physical-martial-art.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Charging Technique",
+            "icon": "martial/charging-technique.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, Charge's duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Martial Art",
+                "to": "Charging Technique"
+            }
+        },
+        {
+            "id": "Silky Soft",
+            "icon": "martial/silky-soft.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Physical Strengthening",
+            "icon": "martial/strength-technique.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Vajra Roars +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Silky Soft",
+                "to": "Physical Strengthening"
+            }
+        },
+        {
+            "id": "Aikido",
+            "icon": "martial/aikido.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, CRIT DMG received -1%."
+        },
+        {
+            "id": "One Mind",
+            "icon": "martial/one-mind.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Persistent Intent, ACC & EVA bonuses +20% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Aikido",
+                "to": "One Mind"
+            }
+        },
+        {
+            "id": "Controlled Breathing",
+            "icon": "martial/controlled-breathing.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Energy Control's cooldown time -5%."
+        },
+        {
+            "id": "Rock Hard",
+            "icon": "martial/rock-hard.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Weakness Strike",
+            "icon": "martial/strike-weakness.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Collapsing Blow +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Rock Hard",
+                "to": "Weakness Strike"
+            }
+        },
+        {
+            "id": "Fighting Mind",
+            "icon": "martial/martial-art-mind-game.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Fierce Power",
+            "icon": "martial/fierce-power.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Supress +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Fighting Mind",
+                "to": "Fierce Power"
+            }
+        },
+        {
+            "id": "Fighting Skills",
+            "icon": "martial/fighting-technique.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, STR +1%."
+        },
+        {
+            "id": "Strength and Harmony",
+            "icon": "martial/power-and-mind.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Spirit Scar +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Fighting Skills",
+                "to": "Strength and Harmony"
+            }
+        }
     ],
     "blade dancer": [
         { "id": "Advanced Spin", "icon": "blade/advanced-spin.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
