@@ -225,7 +225,7 @@
             "icon": "thief/camouflage.webp",
             "row": 3,
             "col": 4,
-            "maxLevel": 10,
+            "maxLevel": 5,
             "description": "For each level up, Move SPD +2%."
         },
         {
