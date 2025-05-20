@@ -450,50 +450,371 @@
         }
     ],
     "blade dancer": [
-        { "id": "Advanced Spin", "icon": "blade/advanced-spin.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Advanced Steps", "icon": "blade/advanced-steps.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Ballet", "icon": "blade/ballet.webp", "row": 1, "col": 3, "maxLevel": 10, "description": "Soon", 
-        "dependency": { "level": 10, "from": "Advanced Steps", "to": "Ballet" } },
-        { "id": "Modern Dance", "icon": "blade/modern-dance.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Samba", "icon": "blade/samba.webp", "row": 1, "col": 5, "maxLevel": 1, "description": "Soon", 
-        "dependency": { "level": 5, "from": "Modern Dance", "to": "Samba" } },
-        { "id": "Radiant Dance", "icon": "blade/radiant-dance.webp", "row": 1, "col": 7, "maxLevel": 1, "description": "Soon" },
-        { "id": "Sword Dance", "icon": "blade/sword-dance.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Yoga", "icon": "blade/yoga.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Drum Dance", "icon": "blade/drum-dance.webp", "row": 2, "col": 4, "maxLevel": 10, "description": "Soon", 
-        "dependency": { "level": 10, "from": "Yoga", "to": "Drum Dance" } },
-        { "id": "Makeup", "icon": "blade/makeup.webp", "row": 2, "col": 5, "maxLevel": 1, "description": "Soon", 
-        "dependency": { "level": 5, "from": "Drum Dance", "to": "Makeup" } },
-        { "id": "Rising Star", "icon": "blade/rising-star.webp", "row": 2, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "Inspirational Dance", "icon": "blade/inspirational-dance.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Rising Star", "to": "Inspirational Dance" } },
-        { "id": "Ritual Dance", "icon": "blade/ritual-dance.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Stage Training", "icon": "blade/stage-training.webp", "row": 3, "col": 2, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Ritual Dance", "to": "Stage Training" } },
-        { "id": "Art of the Sword", "icon": "blade/art-of-the-sword.webp", "row": 3, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Swing Dance", "icon": "blade/swing-dance.webp", "row": 3, "col": 5, "maxLevel": 5, "description": "Soon", 
-        "dependency": { "level": 10, "from": "Art of the Sword", "to": "Swing Dance" } },
-        { "id": "Dance of Worship", "icon": "blade/dance-of-worship.webp", "row": 3, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Tango", "icon": "blade/tango.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", 
-        "dependency": { "level": 5, "from": "Dance of Worship", "to": "Tango" } }
+        {
+            "id": "Advanced Spin",
+            "icon": "blade/advanced-spin.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Advanced Steps",
+            "icon": "blade/advanced-steps.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Ballet",
+            "icon": "blade/ballet.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Modern Dance",
+            "icon": "blade/modern-dance.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Move SPD +1%."
+        },
+        {
+            "id": "Samba Steps",
+            "icon": "blade/samba.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Magic Samba, M-DMG reflect bonus +20% and duration +5 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Modern Dance",
+                "to": "Samba Steps"
+            }
+        },
+        {
+            "id": "Radiant Dance",
+            "icon": "blade/radiant-dance.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Flashy Charm's duration +1 sec."
+        },
+        {
+            "id": "Sword Dance",
+            "icon": "blade/sword-dance.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Yoga",
+            "icon": "blade/yoga.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, AGI +1%."
+        },
+        {
+            "id": "Drum Dance",
+            "icon": "blade/drum-dance.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Song of Patience's duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Yoga",
+                "to": "Drum Dance"
+            }
+        },
+        {
+            "id": "Leap Art",
+            "icon": "blade/leap-art.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Ballet Leap, EVA bonus +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "Drum Dance",
+                "to": "Leap Art"
+            }
+        },
+        {
+            "id": "Rising Star",
+            "icon": "blade/rising-star.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Hypnotic Dance cooldown time -4%."
+        },
+        {
+            "id": "Inspirational Dance",
+            "icon": "blade/inspirational-dance.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Dance of War, CRIT Rate and ATK SPD bonuses +20%, and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Rising Star",
+                "to": "Inspirational Dance"
+            }
+        },
+        {
+            "id": "Ritual Dance",
+            "icon": "blade/ritual-dance.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Stage Training",
+            "icon": "blade/stage-training.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Superstar +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Ritual Dance",
+                "to": "Stage Training"
+            }
+        },
+        {
+            "id": "Sword Art",
+            "icon": "blade/art-of-the-sword.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Sword, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Swing Dance",
+            "icon": "blade/swing-dance.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Dancing Blade +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Sword Art",
+                "to": "Swing Dance"
+            }
+        },
+        {
+            "id": "Dance of Worship",
+            "icon": "blade/dance-of-worship.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Firebird Dance +2%."
+        },
+        {
+            "id": "Tango",
+            "icon": "blade/tango.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Slow Dance, HP recovery and Move SPD bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Dance of Worship",
+                "to": "Tango"
+            }
+        }
     ],
     "samurai": [
-        { "id": "Katana Master", "icon": "samurai/katana-master.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Iaido", "icon": "samurai/iaido.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Tiger Cross", "icon": "samurai/tiger-cross.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Iaido", "to": "Tiger Cross" } },
-        { "id": "Thunder Strike", "icon": "samurai/thunder-strike.webp", "row": 1, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Tiger Cross", "to": "Thunder Strike" } },
-        { "id": "Spear Formation", "icon": "samurai/spear-formation.webp", "row": 1, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Asura Way", "icon": "samurai/asura-way.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Spear Formation", "to": "Asura Way" } },
-        { "id": "Swinging Hit", "icon": "samurai/swinging-hit.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Samurai's Order", "icon": "samurai/samurais-order.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Melee Combat", "icon": "samurai/melee-combat.webp", "row": 2, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Samurai's Order", "to": "Melee Combat" } },
-        { "id": "Physique of Samurai", "icon": "samurai/physique-of-samurai.webp", "row": 2, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Flame", "icon": "samurai/flame.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Physique of Samurai", "to": "Flame" } },
-        { "id": "Samurai Spirit", "icon": "samurai/samurai-spirit.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Flame", "to": "Samurai Spirit" } },
-        { "id": "Way of Samurai", "icon": "samurai/way-of-samurai.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Calm State of Mind", "icon": "samurai/calm-state-of-mind.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "One Katana", "icon": "samurai/one-katana.webp", "row": 3, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Calm State of Mind", "to": "One Katana" } },
-        { "id": "Thousand Sakura", "icon": "samurai/thousand-sakura.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "One Katana", "to": "Thousand Sakura" } },
-        { "id": "Protrusion: Second", "icon": "samurai/protrusion-second.webp", "row": 3, "col": 6, "maxLevel": 1, "description": "Soon" },
-        { "id": "Stumbling Feet", "icon": "samurai/stumbling-feet.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Katana Specialization",
+            "icon": "samurai/katana-master.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Katana, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Iaido",
+            "icon": "samurai/iaido.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Tiger Cross",
+            "icon": "samurai/tiger-cross.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Crosswise Cut +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Iaido",
+                "to": "Tiger Cross"
+            }
+        },
+        {
+            "id": "Lightning Strike",
+            "icon": "samurai/thunder-strike.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Marduk's Tongue, P-ATK & ATK SPD bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Tiger Cross",
+                "to": "Lightning Strike"
+            }
+        },
+        {
+            "id": "Spear Formation",
+            "icon": "samurai/spear-formation.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Purgatory +2%."
+        },
+        {
+            "id": "Asura Way",
+            "icon": "samurai/asura-way.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Asura Slash, the original Double Hit damage will be incresed to Triple Hit damage.",
+            "dependency": {
+                "level": 5,
+                "from": "Spear Formation",
+                "to": "Asura Way"
+            }
+        },
+        {
+            "id": "Swing Training",
+            "icon": "samurai/swinging-hit.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, AGI +2%."
+        },
+        {
+            "id": "Samurai Law",
+            "icon": "samurai/samurais-order.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Melee Combat",
+            "icon": "samurai/melee-combat.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Parry +1%.",
+            "dependency": {
+                "level": 10,
+                "from": "Samurai Law",
+                "to": "Melee Combat"
+            }
+        },
+        {
+            "id": "Samurai Physique",
+            "icon": "samurai/physique-of-samurai.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Flame",
+            "icon": "samurai/flame.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Solar Wind +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Samurai Physique",
+                "to": "Flame"
+            }
+        },
+        {
+            "id": "Samurai Spirit",
+            "icon": "samurai/samurai-spirit.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Shrine Belief, increases the damage reduction bonus +20% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Flame",
+                "to": "Samurai Spirit"
+            }
+        },
+        {
+            "id": "Way of Samurai",
+            "icon": "samurai/way-of-samurai.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, LCK +1%."
+        },
+        {
+            "id": "Calm State of Mind",
+            "icon": "samurai/calm-state-of-mind.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "One Katana",
+            "icon": "samurai/one-katana.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, CRIT DMG +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Calm State of Mind",
+                "to": "One Katana"
+            }
+        },
+        {
+            "id": "Thousand Sakura",
+            "icon": "samurai/thousand-sakura.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Dance of Cranes +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "One Katana",
+                "to": "Thousand Sakura"
+            }
+        },
+        {
+            "id": "Protrusion: Second",
+            "icon": "samurai/protrusion-second.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Protrusion, Physical Resistance reduction +20%."
+        },
+        {
+            "id": "Stumbling Feet",
+            "icon": "samurai/stumbling-feet.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "Fallew Swallow additionally reduces enemy Move SPD -20%."
+        }
     ],
     "hunter": [
         {
