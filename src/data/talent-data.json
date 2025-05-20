@@ -351,24 +351,185 @@
         }
     ],
     "engineer": [
-        { "id": "Gun Training", "icon": "engineer/gun-training.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Forging Knowledge", "icon": "engineer/forging-knowledge.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Alloy Knowledge", "icon": "engineer/alloy-knowledge.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Improved Armor", "icon": "engineer/improved-armor.webp", "row": 1, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Alloy Knowledge", "to": "Improved Armor" } },
-        { "id": "Improved Output System", "icon": "engineer/improved-output-system.webp", "row": 1, "col": 6, "maxLevel": 6, "description": "Soon" },
-        { "id": "Condensed Oil", "icon": "engineer/condensed-oil.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Improved Output System", "to": "Condensed Oil" } },
-        { "id": "Smelter", "icon": "engineer/smelter.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Improved Firing System", "icon": "engineer/improved-firing-system.webp", "row": 2, "col": 2, "maxLevel": 6, "description": "Soon" },
-        { "id": "Modified Artillery", "icon": "engineer/modified-artillery.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Improved Firing System", "to": "Modified Artillery" } },
-        { "id": "Signal Research", "icon": "engineer/signal-research.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Modified Artillery", "to": "Signal Research" } },
-        { "id": "Chemical Engineering", "icon": "engineer/chemical-engineering.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon" },
-        { "id": "Energetics", "icon": "engineer/energetics.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Material Research", "icon": "engineer/material-research.webp", "row": 2, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Energetics", "to": "Material Research" } },
-        { "id": "Wave Mechanics", "icon": "engineer/wave-mechanics.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Electromagnetism", "icon": "engineer/electromagnetism.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Improved Radar", "icon": "engineer/improved-radar.webp", "row": 3, "col": 4, "maxLevel": 6, "description": "Soon" },
-        { "id": "Gunpowder Research", "icon": "engineer/gunpowder-research.webp", "row": 3, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Improved Radar", "to": "Gunpowder Research" } },
-        { "id": "Improved Motor", "icon": "engineer/improved-motor.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Gun Training",
+            "icon": "engineer/gun-training.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Artillery Gun, weapon's M-ATK +3%."
+        },
+        {
+            "id": "Forging Knowledge",
+            "icon": "engineer/forging-knowledge.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Bearing Efficiency",
+            "icon": "engineer/improved-firing-system.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, Move SPD +1%."
+        },
+        {
+            "id": "Chemical Engineering",
+            "icon": "engineer/chemical-engineering.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Slime Explosive +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Bearing Efficiency",
+                "to": "Chemical Engineering"
+            }
+        },
+        {
+            "id": "Improved Motor",
+            "icon": "engineer/improved-motor.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Missile Destruction +3%."
+        },
+        {
+            "id": "Improved Output System",
+            "icon": "engineer/improved-output-system.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Arsenal Improvements, duration +5 sec and includes Missile Destruction to the increase damage buff.",
+            "dependency": {
+                "level": 5,
+                "from": "Improved Motor",
+                "to": "Improved Output System"
+            }
+        },
+        {
+            "id": "Smelter",
+            "icon": "engineer/smelter.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Wave Dynamics",
+            "icon": "engineer/wave-mechanics.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
+        },
+        {
+            "id": "Modified Artillery",
+            "icon": "engineer/modified-artillery.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Heavy Artillery +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Wave Dynamics",
+                "to": "Modified Artillery"
+            }
+        },
+        {
+            "id": "Signal Research",
+            "icon": "engineer/signal-research.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Brain Drain +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Modified Artillery",
+                "to": "Signal Research"
+            }
+        },
+        {
+            "id": "Material Research",
+            "icon": "engineer/material-research.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Machinery Adjustments healing +3%."
+        },
+        {
+            "id": "Error Reduction",
+            "icon": "engineer/error-reduction.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Debug, randomly removes 2 debuffs from the target.",
+            "dependency": {
+                "level": 5,
+                "from": "Material Research",
+                "to": "Error Reduction"
+            }
+        },
+        {
+            "id": "Electromagnetism",
+            "icon": "engineer/electromagnetism.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG & M-CRIT DMG +2%."
+        },
+        {
+            "id": "Alloy Knowledge",
+            "icon": "engineer/alloy-knowledge.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Armor Polishing",
+            "icon": "engineer/armor-polishing.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Cyber Up duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Alloy Knowledge",
+                "to": "Armor Polishing"
+            }
+        },
+        {
+            "id": "Radar Improvement",
+            "icon": "engineer/improved-radar.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Gunpowder Research",
+            "icon": "engineer/gunpowder-research.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Black Explosive +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Radar Improvement",
+                "to": "Gunpowder Research"
+            }
+        },
+        {
+            "id": "Oil Compression",
+            "icon": "engineer/condensed-oil.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Oil Bomb, Skill DMG & DoT +10%."
+        }
     ],
     "ranger": [
         { "id": "Survival", "icon": "ranger/survival.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
