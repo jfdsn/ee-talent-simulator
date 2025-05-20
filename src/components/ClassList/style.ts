@@ -68,20 +68,21 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
     span {
         text-transform: capitalize;
         margin-left: 10px;
-        color: ${({ $active, $className }) => ($active === $className ? "#fff000" : "#fff")};
+        color: ${({ $active, $className }) => ($active === $className ? "#98fff9" : "#fff")};
 
     }
 
     img {
         width: 36px;
         height: 36px;
+        border-bottom: ${({ $active, $className }) => ($active === $className ? "2px solid #98fff9;" : "none;")};
     }
 
     @media (max-width: 768px) {
         min-width: fit-content;
         gap: 2px;
 
-        transform: ${({ $active, $className }) => ($active === $className ? "scale(1.05)" : "scale(1)")};
+        transform: ${({ $active, $className }) => ($active === $className ? "scale(1.03)" : "scale(1)")};
 
         span {
             display: none;
