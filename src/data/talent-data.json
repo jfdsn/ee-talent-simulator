@@ -543,24 +543,180 @@
         }
     ],
     "dragon knight": [
-        { "id": "Pike Master", "icon": "dk/pike-master.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Drake's Rage", "icon": "dk/drakes-rage.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Plunging Drake", "icon": "dk/plunging-drake.webp", "row": 1, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Drake's Rage", "to": "Plunging Drake" } },
-        { "id": "Fierce Flame", "icon": "dk/fierce-flame.webp", "row": 1, "col": 6, "maxLevel": 3, "description": "Soon" },
-        { "id": "Tail Fin Enhancement", "icon": "dk/tail-fin-enhancement.webp", "row": 1, "col": 7, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Fierce Flame", "to": "Tail Fin Enhancement" } },
-        { "id": "Drake Howl", "icon": "dk/drake-howl.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Magic Drake's Rage", "icon": "dk/magic-drakes-rage.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Drake Endurance Scale", "icon": "dk/drake-endurance-scale.webp", "row": 2, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Magic Drake's Rage", "to": "Drake Endurance Scale" } },
-        { "id": "Darkness Enhancement", "icon": "dk/darkness-enhancement.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "Soon" },
-        { "id": "Abyss", "icon": "dk/abyss.webp", "row": 2, "col": 6, "maxLevel": 3, "description": "Soon" },
-        { "id": "Strength Enhancement", "icon": "dk/strength-enhancement.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Abyss", "to": "Strength Enhancement" } },
-        { "id": "Dragon Wing Enhancement", "icon": "dk/dragon-wing-enhancement.webp", "row": 2, "col": 8, "maxLevel": 5, "description": "Soon" },
-        { "id": "Deafening Power", "icon": "dk/deafening-power.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Drake Energy Safeguard", "icon": "dk/drake-energy-safeguard.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Awaken", "icon": "dk/awaken.webp", "row": 3, "col": 4, "maxLevel": 10, "description": "Soon" },
-        { "id": "Scale Enhancement", "icon": "dk/scale-enhancement.webp", "row": 3, "col": 5, "maxLevel": 5, "description": "Soon" },
-        { "id": "Stone Slab", "icon": "dk/stone-slab.webp", "row": 3, "col": 6, "maxLevel": 3, "description": "Soon" },
-        { "id": "Engulf Enhancement", "icon": "dk/engulf-enhancement.webp", "row": 3, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Stone Slab", "to": "Engulf Enhancement" } }
+        {
+            "id": "Pike Master",
+            "icon": "dk/pike-master.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Pike, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Dragon Rage",
+            "icon": "dk/drakes-rage.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +1%."
+        },
+        {
+            "id": "Plunging Drake",
+            "icon": "dk/plunging-drake.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Parry +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Dragon Rage",
+                "to": "Plunging Drake"
+            }
+        },
+        {
+            "id": "Fierce Flame",
+            "icon": "dk/fierce-flame.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 3,
+            "description": "For each level up, Flame Drake Mode cooldown time -10%."
+        },
+        {
+            "id": "Tail Fin Enhancement",
+            "icon": "dk/tail-fin-enhancement.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Drake Tail Strike +3%.",
+            "dependency": {
+                "level": 3,
+                "from": "Fierce Flame",
+                "to": "Tail Fin Enhancement"
+            }
+        },
+        {
+            "id": "Dragon Roar",
+            "icon": "dk/drake-howl.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Dragon Fury",
+            "icon": "dk/magic-drakes-rage.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
+        },
+        {
+            "id": "Drake Endurance Scale",
+            "icon": "dk/drake-endurance-scale.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, all Physical Resistances +1%.",
+            "dependency": {
+                "level": 10,
+                "from": "Dragon Fury",
+                "to": "Drake Endurance Scale"
+            }
+        },
+        {
+            "id": "Darkness Enhancement",
+            "icon": "dk/darkness-enhancement.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Hellfire Dragon Devour +2%."
+        },
+        {
+            "id": "Abyss",
+            "icon": "dk/abyss.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 3,
+            "description": "For each level up, Dark Drake Mode cooldown time -10%."
+        },
+        {
+            "id": "Strength Enhancement",
+            "icon": "dk/strength-enhancement.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Drake's Power +3%.",
+            "dependency": {
+                "level": 3,
+                "from": "Abyss",
+                "to": "Strength Enhancement"
+            }
+        },
+        {
+            "id": "Dragon Wing Enhancement",
+            "icon": "dk/dragon-wing-enhancement.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Drake Wing Slash +2%."
+        },
+        {
+            "id": "Deafening Power",
+            "icon": "dk/deafening-power.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG & M-CRIT DMG +2%."
+        },
+        {
+            "id": "Dragon Energy Body",
+            "icon": "dk/drake-energy-safeguard.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, all Elemental Resistances +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "Deafening Power",
+                "to": "Dragon Energy Body"
+            }
+        },
+        {
+            "id": "Awakening",
+            "icon": "dk/awaken.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, STR & INT +1%."
+        },
+        {
+            "id": "Scale Enhancement",
+            "icon": "dk/scale-enhancement.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Reverse Scale +2%."
+        },
+        {
+            "id": "Stone Slab",
+            "icon": "dk/stone-slab.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 3,
+            "description": "For each level up, Hidden Drake Mode cooldown time -10%."
+        },
+        {
+            "id": "Engulf Enhancement",
+            "icon": "dk/engulf-enhancement.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Drake Fang Ambush +2%.",
+            "dependency": {
+                "level": 3,
+                "from": "Stone Slab",
+                "to": "Engulf Enhancement"
+            }
+        }
     ],
     "thief": [
         {
