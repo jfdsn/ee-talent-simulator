@@ -83,24 +83,185 @@
         { "id": "Engulf Enhancement", "icon": "dk/engulf-enhancement.webp", "row": 3, "col": 8, "maxLevel": 5, "description": "Soon", "dependency": { "level": 3, "from": "Stone Slab", "to": "Engulf Enhancement" } }
     ],
     "thief": [
-        { "id": "Art of Deception", "icon": "thief/art-of-deception.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Dagger Fighter", "icon": "thief/dagger-fighter.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Deadly Intention", "icon": "thief/deadly-intention.webp", "row": 1, "col": 3, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Dagger Fighter", "to": "Deadly Intention" } },
-        { "id": "Hand of Illusions", "icon": "thief/hand-of-illusions.webp", "row": 1, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Fatal Attack", "icon": "thief/fatal-attack.webp", "row": 1, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Hand of Illusions", "to": "Fatal Attack" } },
-        { "id": "Residual Image", "icon": "thief/residual-image.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "Soon" },
-        { "id": "Art of the Theft", "icon": "thief/art-of-the-theft.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Art of Throwing", "icon": "thief/art-of-throwing.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Art of Insight", "icon": "thief/art-of-insight.webp", "row": 2, "col": 3, "maxLevel": 20, "description": "Soon" },
-        { "id": "Relentless Attack", "icon": "thief/relentless-attack.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Art of Insight", "to": "Relentless Attack" } },
-        { "id": "Opportunist", "icon": "thief/opportunist.webp", "row": 2, "col": 6, "maxLevel": 10, "description": "Soon" },
-        { "id": "Cold Blooded", "icon": "thief/cold-blooded.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Opportunist", "to": "Cold Blooded" } },
-        { "id": "Art of Assassination", "icon": "thief/art-of-assassination.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Seize Opportunity", "icon": "thief/seize-opportunity.webp", "row": 3, "col": 3, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Art of Assassination", "to": "Seize Opportunity" } },
-        { "id": "Camouflage", "icon": "thief/camouflage.webp", "row": 3, "col": 4, "maxLevel": 10, "description": "Soon" },
-        { "id": "Hidden Breath", "icon": "thief/hidden-breath.webp", "row": 3, "col": 5, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Camouflage", "to": "Hidden Breath" } },
-        { "id": "Killing Spree", "icon": "thief/killing-spree.webp", "row": 3, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Shadowless", "icon": "thief/shadowless.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Killing Spree", "to": "Shadowless" } }
+        {
+            "id": "Art of Deception",
+            "icon": "thief/art-of-deception.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Dagger Fighter",
+            "icon": "thief/dagger-fighter.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Dagger, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Deadly Intention",
+            "icon": "thief/deadly-intention.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Deadly Containment +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Dagger Fighter",
+                "to": "Deadly Intention"
+            }
+        },
+        {
+            "id": "Hands of Illusions",
+            "icon": "thief/hand-of-illusions.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, AGI +1%."
+        },
+        {
+            "id": "Fatal Attack",
+            "icon": "thief/fatal-attack.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Swift Attack +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Hands of Illusions",
+                "to": "Fatal Attack"
+            }
+        },
+        {
+            "id": "Residual Image",
+            "icon": "thief/residual-image.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Blend, EVA and ACC bonus +20%, duration +5 sec."
+        },
+        {
+            "id": "Theft Art",
+            "icon": "thief/art-of-the-theft.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Art of Throwing",
+            "icon": "thief/art-of-throwing.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Insight",
+            "icon": "thief/art-of-insight.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Relentless Sneak Attack",
+            "icon": "thief/relentless-attack.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Ambush +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Insight",
+                "to": "Relentless Sneak Attack"
+            }
+        },
+        {
+            "id": "Opportunism",
+            "icon": "thief/opportunist.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, LCK +1%."
+        },
+        {
+            "id": "Cold Blooded",
+            "icon": "thief/cold-blooded.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Heartless, ATK bonus +20% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Opportunism",
+                "to": "Cold Blooded"
+            }
+        },
+        {
+            "id": "Assassination",
+            "icon": "thief/art-of-assassination.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Seize Opportunity",
+            "icon": "thief/seize-opportunity.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 1,
+            "description": "When using Sneak, CRIT Rate bonus +20% & P-ATK +5%.",
+            "dependency": {
+                "level": 5,
+                "from": "Assassination",
+                "to": "Seize Opportunity"
+            }
+        },
+        {
+            "id": "Quick Steps",
+            "icon": "thief/camouflage.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Move SPD +2%."
+        },
+        {
+            "id": "Hidden Breath",
+            "icon": "thief/hidden-breath.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Hidden Force, doubles the Move SPD bonus. Also the received damage increase is reduced to 3x.",
+            "dependency": {
+                "level": 5,
+                "from": "Quick Steps",
+                "to": "Hidden Breath"
+            }
+        },
+        {
+            "id": "Killing Spree",
+            "icon": "thief/killing-spree.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Cruel Slashes +2%."
+        },
+        {
+            "id": "Shadowless",
+            "icon": "thief/shadowless.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Gallop,  Move SPD & AGI bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Killing Spree",
+                "to": "Shadowless"
+            }
+        }
     ],
     "martial artist": [
         { "id": "Art of Boxing", "icon": "martial/art-of-boxing.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
