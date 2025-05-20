@@ -181,24 +181,185 @@
         }
     ],
     "knight": [
-        { "id": "Combat Knowledge", "icon": "knight/combat-knowledge.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Weight Training", "icon": "knight/weight-training.webp", "row": 1, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Classical Tactics", "icon": "knight/classical-tactics.webp", "row": 1, "col": 3, "maxLevel": 10, "description": "Soon", "dependency": { "level": 10, "from": "Weight Training", "to": "Classical Tactics" } },
-        { "id": "Practical Training", "icon": "knight/practical-training.webp", "row": 1, "col": 5, "maxLevel": 5, "description": "Soon" },
-        { "id": "Classy Finish", "icon": "knight/classy-finish.webp", "row": 1, "col": 7, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Practical Training", "to": "Classy Finish" } },
-        { "id": "Fencing", "icon": "knight/fencing.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Chivalry", "icon": "knight/chivalry.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Battlefield Cyclones", "icon": "knight/battlefield-cyclones.webp", "row": 2, "col": 3, "maxLevel": 1, "description": "Soon", "dependency": { "level": 10, "from": "Chivalry", "to": "Battlefield Cyclones" } },
-        { "id": "Thrust Training", "icon": "knight/thrust-training.webp", "row": 2, "col": 4, "maxLevel": 10, "description": "Soon" },
-        { "id": "Silence", "icon": "knight/silence.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "Soon", "dependency": { "level": 5, "from": "Thrust Training", "to": "Silence" } },
-        { "id": "Armor Specialization", "icon": "knight/armor-specialization.webp", "row": 2, "col": 7, "maxLevel": 5, "description": "Soon" },
-        { "id": "Insight", "icon": "knight/insight.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Armor Specialization", "to": "Insight" } },
-        { "id": "Noble Knowledge", "icon": "knight/noble-knowledge.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "Soon" },
-        { "id": "Military Art", "icon": "knight/military-art.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "Soon" },
-        { "id": "Swift Attack Stance", "icon": "knight/swift-attack-stance.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "Soon", "dependency": { "level": 10, "from": "Military Art", "to": "Swift Attack Stance" } },
-        { "id": "Sediment", "icon": "knight/sediment.webp", "row": 3, "col": 5, "maxLevel": 10, "description": "Soon" },
-        { "id": "Loyalty", "icon": "knight/loyalty.webp", "row": 3, "col": 6, "maxLevel": 1, "description": "Soon", "dependency": { "level": 5, "from": "Sediment", "to": "Loyalty" } },
-        { "id": "Heroism", "icon": "knight/heroism.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "Soon" }
+        {
+            "id": "Combat Knowledge",
+            "icon": "knight/combat-knowledge.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with Rapier or Sword, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Weight Training",
+            "icon": "knight/weight-training.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Classical Warfare",
+            "icon": "knight/classical-tactics.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Elegant Tactics duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Weight Training",
+                "to": "Classical Warfare"
+            }
+        },
+        {
+            "id": "Practical Training",
+            "icon": "knight/practical-training.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, P-ATK +2%."
+        },
+        {
+            "id": "Knight Style",
+            "icon": "knight/classy-finish.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Knight's Breeze, Move SPD & ATK SPD bonuses +20%.",
+            "dependency": {
+                "level": 5,
+                "from": "Practical Training",
+                "to": "Knight Style"
+            }
+        },
+        {
+            "id": "Fencing",
+            "icon": "knight/fencing.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Chivalry",
+            "icon": "knight/chivalry.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Battlefield Whirlwind",
+            "icon": "knight/battlefield-cyclones.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 1,
+            "description": "When using Judgment Storm, DoT +20% and duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Chivalry",
+                "to": "Battlefield Whirlwind"
+            }
+        },
+        {
+            "id": "Stab Training",
+            "icon": "knight/thrust-training.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +1%."
+        },
+        {
+            "id": "Silence",
+            "icon": "knight/silence.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Blade Pressure Realm, duration +2 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Stab Training",
+                "to": "Silence"
+            }
+        },
+        {
+            "id": "Armor Specialization",
+            "icon": "knight/armor-specialization.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Block +1%."
+        },
+        {
+            "id": "Insight",
+            "icon": "knight/insight.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shield Toss +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Armor Specialization",
+                "to": "Insight"
+            }
+        },
+        {
+            "id": "Noble Knowledge",
+            "icon": "knight/noble-knowledge.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Military Art",
+            "icon": "knight/military-art.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Strike Stance",
+            "icon": "knight/swift-attack-stance.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Continuous Attack +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Military Art",
+                "to": "Strike Stance"
+            }
+        },
+        {
+            "id": "Sediment",
+            "icon": "knight/sediment.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Focus duration +1 sec."
+        },
+        {
+            "id": "Loyalty",
+            "icon": "knight/loyalty.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Fearless, cooldown time -10%.",
+            "dependency": {
+                "level": 5,
+                "from": "Sediment",
+                "to": "Loyalty"
+            }
+        },
+        {
+            "id": "Heroism",
+            "icon": "knight/heroism.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Asylum, ACC & CRIT Rate bonuses +20% and duration +5 sec."
+        }
     ],
     "templar": [
         { "id": "Steadfast Belief", "icon": "templar/steadfast-belief.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
