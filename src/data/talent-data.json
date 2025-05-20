@@ -1,25 +1,184 @@
 {   
     "warrior": [
-        { "id": "Precise Defense", "icon": "warrior/precise-defense.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "Endurance Training", "icon": "warrior/endurance-training.webp", "row": 1, "col": 2, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "Precise Defense", "to": "Endurance Training" } },
-        { "id": "Weapons Mastery", "icon": "warrior/weapons-mastery.webp", "row": 1, "col": 3, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "Rapid Healing", "icon": "warrior/rapid-healing.webp", "row": 1, "col": 4, "maxLevel": 10, "description": "For each level up, apenas testando +5%." },
-        { "id": "Resilient", "icon": "warrior/resilient.webp", "row": 1, "col": 6, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Rapid Healing", "to": "Resilient" } },
-        { "id": "Physically Prepared", "icon": "warrior/physically-prepared.webp", "row": 1, "col": 7, "maxLevel": 10, "description": "For each level up, apenas testando +5%." },
-        { "id": "Sarcasm Skills", "icon": "warrior/sarcasm-skills.webp", "row": 1, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Physically Prepared", "to": "Sarcasm Skills" } },
-        { "id": "Self-Defense", "icon": "warrior/self-defense.webp", "row": 2, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "CQC Training", "icon": "warrior/cqc-training.webp", "row": 2, "col": 2, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "Weapon Master", "icon": "warrior/weapon-master.webp", "row": 2, "col": 4, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 10, "from": "CQC Training", "to": "Weapon Master" } },
-        { "id": "Strength Training", "icon": "warrior/strength-training.webp", "row": 2, "col": 5, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", "dependency": { "level": 5, "from": "Weapon Master", "to": "Strength Training" } },
-        { "id": "Lower Body Training", "icon": "warrior/lower-body-training.webp", "row": 2, "col": 6, "maxLevel": 5, "description": "For each level up, apenas testando +5%." },
-        { "id": "Madman", "icon": "warrior/madman.webp", "row": 2, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%.", 
-        "dependency": { "level": 5, "from": "Lower Body Training", "to": "Madman" } },
-        { "id": "War Technology", "icon": "warrior/war-technology.webp", "row": 3, "col": 1, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "Avenger", "icon": "warrior/avenger.webp", "row": 3, "col": 2, "maxLevel": 20, "description": "For each level up, apenas testando +5%." },
-        { "id": "Hatred Release", "icon": "warrior/hatred-release.webp", "row": 3, "col": 4, "maxLevel": 5, "description": "For each level up, apenas testando +5%.", 
-        "dependency": { "level": 10, "from": "Avenger", "to": "Hatred Release" } },
-        { "id": "Suvival Training", "icon": "warrior/survival-training.webp", "row": 3, "col": 6, "maxLevel": 10, "description": "For each level up, apenas testando +5%."},
-        { "id": "Sense of Fear", "icon": "warrior/sense-of-fear.webp", "row": 3, "col": 8, "maxLevel": 1, "description": "For each level up, apenas testando +5%."}
+        {
+            "id": "Precise Defense",
+            "icon": "warrior/precise-defense.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Endurance Training",
+            "icon": "warrior/endurance-training.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Ironhide Roar,  DEF bonus is increased by 20%.",
+            "dependency": {
+                "level": 10,
+                "from": "Precise Defense",
+                "to": "Endurance Training"
+            }
+        },
+        {
+            "id": "Weapon Proficiency",
+            "icon": "warrior/weapons-mastery.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Quick Healing",
+            "icon": "warrior/rapid-healing.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, P-Healing +1%."
+        },
+        {
+            "id": "Resilient",
+            "icon": "warrior/resilient.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Titan's Wall cooldown time -3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Quick Healing",
+                "to": "Resilient"
+            }
+        },
+        {
+            "id": "Perseverance",
+            "icon": "warrior/perseverance.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Lacerate +2%."
+        },
+        {
+            "id": "Sarcasm Skills",
+            "icon": "warrior/sarcasm-skills.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Group Provoke +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Perseverance",
+                "to": "Sarcasm Skills"
+            }
+        },
+        {
+            "id": "Self-Defense",
+            "icon": "warrior/self-defense.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "CQC Training",
+            "icon": "warrior/cqc-training.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, STR +1%."
+        },
+        {
+            "id": "Weapon Master",
+            "icon": "warrior/weapon-master.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Melee Weapon, weapon's P-ATK & M-ATK +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "CQC Training",
+                "to": "Weapon Master"
+            }
+        },
+        {
+            "id": "Strength Training",
+            "icon": "warrior/strength-training.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Bloody Attack +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Weapon Master",
+                "to": "Strength Training"
+            }
+        },
+        {
+            "id": "Lower Body Training",
+            "icon": "warrior/lower-body-training.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Onrush +3%."
+        },
+        {
+            "id": "Madman",
+            "icon": "warrior/madman.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Thrill of Battle, ACC & ATK SPD bonuses +10%.",
+            "dependency": {
+                "level": 5,
+                "from": "Lower Body Training",
+                "to": "Madman"
+            }
+        },
+        {
+            "id": "War Technology",
+            "icon": "warrior/war-technology.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Avenger",
+            "icon": "warrior/avenger.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, Block +1%."
+        },
+        {
+            "id": "Hatred Release",
+            "icon": "warrior/hatred-release.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Angry Punch +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Avenger",
+                "to": "Hatred Release"
+            }
+        },
+        {
+            "id": "Survival Training",
+            "icon": "warrior/survival-training.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Sense of Survival's duration +1 sec."
+        },
+        {
+            "id": "Sense of Fear",
+            "icon": "warrior/sense-of-fear.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Intimidation, enemy's EVA penalty +20% and duration +2 sec."
+        }
     ],
     "knight": [
         { "id": "Combat Knowledge", "icon": "knight/combat-knowledge.webp", "row": 1, "col": 1, "maxLevel": 20, "description": "Soon" },
