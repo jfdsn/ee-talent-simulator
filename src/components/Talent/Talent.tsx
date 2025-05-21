@@ -1,4 +1,4 @@
-import { TooltipWrapper } from "../Tooltip/Tooltip";
+import { TooltipWrapper } from "../TalentTooltip/Tooltip";
 import { Btn, BtnContainer, Display, IconContainer, TalentContainer } from "./style";
 import { usePoints } from "../../context/PointsContext";
 
