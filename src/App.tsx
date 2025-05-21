@@ -3,6 +3,7 @@ import './App.css'
 import { TalentSimulator } from './pages/TalentSimulator/TalentSimulator'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Header } from './Layout/Header'
+import { CertificatesComboList } from './pages/CertificatesComboList/CertificatesComboList'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/talents" />} />
           <Route path='/talents' element={<TalentSimulator />}></Route>
-          <Route path='/certificates' element={<></>}></Route>
+          <Route path='/certificates' element={<CertificatesComboList />}></Route>
         </Routes>
       </AppContainer>
     </Router>
