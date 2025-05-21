@@ -1,0 +1,362 @@
+[
+    {
+        "id": "taunt",
+        "name": "Taunt",
+        "image": "/assets/warrior/taunt.webp",
+        "description": "P-ATK +10%"
+    },
+    {
+        "id": "iron-armor",
+        "name": "Iron Armor",
+        "image": "/assets/warrior/iron-armor.webp",
+        "description": "DEF +10%"
+    },
+    {
+        "id": "muscle-flexibility",
+        "name": "Muscle Flexibility",
+        "image": "/assets/warrior/muscle-flexibility.webp",
+        "description": "Max HP +10%"
+    },
+    {
+        "id": "elegance",
+        "name": "Elegance",
+        "image": "/assets/knight/elegance.webp",
+        "description": "EVA +8%"
+    },
+    {
+        "id": "defend-master",
+        "name": "Defend Master",
+        "image": "/assets/knight/defend-master.webp",
+        "description": "Received P-DMG -9%"
+    },
+    {
+        "id": "rapier-attack",
+        "name": "Rapier Attack",
+        "image": "/assets/knight/rapier-attack.webp",
+        "description": "Double Hit rate +2%"
+    },
+    {
+        "id": "heavy-shield-defense",
+        "name": "Heavy Shield Defense",
+        "image": "/assets/templar/heavy-shield-defense.webp",
+        "description": "Block +5%"
+    },
+    {
+        "id": "holy-heart",
+        "name": "Holy Heart",
+        "image": "/assets/templar/holy-heart.webp",
+        "description": "All Elemental Reisistances +5%"
+    },
+    {
+        "id": "critical-attack",
+        "name": "Critical Attack",
+        "image": "/assets/templar/critical-attack.webp",
+        "description": "When attacking, there is a 2% chance to Stun the target for 3 sec. No effect on Boss monsters."
+    },
+    {
+        "id": "dragon-scale-protection",
+        "name": "Dragon Scale Protection",
+        "image": "/assets/dk/dragon-scale-protection.webp",
+        "description": "All DMG taken -6%"
+    },
+    {
+        "id": "dragons-roar",
+        "name": "Dragon's Roar",
+        "image": "/assets/dk/dragons-roar.webp",
+        "description": "When under attack, there's a 4% chance of inflicting the Mundane status upon an enemy for 3 sec."
+    },
+    {
+        "id": "drake-soul-gatherer",
+        "name": "Drake Soul Gatherer",
+        "image": "/assets/dk/drake-soul-gatherer.webp",
+        "description": "When parry is triggered, there is a 40% chance to restore 1000~2000 HP"
+    },
+    {
+        "id": "nimbleness",
+        "name": "Nimbleness",
+        "image": "/assets/thief/nimbleness.webp",
+        "description": "EVA +8%"
+    },
+    {
+        "id": "super-speed-hand",
+        "name": "Super-Speed Hand",
+        "image": "/assets/thief/super-speed-hand.webp",
+        "description": "Double Hit rate +2%"
+    },
+    {
+        "id": "thunder-reflection",
+        "name": "Thunder Reflection",
+        "image": "/assets/thief/thunder-reflection.webp",
+        "description": "AGI +15%"
+    },
+    {
+        "id": "powerful-muscle",
+        "name": "Powerful Muscle",
+        "image": "/assets/martial/powerful-muscle.webp",
+        "description": "STR +15%"
+    },
+    {
+        "id": "stamina",
+        "name": "Stamina",
+        "image": "/assets/martial/stamina.webp",
+        "description": "Max HP +10%"
+    },
+    {
+        "id": "defense-energy",
+        "name": "Defense Energy",
+        "image": "/assets/martial/defense-energy.webp",
+        "description": "DEF +10%"
+    },
+    {
+        "id": "smile",
+        "name": "Smile",
+        "image": "/assets/blade/smile.webp",
+        "description": "ATK SPD +10%"
+    },
+    {
+        "id": "dynamic-body",
+        "name": "Dynamic Body",
+        "image": "/assets/blade/dynamic-body.webp",
+        "description": "DMG Dealt +3%"
+    },
+    {
+        "id": "dancing-master",
+        "name": "Dancing Master",
+        "image": "/assets/blade/dancing-master.webp",
+        "description": "CRIT Rate +10%"
+    },
+    {
+        "id": "calm",
+        "name": "Calm",
+        "image": "/assets/samurai/calm.webp",
+        "description": "CRIT DMG +20%"
+    },
+    {
+        "id": "loyalty-and-faith",
+        "name": "Loyalty and Faith",
+        "image": "/assets/samurai/loyalty-and-faith.webp",
+        "description": "Parry +7%"
+    },
+    {
+        "id": "fearless",
+        "name": "Fearless",
+        "image": "/assets/samurai/fearless.webp",
+        "description": "All Physical Resistances +5%"
+    },
+    {
+        "id": "find-weakness",
+        "name": "Find Weakness",
+        "image": "/assets/hunter/find-weakness.webp",
+        "description": "CRIT DMG +20%"
+    },
+    {
+        "id": "hidden-aura",
+        "name": "Hidden Aura",
+        "image": "/assets/hunter/hidden-aura.webp",
+        "description": "Parry +7%"
+    },
+    {
+        "id": "treasure-search",
+        "name": "Treasure Search",
+        "image": "/assets/hunter/treasure-search.webp",
+        "description": "LCK +15%"
+    },
+    {
+        "id": "lens-optics",
+        "name": "Lens Optics",
+        "image": "/assets/engineer/lens-optics.webp",
+        "description": "ACC +15%"
+    },
+    {
+        "id": "turbine-dynamics",
+        "name": "Turbine Dynamics",
+        "image": "/assets/engineer/turbine-dynamics.webp",
+        "description": "CRIT Rate +10%"
+    },
+    {
+        "id": "shake-sonar-study",
+        "name": "Shake Sonar Study",
+        "image": "/assets/engineer/shake-sonar-study.webp",
+        "description": "When attacking, there is a 2% chance to Stun the target for 3 sec. No effect on Boss monsters."
+    },
+    {
+        "id": "quick-aim",
+        "name": "Quick Aim",
+        "image": "/assets/ranger/quick-aim.webp",
+        "description": "ATK SPD +10%"
+    },
+    {
+        "id": "quick-passing",
+        "name": "Quick Passing",
+        "image": "/assets/ranger/quick-passing.webp",
+        "description": "Move SPD +10%"
+    },
+    {
+        "id": "dual-arrow-shot",
+        "name": "Dual Arrow Shot",
+        "image": "/assets/ranger/dual-arrow-shot.webp",
+        "description": "Double Hit rate +2%"
+    },
+    {
+        "id": "indomitable-strike",
+        "name": "Indomitable Strike",
+        "image": "/assets/inquisitor/indomitable-strike.webp",
+        "description": "When attacking, there is a 5% change to recover 5% of Max HP"
+    },
+    {
+        "id": "deadly-onslaught",
+        "name": "Deadly Onslaught",
+        "image": "/assets/inquisitor/deadly-onslaught.webp",
+        "description": "When attacking, there is a 5% chance to increase P-ATK & M-ATK +10% for 6 sec"
+    },
+    {
+        "id": "staggering-blow",
+        "name": "Staggering Blow",
+        "image": "/assets/inquisitor/staggering-blow.webp",
+        "description": "When attacking, each physical critical strike has a 25% chance to increase ATK SPD +5% for 6 sec. Stacks up to 3 times"
+    },
+    {
+        "id": "devoted-belief",
+        "name": "Devoted Belief",
+        "image": "/assets/cleric/devoted-belief.webp",
+        "description": "WIS +15%"
+    },
+    {
+        "id": "holy-inspiration",
+        "name": "Holy Inspiration",
+        "image": "/assets/cleric/holy-inspiration.webp",
+        "description": "Double Hit rate +2%"
+    },
+    {
+        "id": "holy-kindness",
+        "name": "Holy Kindness",
+        "image": "/assets/cleric/holy-kindness.webp",
+        "description": "Max MP +10%"
+    },
+    {
+        "id": "rock-soul",
+        "name": "Rock Soul",
+        "image": "/assets/bard/rock-soul.webp",
+        "description": "M-CRIT Rate +10%"
+    },
+    {
+        "id": "tuner",
+        "name": "Tuner",
+        "image": "/assets/bard/tuner.webp",
+        "description": "G-Heal +5%"
+    },
+    {
+        "id": "pop-star",
+        "name": "Pop Star",
+        "image": "/assets/bard/pop-star.webp",
+        "description": "EVA +8%"
+    },
+    {
+        "id": "ancient-spirit-spell",
+        "name": "Ancient Spirit Spell",
+        "image": "/assets/shaman/ancient-spirit-spell.webp",
+        "description": "All Elemental Reisistances +5%"
+    },
+    {
+        "id": "spirit-totem",
+        "name": "Spirit Totem",
+        "image": "/assets/shaman/spirit-totem.webp",
+        "description": "M-CRIT DMG +20%"
+    },
+    {
+        "id": "focused-thought",
+        "name": "Focused Thought",
+        "image": "/assets/shaman/focused-thought.webp",
+        "description": "Cast SPD +10%"
+    },
+    {
+        "id": "silence-prayer",
+        "name": "Silence Prayer",
+        "image": "/assets/sage/silence-prayer.webp",
+        "description": "MP consumption -15%"
+    },
+    {
+        "id": "sage-king-blessing",
+        "name": "Sage King Blessing",
+        "image": "/assets/sage/sage-king-blessing.webp",
+        "description": "All Physical Resistances +5%"
+    },
+    {
+        "id": "holy-spirit-dependent",
+        "name": "Holy Spirit Dependent",
+        "image": "/assets/sage/holy-spirit-dependent.webp",
+        "description": "Received M-DMG -9%"
+    },
+    {
+        "id": "quiet-wrath",
+        "name": "Quiet Wrath",
+        "image": "/assets/magician/quiet-wrath.webp",
+        "description": "Parry +7%"
+    },
+    {
+        "id": "elemental-fusion",
+        "name": "Elemental Fusion",
+        "image": "/assets/magician/elemental-fusion.webp",
+        "description": "M-CRIT Rate +10%"
+    },
+    {
+        "id": "sorcery-knowledge",
+        "name": "Sorcery Knoweledge",
+        "image": "/assets/magician/sorcery-knowledge.webp",
+        "description": "INT +15%"
+    },
+    {
+        "id": "avatar-master",
+        "name": "Avatar Master",
+        "image": "/assets/illusionist/avatar-master.webp",
+        "description": "EVA +8%"
+    },
+    {
+        "id": "time-trick",
+        "name": "Time Trick",
+        "image": "/assets/illusionist/time-trick.webp",
+        "description": "Cast SPD +10%"
+    },
+    {
+        "id": "illusion-control",
+        "name": "Illusion Control",
+        "image": "/assets/illusionist/illusion-control.webp",
+        "description": "MP consumption -15%"
+    },
+    {
+        "id": "soul-ritual",
+        "name": "Soul Ritual",
+        "image": "/assets/warlock/soul-ritual.webp",
+        "description": "M-CRIT DMG +20%"
+    },
+    {
+        "id": "demon-eyes",
+        "name": "Demon Eyes",
+        "image": "/assets/warlock/demon-eyes.webp",
+        "description": "ACC +15%"
+    },
+    {
+        "id": "multiple-curses",
+        "name": "Multiple Curses",
+        "image": "/assets/warlock/multiple-curses.webp",
+        "description": "Double Hit rate +2%"
+    },
+    {
+        "id": "magic-lesson",
+        "name": "Magic Lesson",
+        "image": "/assets/luminary/magic-lesson.webp",
+        "description": "When attacking, there is a 10% chance to recover 5% of Max MP."
+    },
+    {
+        "id": "chaotic-will",
+        "name": "Chaotic Will",
+        "image": "/assets/luminary/chaotic-will.webp",
+        "description": "M-ATK +10%"
+    },
+    {
+        "id": "demonic-slash",
+        "name": "Demonic Slash",
+        "image": "/assets/luminary/demonic-slash.webp",
+        "description": "When attacking, each magical critical strike has a 50% chance to increase Cast SPD +5% for 6 sec. Stacks up to 3 times"
+    }
+]
