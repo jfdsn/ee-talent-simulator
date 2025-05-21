@@ -1,0 +1,42 @@
+{
+    "yellow": {
+        "warrior": {
+            "classId": "warrior",
+            "className": "Warrior",
+            "image": "/assets/warrior/warrior-img.webp",
+            "combos": [
+                {
+                    "certificate1Id": "taunt",
+                    "certificate2Id": "elegance",
+                    "combo": {
+                        "id": "teste",
+                        "name": "Teste",
+                        "description": "Alguma coisa acontece teste"
+                    }
+                },
+                {
+                    "certificate1Id": "elegance",
+                    "certificate2Id": "taunt",
+                    "combo": {
+                        "id": "teste",
+                        "name": "Teste",
+                        "description": "Alguma coisa acontece teste"
+                    }
+                }
+            ]
+        }
+         
+    },
+    "orange": {
+
+    },
+    "green": {
+
+    },
+    "blue": {
+
+    },
+    "purple": {
+
+    }
+}
