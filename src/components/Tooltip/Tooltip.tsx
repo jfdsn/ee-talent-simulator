@@ -25,11 +25,13 @@ export const TooltipWrapper: React.FC<Props> = ({ children, data, getLevel }) =>
 
     const talentPointsAlert = getLevel();
 
+    const talentName = data.id;
+
     return (
         <TooltipContainer>
             {children}
             <TooltipText>
-                <Title>{data.id}</Title>
+                <Title>{talentName}</Title>
                 <MaxLevel>Max Level {data.maxLevel}</MaxLevel>
                 <Description>{data.description}</Description>
                 {(data.dependency || minKP) && (
