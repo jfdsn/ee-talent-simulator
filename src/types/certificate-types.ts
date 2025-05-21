@@ -5,7 +5,7 @@ export type Certificate = {
     description: string;
 }
 
-export type CertificateCombo = {
+export type CertificateComboData = {
     certificate1Id: string; //ID do certificado na lista de certificados
     certificate2Id: string; //ID do certificado na lista de certificados
     combo: {
@@ -19,7 +19,7 @@ export type ClassCombos = {
     classId: string;
     className: string;
     image: string;
-    combos: CertificateCombo[];
+    combos: CertificateComboData[];
 }
 
 export  type ClassColor = 'yellow' | 'orange' | 'green' | 'blue' | 'purple'
