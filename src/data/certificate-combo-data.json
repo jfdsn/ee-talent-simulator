@@ -3,40 +3,510 @@
         "warrior": {
             "classId": "warrior",
             "className": "Warrior",
-            "image": "/assets/warrior/warrior-img.webp",
+            "image": "/assets/warrior/warrior-icon.webp",
             "combos": [
                 {
                     "certificate1Id": "taunt",
-                    "certificate2Id": "elegance",
+                    "certificate2Id": "rapier-attack",
                     "combo": {
-                        "id": "teste",
-                        "name": "Teste",
-                        "description": "Alguma coisa acontece teste"
+                        "id": "warriors-fury",
+                        "name": "Warrior's Fury",
+                        "description": "Bloody Attack's DMG +12%"
                     }
                 },
                 {
+                    "certificate1Id": "iron-armor",
+                    "certificate2Id": "holy-heart",
+                    "combo": {
+                        "id": "warriors-sturdiness",
+                        "name": "Warrior's Sturdiness",
+                        "description": "Titan's Wall's duration +2 sec"
+                    }
+                }
+            ]
+        },
+        "knight": {
+            "classId": "knight",
+            "className": "Knight",
+            "image": "/assets/knight/knight-icon.webp",
+            "combos": [
+                {
                     "certificate1Id": "elegance",
+                    "certificate2Id": "heavy-shield-defense",
+                    "combo": {
+                        "id": "knights-pride",
+                        "name": "Knight's Pride",
+                        "description": "Elegant Tactics duration +5 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "rapier-attack",
+                    "certificate2Id": "muscle-flexibility",
+                    "combo": {
+                        "id": "knights-honor",
+                        "name": "Knight's Honor",
+                        "description": "Judgment Storm's DMG +8%"
+                    }
+                }
+            ]
+        },
+        "templar": {
+            "classId": "templar",
+            "className": "Templar",
+            "image": "/assets/templar/templar-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "critical-attack",
+                    "certificate2Id": "rapier-attack",
+                    "combo": {
+                        "id": "templars-judgment",
+                        "name": "Templa's Judgment",
+                        "description": "Judgment Impact's DMG +8%"
+                    }
+                },
+                {
+                    "certificate1Id": "holy-heart",
+                    "certificate2Id": "heavy-shield-defense",
+                    "combo": {
+                        "id": "templars-belief",
+                        "name": "Templar's Belief",
+                        "description": "Light Shield's cooldown -15%"
+                    }
+                }
+            ]
+        },
+        "dragon knight": {
+            "classId": "dragon-knight",
+            "className": "Dragon Knight",
+            "image": "assets/dk/dk-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "drake-soul-gatherer",
+                    "certificate2Id": "dragon-scale-protection",
+                    "combo": {
+                        "id": "dragon-knights-toughness",
+                        "name": "Dragon Knight's Toughness",
+                        "description": "Drake Fang Ambush DMG +8%"
+                    }
+                },
+                {
+                    "certificate1Id": "dragons-roar",
                     "certificate2Id": "taunt",
                     "combo": {
-                        "id": "teste",
-                        "name": "Teste",
-                        "description": "Alguma coisa acontece teste"
+                        "id": "dragon-knights-terror",
+                        "name": "Dragon Knight's Terror",
+                        "description": "Reverse Scale DMG +8%"
+                    }
+                }
+            ]
+        } 
+    },
+    "orange": {
+        "thief": {
+            "classId": "thief",
+            "className": "Thief",
+            "image": "/assets/thief/thief-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "nimbleness",
+                    "certificate2Id": "stamina",
+                    "combo": {
+                        "id": "thiefs-spirit",
+                        "name": "Thief's Spirit",
+                        "description": "Gallop's duration +5 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "super-speed-hand",
+                    "certificate2Id": "dancing-master",
+                    "combo": {
+                        "id": "thiefs-nimbleness",
+                        "name": "Thief's Nimbleness",
+                        "description": "Deadly Containment's DMG +20%"
+                    }
+                }
+            ]
+        },
+        "martial artist": {
+            "classId": "martial-artist",
+            "className": "Martial Artist",
+            "image": "/assets/martial/martial-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "defense-energy",
+                    "certificate2Id": "thunder-reflection",
+                    "combo": {
+                        "id": "martial-artists-toughness",
+                        "name": "Martial Artist's Toughness",
+                        "description": "Defense Strength's duration +8 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "powerful-muscle",
+                    "certificate2Id": "smile",
+                    "combo": {
+                        "id": "martial-artists-dignity",
+                        "name": "Martial Artist's Dignity",
+                        "description": "Charge's duration +8 sec"
+                    }
+                }
+            ]
+        },
+        "blade dancer": {
+            "classId": "blade-dancer",
+            "className": "Blade Dancer",
+            "image": "/assets/blade/blade-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "dancing-master",
+                    "certificate2Id": "nimbleness",
+                    "combo": {
+                        "id": "blade-dancers-beauty",
+                        "name": "Blade Dancer's Beauty",
+                        "description": "Dance of War's duration +8 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "smile",
+                    "certificate2Id": "calm",
+                    "combo": {
+                        "id": "blade-dancers-ego",
+                        "name": "Blade Dancer's Ego",
+                        "description": "Dancing Blade's DMG +8%"
+                    }
+                }
+            ]
+        },
+        "samurai": {
+            "classId": "samurai",
+            "className": "Samurai",
+            "image": "/assets/samurai/samurai-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "loyalty-and-faith",
+                    "certificate2Id": "defense-energy",
+                    "combo": {
+                        "id": "samurais-loyalty",
+                        "name": "Samurai's Loyalty",
+                        "description": "Shrine Belief's duration +5 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "calm",
+                    "certificate2Id": "powerful-muscle",
+                    "combo": {
+                        "id": "samurais-meditative-mind",
+                        "name": "Samurai's Meditative Mind",
+                        "description": "Marduk's Tongue's duration +5 sec"
                     }
                 }
             ]
         }
-         
-    },
-    "orange": {
-
     },
     "green": {
-
+        "hunter": {
+            "classId": "hunter",
+            "className": "Hunter",
+            "image": "/assets/hunter/hunter-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "treasure-search",
+                    "certificate2Id": "quick-passing",
+                    "combo": {
+                        "id": "hunters-concentration",
+                        "name": "Hunter's Concentration",
+                        "description": "Burning Arrow's duration +10 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "find-weakness",
+                    "certificate2Id": "turbine-dynamics",
+                    "combo": {
+                        "id": "hunters-attention",
+                        "name": "Hunter's Attention",
+                        "description": "Painful Stab's duration +2 sec"
+                    }
+                }
+            ]
+        },
+        "engineer": {
+            "classId": "engineer",
+            "className": "Engineer",
+            "image": "/assets/engineer/engineer-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "shake-sonar-study",
+                    "certificate2Id": "treasure-search",
+                    "combo": {
+                        "id": "engineers-nanotechnology",
+                        "name": "Engineer's Nanotechnology",
+                        "description": "Slime Explosive's DMG +8%"
+                    }
+                },
+                {
+                    "certificate1Id": "lens-optics",
+                    "certificate2Id": "quick-passing",
+                    "combo": {
+                        "id": "engineers-c4-technology",
+                        "name": "Engineer's C-4 Technology",
+                        "description": "Heavy Artillery's DMG +12% and duration +1 sec"
+                    }
+                }
+            ]
+        },
+        "ranger": {
+            "classId": "ranger",
+            "className": "Ranger",
+            "image": "/assets/ranger/ranger-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "quick-passing",
+                    "certificate2Id": "find-weakness",
+                    "combo": {
+                        "id": "rangers-calm",
+                        "name": "Ranger's Calm",
+                        "description": "Serenity's duration +8 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "dual-arrow-shot",
+                    "certificate2Id": "shake-sonar-study",
+                    "combo": {
+                        "id": "rangers-tracking",
+                        "name": "Ranger's Tracking",
+                        "description": "Sniper's Heart's duration +8 sec"
+                    }
+                }
+            ]
+        },
+        "inquisitor": {
+            "classId": "inquisitor",
+            "className": "Inquisitor",
+            "image": "/assets/inquisitor/inquisitor-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "indomitable-strike",
+                    "certificate2Id": "quick-aim",
+                    "combo": {
+                        "id": "inquisitors-sickleshot",
+                        "name": "Inquisitor's Sickleshot",
+                        "description": "Piercing Spiral DMG +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "deadly-onslaught",
+                    "certificate2Id": "staggering-blow",
+                    "combo": {
+                        "id": "inquisitors-wardance",
+                        "name": "Inquisitor's Wardance",
+                        "description": "Hunting Stance duration +5 sec"
+                    }
+                }
+            ]
+        }
     },
     "blue": {
-
+        "cleric": {
+            "classId": "cleric",
+            "className": "Cleric",
+            "image": "/assets/cleric/cleric-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "devoted-belief",
+                    "certificate2Id": "focused-thought",
+                    "combo": {
+                        "id": "clerics-faith",
+                        "name": "Cleric's Faith",
+                        "description": "Healing Radiance's G-Healing +5%"
+                    }
+                },
+                {
+                    "certificate1Id": "holy-kindness",
+                    "certificate2Id": "tuner",
+                    "combo": {
+                        "id": "clerics-devotion",
+                        "name": "Cleric's Devotion",
+                        "description": "Life Cure's duration +5 sec"
+                    }
+                }
+            ]
+        },
+        "bard": {
+            "classId": "bard",
+            "className": "Bard",
+            "image": "/assets/bard/bard-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "rock-soul",
+                    "certificate2Id": "holy-inspiration",
+                    "combo": {
+                        "id": "bards-passion",
+                        "name": "Bard's Passion",
+                        "description": "Vocal Bomb's M-CRIT Rate +6% and DMG Dealt +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "pop-star",
+                    "certificate2Id": "ancient-spirit-spell",
+                    "combo": {
+                        "id": "bards-knowledge",
+                        "name": "Bard's Knowledge",
+                        "description": "Music of Life's duration +2 sec"
+                    }
+                }
+            ]
+        },
+        "shaman": {
+            "classId": "shaman",
+            "className": "Shaman",
+            "image": "/assets/shaman/shaman-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "spirit-totem",
+                    "certificate2Id": "holy-inspiration",
+                    "combo": {
+                        "id": "shamans-prestige",
+                        "name": "Shaman's Prestige",
+                        "description": "Natural Punishment's M-CRIT Rate +6% and DMG Delty +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "focused-thought",
+                    "certificate2Id": "tuner",
+                    "combo": {
+                        "id": "shamans-pray",
+                        "name": "Shaman's Pray",
+                        "description": "Drops of Heaven's Healing +5%"
+                    }
+                }
+            ]
+        },
+        "sage": {
+            "classId": "sage",
+            "className": "Sage",
+            "image": "/assets/sage/sage-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "holy-spirit-dependent",
+                    "certificate2Id": "ancient-spirit-spell",
+                    "combo": {
+                        "id": "sages-wisdom",
+                        "name": "Sage's Wisdom",
+                        "description": "Hammer of Inspiration's DMG +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "sage-king-blessing",
+                    "certificate2Id": "devoted-belief",
+                    "combo": {
+                        "id": "sages-intelligence",
+                        "name": "Sage's Intelligence",
+                        "description": "Healing Hammer's DMG +12%"
+                    }
+                }
+            ]
+        }
     },
     "purple": {
-
+        "magician": {
+            "classId": "magician",
+            "className": "Magician",
+            "image": "/assets/magician/magician-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "quiet-wrath",
+                    "certificate2Id": "illusion-control",
+                    "combo": {
+                        "id": "magicians-thunder-spell",
+                        "name": "Magician's Thunder Spell",
+                        "description": "Lightning Bolt's DMG +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "sorcery-knowledge",
+                    "certificate2Id": "soul-ritual",
+                    "combo": {
+                        "id": "magicians-icy-storm",
+                        "name": "Magician's Icy Storm",
+                        "description": "Snow Storm's DMG +7%"
+                    }
+                }
+            ]
+        },
+        "illusionist": {
+            "classId": "illusionist",
+            "className": "Illusionist",
+            "image": "/assets/illusionist/illusionist-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "illusion-control",
+                    "certificate2Id": "avatar-master",
+                    "combo": {
+                        "id": "illusionists-trick",
+                        "name": "Illusionist's Trick",
+                        "description": "Stimulation's duration +5 sec"
+                    }
+                },
+                {
+                    "certificate1Id": "elemental-fusion",
+                    "certificate2Id": "time-trick",
+                    "combo": {
+                        "id": "illusionists-performance",
+                        "name": "Illusionist's Performance",
+                        "description": "Deadly Icicle's DMG +12%"
+                    }
+                }
+            ]
+        },
+        "warlock": {
+            "classId": "warlock",
+            "className": "Warlock",
+            "image": "/assets/warlock/warlock-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "multiple-curses",
+                    "certificate2Id": "sorcery-knowledge",
+                    "combo": {
+                        "id": "warlocks-malice",
+                        "name": "Warlock's Malice",
+                        "description": "Nightmare Attack's DMG +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "demon-eyes",
+                    "certificate2Id": "avatar-master",
+                    "combo": {
+                        "id": "warlocks-blood-curse",
+                        "name": "Warlock's Blood Curse",
+                        "description": "Tribute's duration +5 sec"
+                    }
+                }
+            ]
+        },
+        "luminary": {
+            "classId": "luminary",
+            "className": "Luminary",
+            "image": "/assets/luminary/luminary-icon.webp",
+            "combos": [
+                {
+                    "certificate1Id": "chaotic-will",
+                    "certificate2Id": "soul-ritual",
+                    "combo": {
+                        "id": "luminarys-windstorm",
+                        "name": "Luminary's Windstorm",
+                        "description": "Black Cut's DMG +12%"
+                    }
+                },
+                {
+                    "certificate1Id": "magic-lesson",
+                    "certificate2Id": "demonic-slash",
+                    "combo": {
+                        "id": "luminarys-diseased-slash",
+                        "name": "Luminary's Diseased Slash",
+                        "description": "Luminary's Holy-type skills cooldown time -15%"
+                    }
+                }
+            ]
+        }
     }
 }
