@@ -4,7 +4,7 @@ export const TalentSimulatorContainer = styled.div`
     display: flex;
     flex-direction: row;
     max-width: 900px;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     margin-left: auto;
     margin-right: auto;
     border: 6px solid transparent;

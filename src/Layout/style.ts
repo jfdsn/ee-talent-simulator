@@ -6,6 +6,8 @@ export const HeaderContainer = styled.div`
     padding: 10px 0;
     margin-bottom: 5px;
     z-index: 10;
+    background-color: #242424;
+    position: fixed;
 `;
 
 export const Logo = styled.img`
@@ -23,7 +25,6 @@ export const NavBar = styled.nav`
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: transparent;
 
     ul {
         display: flex;

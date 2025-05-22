@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const MainContentContainer = styled.div `
     padding-top: 5vw;
+
+    h1{
+        padding-top: 3rem;
+    }
 `
 
 export const CardsContainer = styled.div <{$classColor: string}>`
