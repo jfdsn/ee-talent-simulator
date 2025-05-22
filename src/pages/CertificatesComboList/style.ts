@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MainContentContainer = styled.div `
     padding-top: 5vw;
+    overflow-x: hidden;
 
     h1{
         padding-top: 3rem;
