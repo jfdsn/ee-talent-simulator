@@ -29,11 +29,10 @@ export const TooltipText = styled.span`
     transition: opacity 0.3s;
 
     @media (max-width: 460px) {
-        position: fixed;
-        top: 30%;
+        top: -80%;
         left: 50%;
         bottom: auto;
-        margin-left: 0;
+        margin-left: 1rem;
         transform: translate(-50%, -50%);
     }
 `;

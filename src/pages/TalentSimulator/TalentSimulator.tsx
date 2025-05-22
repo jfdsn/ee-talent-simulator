@@ -25,7 +25,7 @@ export const TalentSimulator = () => {
     return (
         <PointsProvider>
             <ReponsiveContainer>
-                <h1 style={{marginTop: "2rem"}}>Talent Simulator</h1>
+                <h1 style={{paddingTop: "3rem"}}>Talent Simulator</h1>
                 <TalentSimulatorContainer>
                     <ClassList onClassChange={setClassChange} />
                     <div style={{display: "flex", flexDirection: "column"}}>

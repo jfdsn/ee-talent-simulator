@@ -15,7 +15,6 @@ export const CardsContainer = styled.div <{$classColor: string}>`
     gap: 1rem;
     margin: 1rem auto;
     max-width: 1400px;
-    overflow-x: hidden;
     
     background-color: ${({ $classColor }) => colorMap[$classColor as keyof typeof colorMap]}22;
     border-left: 4px solid ${({ $classColor }) => colorMap[$classColor as keyof typeof colorMap]};
