@@ -1,5 +1,6 @@
 import { ClassCombos } from "../../types/certificate-types";
 import { CertificateCombo } from "../CertificateCombo/CertificateCombo";
+import { CardContainer, ClassBanner, ComboSection } from "./style";
 
 type ClassCertificateCardProps = {
     data: ClassCombos;
@@ -7,16 +8,21 @@ type ClassCertificateCardProps = {
 
 export const ClassCertificateCard: React.FC<ClassCertificateCardProps> = ({data: { className, image, combos }}) => {
     return (
-        <div>
-            <div>
-                <h3>{className}</h3>
-                <img src={image} alt={`${className} image`} />
-            </div>
-            <>
+        <CardContainer
+            key={className}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+            <ClassBanner>
+                <h2>{className}</h2>
+                <img src={image} alt={`${className} icon`} />
+            </ClassBanner>
+            <ComboSection>
                 {combos.map(cb => (
                     <CertificateCombo key={cb.combo.id} data={cb} />
                 ))}
-            </>
-        </div>
+            </ComboSection>
+        </CardContainer>
     )
 }
