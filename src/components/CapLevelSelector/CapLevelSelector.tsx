@@ -10,7 +10,7 @@ export const CapLevelSelector: React.FC = () => {
     }
     
     return (
-        <select onChange={handleChange}>
+        <select id="cap-level-select" onChange={handleChange}>
             <option value="65">65</option>
             <option value="70">70</option>
             <option value="75">75</option>
