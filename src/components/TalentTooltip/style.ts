@@ -22,7 +22,7 @@ export const TooltipText = styled.span`
     padding: 5px;
     position: absolute;
     z-index: 99;
-    bottom: 80%;
+    bottom: 90%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
