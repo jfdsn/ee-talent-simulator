@@ -25,6 +25,11 @@ export const IconContainer = styled.div.attrs<{ $isTalentRequirements: boolean; 
     border-radius: 4px;
     background-size: cover;
 
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+
     &:after {
         content: "";
         position: absolute;

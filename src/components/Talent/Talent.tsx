@@ -1,8 +1,9 @@
 import { TooltipWrapper } from "../TalentTooltip/Tooltip";
 import { Btn, BtnContainer, Display, IconContainer, TalentContainer } from "./style";
 import { usePoints } from "../../context/PointsContext";
+import { useEffect, useState } from "react";
 
-type Props = {
+type TalentProps = {
     id: string;
     icon: string;
     row: number;
@@ -19,7 +20,9 @@ type Props = {
     getTalentLevel: (id: string) => number;
 }
 
-export const Talent: React.FC<Props> = ( props ) => {
+export const Talent: React.FC<TalentProps> = ( props ) => {
+    const [isDesktop, setIsDesktop] = useState(false); // State to track if the device is desktop or not
+    
     const { icon, row, col, talentLevel, setTalentLevel, getTalentLevel } = props;
     const talentMaxLevel = props.maxLevel;
     const talentMinLevel = 0;
@@ -45,6 +48,7 @@ export const Talent: React.FC<Props> = ( props ) => {
             setTalentLevel(talentLevel + 1);
             setPoints(globalPoints - 2);
         } else {
+            if(globalPoints < 1) return; // Prevents from spending points if not enough
             setTalentLevel(talentLevel + 1);
             setPoints(globalPoints - 1);
         }
@@ -65,6 +69,24 @@ export const Talent: React.FC<Props> = ( props ) => {
         }
     }
 
+    useEffect(() => {
+        const isHoverCapable = window.matchMedia("(hover: hover)").matches; // Check if the device is desktop via hover capability
+        setIsDesktop(isHoverCapable);
+    }, []);
+
+    // Handle click events for desktop devices when user try to add or remove talent points clicking on the icon
+    const handleDesktopClick = (e: React.MouseEvent) => {
+        if (!isDesktop) return;
+        if(!isTalentRequirement) return; // Prevents from clicking if talent is not available
+    
+        if (e.type === "click" && e.button === 0) {
+          increment();
+        } else if (e.type === "contextmenu") {
+          e.preventDefault();
+          decrement();
+        }
+    };
+
     //Inform Tooltip how many points a talent costs based on current level
     const getLevel = () :number => {
         if (isMaxLevel) return 0;
@@ -76,7 +98,7 @@ export const Talent: React.FC<Props> = ( props ) => {
     return (
         <TalentContainer style={{ gridColumn: col, gridRow: row }}>
             <TooltipWrapper data={props} getLevel={getLevel}>
-                <IconContainer $isTalentRequirements={isTalentRequirement} $icon={icon}>
+                <IconContainer $isTalentRequirements={isTalentRequirement} $icon={icon} onClick={handleDesktopClick} onContextMenu={handleDesktopClick}>
                     <Display $isInserting={isInserting} $isMaxLevel={isMaxLevel}>{talentLevel}</Display>
                 </IconContainer>
             </TooltipWrapper>
