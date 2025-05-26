@@ -77,13 +77,13 @@ export const Talent: React.FC<TalentProps> = ( props ) => {
     // Handle click events for desktop devices when user try to add or remove talent points clicking on the icon
     const handleDesktopClick = (e: React.MouseEvent) => {
         if (!isDesktop) return;
+        e.preventDefault();
         if(!isTalentRequirement) return; // Prevents from clicking if talent is not available
-    
+        
         if (e.type === "click" && e.button === 0) {
-          increment();
+            increment();
         } else if (e.type === "contextmenu") {
-          e.preventDefault();
-          decrement();
+            decrement();
         }
     };
 
