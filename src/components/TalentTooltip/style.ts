@@ -24,7 +24,7 @@ export const TooltipText = styled.span`
     z-index: 99;
     bottom: 90%;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -80px;
     opacity: 0;
     transition: opacity 0.3s;
 

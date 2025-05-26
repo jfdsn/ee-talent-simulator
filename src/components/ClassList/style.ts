@@ -37,11 +37,12 @@ export const ClassListContainer = styled.div`
     scrollbar-width: thin;                   
     scrollbar-color: rgba(255,255,255,0.3)   rgba(0,0,0,0.1);          
 
-    @media (max-width: 768px) {
+    
+    @media (max-width: 1048px) {
         flex-direction: row;
         overflow-x: auto;
         overflow-y: hidden;
-        width: 100%;
+        width: 90%;
         height: auto;
         padding: 0.5rem;
         gap: 2px;
@@ -77,9 +78,8 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
         height: 36px;
         border-bottom: ${({ $active, $className }) => ($active === $className ? "2px solid #98fff9;" : "none;")};
     }
-
-    @media (max-width: 768px) {
-        min-width: fit-content;
+    
+    @media (max-width: 1048px) {    
         gap: 2px;
 
         transform: ${({ $active, $className }) => ($active === $className ? "scale(1.03)" : "scale(1)")};

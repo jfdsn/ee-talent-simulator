@@ -11,9 +11,12 @@ export const TalentSimulatorContainer = styled.div`
     border-image: url('/window-border.webp') 6 fill stretch;
     padding: 0.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1048px) {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
         border: none;
     }
 `
