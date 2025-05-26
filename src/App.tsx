@@ -4,6 +4,7 @@ import { TalentSimulator } from './pages/TalentSimulator/TalentSimulator'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Header } from './Layout/Header'
 import { CertificatesComboList } from './pages/CertificatesComboList/CertificatesComboList'
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Navigate to="/talents" />} />
           <Route path='/talents' element={<TalentSimulator />}></Route>
           <Route path='/certificates' element={<CertificatesComboList />}></Route>
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </AppContainer>
     </Router>
