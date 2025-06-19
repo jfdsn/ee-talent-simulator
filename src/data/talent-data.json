@@ -1449,7 +1449,7 @@
             "row": 3,
             "col": 8,
             "maxLevel": 1,
-            "description": "Fallew Swallow additionally reduces enemy Move SPD -20%."
+            "description": "Fallen Swallow additionally reduces enemy Move SPD -20%."
         }
     ],
     "hunter": [
@@ -2288,7 +2288,7 @@
             "row": 2,
             "col": 6,
             "maxLevel": 1,
-            "description": "After learning, trabsforms Purifying Wind into a placeable area skill, but the area of effect is reduced to 20 meters.",
+            "description": "After learning, transforms Purifying Wind into a placeable area skill, but the area of effect is reduced to 20 meters.",
             "dependency": {
                 "level": 5,
                 "from": "Enlightenment",
