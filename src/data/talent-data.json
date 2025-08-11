@@ -2010,16 +2010,16 @@
             "description": "For each level up, when equipped with a Sickleshot, weapon's P-ATK & M-ATK +1%."
         },
         {
-            "id": "Flame Burst",
-            "icon": "inquisitor/flame-burst.webp",
+            "id": "Bloodthirster",
+            "icon": "inquisitor/bloodthirster.webp",
             "row": 1,
             "col": 2,
             "maxLevel": 5,
-            "description": "For each level up, DMG from Inferno Impact +2%.",
+            "description": "For each level up, DMG from Chains of Agony +3%.",
             "dependency": {
                 "level": 10,
                 "from": "Sickleshot Expert",
-                "to": "Flame Burst"
+                "to": "Bloodthirster"
             }
         },
         {
@@ -2036,7 +2036,7 @@
             "row": 1,
             "col": 4,
             "maxLevel": 5,
-            "description": "For each level up, DMG from Soul Shackle +2%.",
+            "description": "For each level up, DMG from Soul Shackle +3%.",
             "dependency": {
                 "level": 5,
                 "from": "Death Foretold",
@@ -2107,12 +2107,12 @@
             }
         },
         {
-            "id": "Bloodthirster",
-            "icon": "inquisitor/bloodthirster.webp",
+            "id": "Flame Burst",
+            "icon": "inquisitor/flame-burst.webp",
             "row": 2,
             "col": 7,
-            "maxLevel": 20,
-            "description": "For each level up, Max HP +1%."
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Inferno Impact +3%."
         },
         {
             "id": "Profane Protection",
@@ -2123,7 +2123,7 @@
             "description": "For each level up, all Physical Resistances +1%.",
             "dependency": {
                 "level": 5,
-                "from": "Bloodthirster",
+                "from": "Flame Burst",
                 "to": "Profane Protection"
             }
         },
@@ -2162,7 +2162,7 @@
             "row": 3,
             "col": 4,
             "maxLevel": 5,
-            "description": "For each level up, Piercing Spiral's area +4 meters."
+            "description": "For each level up, DMG from Piercing Spiral +2%."
         },
         {
             "id": "Soul Scorch",
