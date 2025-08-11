@@ -431,7 +431,7 @@
             "row": 2,
             "col": 1,
             "maxLevel": 20,
-            "description": "For each level up, when equipped with a Mace, weapon's M-ATK +1%. When equipped with a Hammer, weapon's M-ATK +2%."
+            "description": "For each level up, when equipped with a Mace, weapon's M-ATK +1%. When equipped with a Hammer, weapon's M-ATK +3%."
         },
         {
             "id": "Pray",
@@ -560,16 +560,16 @@
             "description": "For each level up, ACC +1%."
         },
         {
-            "id": "Plunging Drake",
-            "icon": "dk/plunging-drake.webp",
+            "id": "Drake Endurance Scale",
+            "icon": "dk/drake-endurance-scale.webp",
             "row": 1,
             "col": 3,
             "maxLevel": 10,
-            "description": "For each level up, Parry +2%.",
+            "description": "For each level up, all Physical Resistances +1%.",
             "dependency": {
-                "level": 10,
+                "level": 5,
                 "from": "Dragon Rage",
-                "to": "Plunging Drake"
+                "to": "Drake Endurance Scale"
             }
         },
         {
@@ -610,16 +610,16 @@
             "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
         },
         {
-            "id": "Drake Endurance Scale",
-            "icon": "dk/drake-endurance-scale.webp",
+            "id": "Awakening",
+            "icon": "dk/awaken.webp",
             "row": 2,
             "col": 3,
             "maxLevel": 5,
-            "description": "For each level up, all Physical Resistances +1%.",
+            "description": "For each level up, DMG from Hidden Dark Flame +2%.",
             "dependency": {
-                "level": 10,
+                "level": 5,
                 "from": "Dragon Fury",
-                "to": "Drake Endurance Scale"
+                "to": "Awakening"
             }
         },
         {
@@ -681,12 +681,12 @@
             }
         },
         {
-            "id": "Awakening",
-            "icon": "dk/awaken.webp",
+            "id": "Plunging Drake",
+            "icon": "dk/plunging-drake.webp",
             "row": 3,
             "col": 4,
             "maxLevel": 10,
-            "description": "For each level up, STR & INT +1%."
+            "description": "For each level up, Parry +2%."
         },
         {
             "id": "Scale Enhancement",
