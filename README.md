@@ -3,7 +3,7 @@
 ## Descrição
     Simulador de Talentos do jogo Eden Eternal feito em React e Typescript.
 
-## Functionalidades
+## Funcionalidades
 - Gera dinamicamente as árvores de talentos de cada classe do jogo.
 - Layout semelhante ao do jogo.
 - Funciona em todos tipos de dispositivos.
