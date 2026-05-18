@@ -15,25 +15,25 @@ export const TooltipText = styled.span`
     display: flex;
     flex-direction: column;
     visibility: hidden;
-    width: 260px;
+    width: 280px;
     text-align: start;
     border: 4px solid transparent;
     border-image: url('/tooltip-border.webp') 4 fill stretch;
-    padding: 5px;
-    position: absolute;
-    z-index: 99;
-    bottom: 90%;
-    left: 50%;
-    margin-left: -80px;
+    padding: 10px;
+    
+    position: fixed;
+    z-index: 999;
+    top: 100px;
+    left: 20%;
+    
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
 
     @media (max-width: 460px) {
-        position: fixed;
-        top: 30%;
+        top: 50%;
         left: 50%;
         bottom: auto;
-        margin-left: 0;
+        right: auto;
         transform: translate(-50%, -50%);
     }
 `;
