@@ -8,7 +8,6 @@ export const CertificatesComboList = () => {
 
     return (
         <MainContentContainer>
-            <h1>Certificate Combo</h1>
             {Object.entries(comboData).map(([color, classes]) => (
                 <CardsContainer key={color} $classColor={color}>
                     {Object.entries(classes).map(([classId, classData]) => (

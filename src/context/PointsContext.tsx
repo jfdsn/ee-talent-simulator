@@ -12,7 +12,7 @@ type PointsContextType = {
 const PointsContext = createContext<PointsContextType | undefined>(undefined);
 
 export const PointsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [globalMaxPoints, setMaxPoints] = useState(65);
+    const [globalMaxPoints, setMaxPoints] = useState(85);
     const [globalPoints, setPoints] = useState(globalMaxPoints); // Initialize points with maxPoints value
     const [resetObserver, setResetCounter] = useState(0); // State to help all Talents to re-render when resetPoints is called
 
