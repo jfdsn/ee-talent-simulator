@@ -31,6 +31,7 @@ export const TooltipText = styled.span`
     transition: opacity 0.2s;
 
     @media (max-width: 460px) {
+        position: fixed;
         top: 50%;
         left: 50%;
         bottom: auto;
