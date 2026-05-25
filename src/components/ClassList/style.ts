@@ -90,3 +90,43 @@ export const ClassItem = styled.button<{ $active: string, $className: string }>`
         
     }
 `;
+
+export const ComponentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    
+    @media (max-width: 1048px) {
+        width: 100%;
+    }
+`;
+
+export const TabContainer = styled.div`
+    display: flex;
+    gap: 10px;
+    width: 220px;
+    margin: 0 auto 10px auto;
+
+    @media (max-width: 1048px) {
+        width: 90%;
+        justify-content: center;
+    }
+`;
+
+export const TabButton = styled.button<{ $isActive: boolean }>`
+    all: unset;
+    flex: 1;
+    text-align: center;
+    padding: 0.2rem;
+    cursor: pointer;
+    font-size: 14px;
+    color: ${({ $isActive }) => ($isActive ? "#ffcc00" : "#fff")};
+    border: 4px solid transparent;
+    border-image: url("/button-border.webp") 4 fill stretch; 
+    transition: all 0.2s;
+
+    &:hover {
+        color: #ffcc00;
+    }
+`;

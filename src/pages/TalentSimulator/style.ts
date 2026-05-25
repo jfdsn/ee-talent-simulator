@@ -13,6 +13,7 @@ export const TalentSimulatorContainer = styled.div`
 
     @media (max-width: 1048px) {
         flex-direction: column;
+        margin-top: 1.5rem;
         gap: 1rem;
     }
 

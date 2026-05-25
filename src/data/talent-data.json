@@ -3606,5 +3606,714 @@
             "maxLevel": 3,
             "description": "For each level up, Dark Shadow Sacrifice cooldown time -5%."
         }
+    ],
+
+    "awaken1": [],
+    "rakshasa": [
+        {
+            "id": "Boxing",
+            "icon": "martial/art-of-boxing.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Cestus, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Martial Arts",
+            "icon": "martial/martial-art.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Resonant Punch",
+            "icon": "martial/resonant-punch.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Force Pulse +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Martial Arts",
+                "to": "Resonant Punch"
+            }
+        },
+        {
+            "id": "Adjusted Pace",
+            "icon": "martial/adjusted-pace.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Ground Flow",
+            "icon": "martial/ground-flow.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Impact Rush +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Adjusted Pace",
+                "to": "Ground Flow"
+            }
+        },
+        {
+            "id": "Military Fighting Technology",
+            "icon": "martial/physical-martial-art.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Painkiller",
+            "icon": "martial/painkiller.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Pain Conversion, the damage reduction will be increased by 10%.",
+            "dependency": {
+                "level": 10,
+                "from": "Military Fighting Technology",
+                "to": "Painkiller"
+            }
+        },
+        {
+            "id": "Silky Soft",
+            "icon": "martial/silky-soft.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Aikido",
+            "icon": "martial/aikido.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, CRIT DMG received -1%.",
+            "dependency": {
+                "level": 10,
+                "from": "Silky Soft",
+                "to": "Aikido"
+            }
+        },
+        {
+            "id": "Quick Fists",
+            "icon": "martial/quick-fists.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Seize the Day",
+            "icon": "martial/seize-day.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Rapage Drive, generates 1 stack of 'Crushing Focus' every 2 sec instead of every 3 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Quick Fists",
+                "to": "Seize the Day"
+            }
+        },
+        {
+            "id": "Savage",
+            "icon": "martial/savage.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, Brute Force duration +1 sec."
+        },
+        {
+            "id": "Rock Hard",
+            "icon": "martial/rock-hard.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Purgatory Wave",
+            "icon": "martial/purgatory-wave.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shatterwave +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Rock Hard",
+                "to": "Purgatory Wave"
+            }
+        },
+        {
+            "id": "Fighting Mind",
+            "icon": "martial/martial-art-mind-game.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Group Shadow Order",
+            "icon": "martial/group-shadow-order.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Gathering Fine +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Fighting Mind",
+                "to": "Group Shadow Order"
+            }
+        },
+        {
+            "id": "Fighting Skills",
+            "icon": "martial/fighting-technique.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, STR +1%."
+        },
+        {
+            "id": "Concentration of Flames",
+            "icon": "martial/concentration-flames.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Fracture Burst +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Fighting Skills",
+                "to": "Concentration of Flames"
+            }
+        }
+    ],
+    "reaver": [
+        {
+            "id": "Sickleshot Expert",
+            "icon": "inquisitor/sickleshot-expert.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Sickleshot, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Death Foretold",
+            "icon": "inquisitor/death-foretold.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +1%."
+        },
+        {
+            "id": "Harvest Strike",
+            "icon": "inquisitor/harvest-strike.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Soul Reap +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Death Foretold",
+                "to": "Harvest Strike"
+            }
+        },
+        {
+            "id": "Bloodythirsty Body",
+            "icon": "inquisitor/bloodythirsty-body.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Profane Protection",
+            "icon": "inquisitor/profane-protection.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "Bloodythirsty Body",
+                "to": "Profane Protection"
+            }
+        },
+        {
+            "id": "Scythe",
+            "icon": "inquisitor/scythe.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Nightshade Scythe's cooldown -3%."
+        },
+        {
+            "id": "Sickle Enhancement",
+            "icon": "inquisitor/sickle-enhancement.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Rampaging Soul",
+            "icon": "inquisitor/rampaging-soul.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Rage Lock",
+            "icon": "inquisitor/rage-lock.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Chain of Fury +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Rampaging Soul",
+                "to": "Rage Lock"
+            }
+        },
+        {
+            "id": "Shadow Kill",
+            "icon": "inquisitor/shadow-kill.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shadowfury +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Rage Lock",
+                "to": "Shadow Kill"
+            }
+        },
+        {
+            "id": "Execution",
+            "icon": "inquisitor/execution.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 1,
+            "description": "When using Scythe of Judgment, it now gives Move SPD +25% and damage taken +7.5%."
+        },
+        {
+            "id": "Shot Enhancement",
+            "icon": "inquisitor/shot-enhancement.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Shadowsnare",
+            "icon": "inquisitor/shadowsnare.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Sickle Dance",
+            "icon": "inquisitor/sickle-dance.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, AGI +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Shadowsnare",
+                "to": "Sickle Dance"
+            }
+        },
+        {
+            "id": "Essential Shadows",
+            "icon": "inquisitor/essential-shadows.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, Move SPD +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Sickle Dance",
+                "to": "Essential Shadows"
+            }
+        },
+        {
+            "id": "Reaper's Visit",
+            "icon": "inquisitor/reaper-visit.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Final Destination +3%."
+        },
+        {
+            "id": "Purgatory",
+            "icon": "inquisitor/purgatory.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Flying Shackles +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Reaper's Visit",
+                "to": "Purgatory"
+            }
+        },
+        {
+            "id": "Veil of Death",
+            "icon": "inquisitor/veil-death.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Grim Walk's cooldown -4%."
+        }
+    ],
+    "druid": [
+        {
+            "id": "Astrology",
+            "icon": "shaman/astrology.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Voodoo Essence",
+            "icon": "shaman/voodoo-essence.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from The Art of Voodoo +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Astrology",
+                "to": "Voodoo Essence"
+            }
+        },
+        {
+            "id": "Touch Grass",
+            "icon": "shaman/awakened-grace.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Blessed by Nature +2%."
+        },
+        {
+            "id": "The Fountain of Life",
+            "icon": "shaman/spring-of-life.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Bear's Greed",
+            "icon": "shaman/bears-greed.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Mighty Bear Swipe, Earth Breaking Charge and Grizzly Growl +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "The Fountain of Life",
+                "to": "Bear's Greed"
+            }
+        },
+        {
+            "id": "Psychicism",
+            "icon": "shaman/supernatural-lore.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Cast SPD +1%."
+        },
+        {
+            "id": "Seismology",
+            "icon": "shaman/seismology.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Ancestral Spirit Strike +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Psychicism",
+                "to": "Seismology"
+            }
+        },
+        {
+            "id": "Ancient Knowledge",
+            "icon": "shaman/ancient-knowledge.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Staff, weapon's P-ATK & M-ATK +0.8%."
+        },
+        {
+            "id": "Accumulating Knowledge",
+            "icon": "shaman/accumulating-knowledge.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, Wilt Essence duration +1 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Ancient Knowledge",
+                "to": "Accumulating Knowledge"
+            }
+        },
+        {
+            "id": "Born to be Wild",
+            "icon": "shaman/born-to-be-wild.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Spirit of the Wild duration +1 sec."
+        },
+        {
+            "id": "Forest Breath",
+            "icon": "shaman/forest-breath.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, INT +1%."
+        },
+        {
+            "id": "Crazy Monkey",
+            "icon": "shaman/hunting-ritual.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Monkey Spirit, Jungle Rampage and Primate Wrath +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Forest Breath",
+                "to": "Crazy Monkey"
+            }
+        },
+        {
+            "id": "Geology",
+            "icon": "shaman/geology.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Druid Roar",
+            "icon": "shaman/druid-roar.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Power of Transmogrification +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Geology",
+                "to": "Druid Roar"
+            }
+        },
+        {
+            "id": "Natural Science",
+            "icon": "shaman/natural-science.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, all Elemental Resistances +1%."
+        },
+        {
+            "id": "Reforestation",
+            "icon": "shaman/reforestation2.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Wild Regrowth, healing effect +10% and duration +0.8 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Natural Science",
+                "to": "Reforestation"
+            }
+        },
+        {
+            "id": "Rock Art",
+            "icon": "shaman/rock-art.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Wild Canid",
+            "icon": "shaman/wild-canid.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Feral Claw, Wraithstep and Fierce Instinct +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Rock Art",
+                "to": "Wild Canid"
+            }
+        }
+    ],
+    "stormcaster": [
+        {
+            "id": "Staff Master",
+            "icon": "magician/staff-master.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Staff, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Focused Thunder",
+            "icon": "magician/focused-thunder.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Thunderclap +3%.",
+            "dependency": { "level": 10, "from": "Staff Master", "to": "Focused Thunder" }
+        },
+        {
+            "id": "Time and Space Magic",
+            "icon": "magician/space-magic.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Energy Saving",
+            "icon": "magician/energy-saving.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Recharge, the MP cost is reduced to 20%."
+        },
+        {
+            "id": "Meditation",
+            "icon": "magician/meditation.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, MP consumption -2%."
+        },
+        {
+            "id": "Coulomb's Law",
+            "icon": "magician/coulomb-law.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Electrostatic Repulsion, duration +0.8 sec.",
+            "dependency": { "level": 5, "from": "Meditation", "to": "Coulomb's Law" }
+        },
+        {
+            "id": "Elemental Knowledge",
+            "icon": "magician/elemental-mechanics.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Tongue Twister",
+            "icon": "magician/tongue-twister.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Voltage Gain",
+            "icon": "magician/voltage-gain.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, Voltage Amplifier Cooldown -4%.",
+            "dependency": { "level": 10, "from": "Tongue Twister", "to": "Voltage Gain" }
+        },
+        {
+            "id": "Illumination",
+            "icon": "magician/illumination.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Arc Beacon, both the Move SPD bonus granted to allies and the Move SPD reduction applied to enemies are increased by 5%.",
+            "dependency": { "level": 5, "from": "Voltage Gain", "to": "Illumination" }
+        },
+        {
+            "id": "Unified Will",
+            "icon": "magician/unified-will.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Energy Release",
+            "icon": "magician/energy-release.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, DMHalf Reactions.",
+            "dependency": { "level": 5, "from": "Unified Will", "to": "Energy Release" }
+        },
+        {
+            "id": "Black Magic",
+            "icon": "magician/black-magic.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Half Reactions",
+            "icon": "magician/half-reactions.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Redox +2%.",
+            "dependency": { "level": 10, "from": "Black Magic", "to": "Half Reactions" }
+        },
+        {
+            "id": "Gift of Magic",
+            "icon": "magician/gift-of-magic.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, all Elemental Resistance +1%."
+        },
+        {
+            "id": "Energy Overload",
+            "icon": "magician/energy-overload.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Short Circuit duration +1 sec.",
+            "dependency": { "level": 5, "from": "Gift of Magic", "to": "Energy Overload" }
+        },
+        {
+            "id": "Grounding",
+            "icon": "magician/grounding.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Faraday Cage, the Lightning Resistance bonuses are increased by 5.",
+            "dependency": { "level": 5, "from": "Energy Overload", "to": "Grounding" }
+        },
+        {
+            "id": "Magnetism",
+            "icon": "magician/magnetism.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Polarity Field +3%."
+        }
     ]
 }

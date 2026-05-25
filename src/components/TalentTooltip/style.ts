@@ -21,10 +21,11 @@ export const TooltipText = styled.span`
     border-image: url('/tooltip-border.webp') 4 fill stretch;
     padding: 10px;
     
-    position: fixed;
+    position: absolute;
     z-index: 999;
     top: 100px;
-    left: 20%;
+    right: auto;
+    left: auto;
     
     opacity: 0;
     transition: opacity 0.2s;
