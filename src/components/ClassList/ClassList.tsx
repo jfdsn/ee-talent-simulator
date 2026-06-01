@@ -25,7 +25,7 @@ const classes = [
     { id: 20, name: 'luminary', icon: 'assets/luminary/luminary-icon.webp', type: 'classic' },
     
     // Awaken List
-    /*{ id: 21, name: 'awaken1', icon: 'assets/', type: 'awakened'},*/
+    { id: 21, name: 'shielder', icon: 'assets/warrior/shielder-icon.webp', type: 'awakened'},
     { id: 22, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
     { id: 23, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
     { id: 24, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },

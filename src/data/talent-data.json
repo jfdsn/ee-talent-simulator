@@ -3608,7 +3608,187 @@
         }
     ],
 
-    "awaken1": [],
+    "shielder": [
+        {
+            "id": "Body Protection",
+            "icon": "warrior/precise-defense.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Echoes of Valor",
+            "icon": "warrior/inspiring-roar.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Inspiring Roar, increases the DEF bonus by 10% and reduces the internal cooldown of the cleanse effect by 0.5 sec.",
+            "dependency": {
+                "level": 10,
+                "from": "Body Protection",
+                "to": "Echoes of Valor"
+            }
+        },
+        {
+            "id": "Weapon Proficiency",
+            "icon": "warrior/weapons-mastery.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Quick Healing",
+            "icon": "warrior/rapid-healing.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, P-Healing +1%."
+        },
+        {
+            "id": "Colossus",
+            "icon": "warrior/titan-body.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Titan's Body duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Quick Healing",
+                "to": "Colossus"
+            }
+        },
+        {
+            "id": "Perseverance",
+            "icon": "warrior/perseverance2.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, CRIT DMG received -1%."
+        },
+        {
+            "id": "Anger",
+            "icon": "warrior/infinite-battle-intent.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Infinite Battle Intent, increase its area by 4 meters.",
+            "dependency": {
+                "level": 5,
+                "from": "Perseverance",
+                "to": "Anger"
+            }
+        },
+        {
+            "id": "Self-Defense",
+            "icon": "warrior/self-defense.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "CQC Training",
+            "icon": "warrior/cqc-training.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, STR +1%."
+        },
+        {
+            "id": "Weapon Master",
+            "icon": "warrior/weapon-master.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Melee Weapon, weapon's P-ATK & M-ATK +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "CQC Training",
+                "to": "Weapon Master"
+            }
+        },
+        {
+            "id": "Tenacity",
+            "icon": "warrior/perseverance-strike.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Perseverance Strike +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Weapon Master",
+                "to": "Tenacity"
+            }
+        },
+        {
+            "id": "Defensive Posture",
+            "icon": "warrior/defensive-posture.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Interception",
+            "icon": "warrior/intercept.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 3,
+            "description": "For each level up, Intercept cooldown -5%.",
+            "dependency": {
+                "level": 5,
+                "from": "Defensive Posture",
+                "to": "Interception"
+            }
+        },
+        {
+            "id": "War Technology",
+            "icon": "warrior/war-technology.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "Avenger",
+            "icon": "warrior/avenger.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, Block +1%."
+        },
+        {
+            "id": "Provocative",
+            "icon": "warrior/provocative-bash.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Provocative Bash +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Avenger",
+                "to": "Provocative"
+            }
+        },
+        {
+            "id": "Explore the Potential",
+            "icon": "warrior/life-inspiration.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Life Inspiration's duration +1 sec."
+        },
+        {
+            "id": "Shudder Consciousness",
+            "icon": "warrior/disruption.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Disruption +3%."
+        }
+    ],
     "rakshasa": [
         {
             "id": "Boxing",
