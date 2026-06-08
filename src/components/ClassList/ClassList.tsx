@@ -29,7 +29,9 @@ const classes = [
     { id: 22, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
     { id: 23, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
     { id: 24, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },
-    { id: 25, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
+    { id: 25, name: 'life worshipper', icon: 'assets/bard/life-worshipper-icon.webp', type: 'awakened' },
+    { id: 26, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
+
 ];  
 
 type Props = {
@@ -63,7 +65,7 @@ export const ClassList: React.FC<Props> = ({onClassChange}) => {
                     $isActive={currentTab === 'awakened'} 
                     onClick={() => setCurrentTab('awakened')}
                 >
-                    Awakened
+                    Reforged
                 </TabButton>
             </TabContainer>
             <ClassListContainer>
