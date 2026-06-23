@@ -26,11 +26,12 @@ const classes = [
     
     // Awaken List
     { id: 21, name: 'shielder', icon: 'assets/warrior/shielder-icon.webp', type: 'awakened'},
-    { id: 22, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
-    { id: 23, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
-    { id: 24, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },
-    { id: 25, name: 'life worshipper', icon: 'assets/bard/life-worshipper-icon.webp', type: 'awakened' },
-    { id: 26, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
+    { id: 29, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
+    { id: 30, name: 'blade master', icon: 'assets/samurai/blade-master-icon.webp', type: 'awakened' },
+    { id: 37, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
+    { id: 45, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },
+    { id: 46, name: 'life worshipper', icon: 'assets/bard/life-worshipper-icon.webp', type: 'awakened' },
+    { id: 53, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
 
 ];  
 

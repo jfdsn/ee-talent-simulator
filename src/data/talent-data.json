@@ -1415,33 +1415,33 @@
             "row": 3,
             "col": 3,
             "maxLevel": 10,
-            "description": "For each level up, CRIT DMG +2%.",
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Protrusion: Second",
+            "icon": "samurai/protrusion-second.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Protrusion +2%.",
             "dependency": {
                 "level": 5,
-                "from": "Calm State of Mind",
-                "to": "One Katana"
+                "from": "One Katana",
+                "to": "Protrusion: Second"
             }
         },
         {
             "id": "Thousand Sakura",
             "icon": "samurai/thousand-sakura.webp",
             "row": 3,
-            "col": 4,
-            "maxLevel": 5,
-            "description": "For each level up, DMG from Dance of Cranes +2%.",
-            "dependency": {
-                "level": 5,
-                "from": "One Katana",
-                "to": "Thousand Sakura"
-            }
-        },
-        {
-            "id": "Protrusion: Second",
-            "icon": "samurai/protrusion-second.webp",
-            "row": 3,
             "col": 6,
             "maxLevel": 1,
-            "description": "When using Protrusion, Physical Resistance reduction +20%."
+            "description": "When using Dance of Cranes, the 'Thousand Cranes' effect will now reduces all Physical Res -12.",
+            "dependency": {
+                "level": 5,
+                "from": "Protrusion: Second",
+                "to": "Thousand Sakura"
+            }
         },
         {
             "id": "Stumbling Feet",
@@ -3973,6 +3973,192 @@
                 "from": "Fighting Skills",
                 "to": "Concentration of Flames"
             }
+        }
+    ],
+    "blade master": [
+        {
+            "id": "Katana Specialization",
+            "icon": "samurai/katana-master.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Katana, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Iaido",
+            "icon": "samurai/iaido.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ATK SPD +1%."
+        },
+        {
+            "id": "Pursuer",
+            "icon": "samurai/jaded-steps.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Jaded Steps +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Iaido",
+                "to": "Pursuer"
+            }
+        },
+        {
+            "id": "Righteousness",
+            "icon": "samurai/brutal-mirror.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Brutal Mirror +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Pursuer",
+                "to": "Righteousness"
+            }
+        },
+        {
+            "id": "Controlling the Sword",
+            "icon": "samurai/oneiric-sword.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Oneiric Sword +2%."
+        },
+        {
+            "id": "Deadly Focus",
+            "icon": "samurai/brainwash.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Brainwash +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Controlling the Sword",
+                "to": "Deadly Focus"
+            }
+        },
+        {
+            "id": "Swing Training",
+            "icon": "samurai/swinging-hit.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, AGI +2%."
+        },
+        {
+            "id": "Samurai Law",
+            "icon": "samurai/samurais-order.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Melee Combat",
+            "icon": "samurai/melee-combat.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Parry +1%.",
+            "dependency": {
+                "level": 10,
+                "from": "Samurai Law",
+                "to": "Melee Combat"
+            }
+        },
+        {
+            "id": "Samurai Physique",
+            "icon": "samurai/physique-of-samurai.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Forcing Sword",
+            "icon": "samurai/forcing-sword.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, all Physical Resistances +1%.",
+            "dependency": {
+                "level": 5,
+                "from": "Samurai Physique",
+                "to": "Forcing Sword"
+            }
+        },
+        {
+            "id": "Blink",
+            "icon": "samurai/resilience.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, Resilience cooldown -2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Forcing Sword",
+                "to": "Blink"
+            }
+        },
+        {
+            "id": "Way of Samurai",
+            "icon": "samurai/way-of-samurai.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, LCK +1%."
+        },
+        {
+            "id": "Calm State of Mind",
+            "icon": "samurai/calm-state-of-mind.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate +1%."
+        },
+        {
+            "id": "One Katana",
+            "icon": "samurai/one-katana.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, CRIT DMG +2%."
+        },
+        {
+            "id": "Swallow's Nest",
+            "icon": "samurai/swallowing-strike.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Swallowing Strike +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "One Katana",
+                "to": "Swallow's Nest"
+            }
+        },
+        {
+            "id": "Steady Progress",
+            "icon": "samurai/kamae.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Kamae, increases the CRIT Rate, ACC and ATK SPD bonuses given by Hasso, Waki and Chudan no Kamae by 10%.",
+            "dependency": {
+                "level": 5,
+                "from": "Swallow's Nest",
+                "to": "Steady Progress"
+            }
+        },
+        {
+            "id": "Downstream",
+            "icon": "samurai/raging-river.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Raging River cooldown -3%."
         }
     ],
     "reaver": [
