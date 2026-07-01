@@ -26,6 +26,7 @@ const classes = [
     
     // Awaken List
     { id: 21, name: 'shielder', icon: 'assets/warrior/shielder-icon.webp', type: 'awakened'},
+    { id: 22, name: 'dawnbreaker', icon: 'assets/templar/dawnbreaker-icon.webp', type: 'awakened' },
     { id: 29, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
     { id: 30, name: 'blade master', icon: 'assets/samurai/blade-master-icon.webp', type: 'awakened' },
     { id: 37, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
