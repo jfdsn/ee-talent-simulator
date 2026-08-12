@@ -30,9 +30,12 @@ const classes = [
     { id: 29, name: 'rakshasa', icon: 'assets/martial/rakshasa-icon.webp', type: 'awakened' },
     { id: 30, name: 'blade master', icon: 'assets/samurai/blade-master-icon.webp', type: 'awakened' },
     { id: 37, name: 'reaver', icon: 'assets/inquisitor/reaver-icon.webp', type: 'awakened' },
+    { id: 38, name: 'devil hunter', icon: 'assets/hunter/devil-hunter-icon.webp', type: 'awakened' },
+    { id: 39, name: 'mecha ares', icon: 'assets/engineer/mecha-ares-icon.webp', type: 'awakened' },
     { id: 45, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },
     { id: 46, name: 'life worshipper', icon: 'assets/bard/life-worshipper-icon.webp', type: 'awakened' },
     { id: 53, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
+    { id: 54, name: 'chronologist', icon: 'assets/illusionist/chronologist-icon.webp', type: 'awakened' },
 
 ];  
 

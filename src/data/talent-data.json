@@ -4528,6 +4528,364 @@
             "description": "For each level up, Grim Walk's cooldown -4%."
         }
     ],
+    "devil hunter": [
+        {
+            "id": "Beastology",
+            "icon": "hunter/biology.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Arrows",
+            "icon": "hunter/umbral-cascade.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Umbral Cascade +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Beastology",
+                "to": "Arrows"
+            }
+        },
+        {
+            "id": "Strongbow String",
+            "icon": "hunter/crossbow-string.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, INT +2%."
+        },
+        {
+            "id": "Arrow Feather",
+            "icon": "hunter/dread-whisper.webp",
+            "row": 1,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Dread Whisper +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Strongbow String",
+                "to": "Arrow Feather"
+            }
+        },
+        {
+            "id": "Nature and Wildness",
+            "icon": "hunter/wild-nature.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Enchanted Quiver",
+            "icon": "hunter/devil-hunting.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Devil Hunting, it will also grant a certain amount of ACC.",
+            "dependency": {
+                "level": 5,
+                "from": "Nature and Wildness",
+                "to": "Enchanted Quiver"
+            }
+        },
+        {
+            "id": "Astrology",
+            "icon": "hunter/stargazer.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, LCK +1%."
+        },
+        {
+            "id": "Front Sight",
+            "icon": "hunter/shrouded-sight.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Shrouded Sight +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Astrology",
+                "to": "Front Sight"
+            }
+        },
+        {
+            "id": "Hidden Knowledge",
+            "icon": "hunter/stealth-knowledge.webp",
+            "row": 2,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Viper Surrounded",
+            "icon": "hunter/suffocating-dark.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Suffocating Dark +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Hidden Knowledge",
+                "to": "Viper Surrounded"
+            }
+        },
+        {
+            "id": "Beast Breath",
+            "icon": "hunter/beast-breath.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Malice -2%."
+        },
+        {
+            "id": "Enhanced Concealment",
+            "icon": "hunter/hidden-hunter.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Hidden Hunter cooldown -3%."
+        },
+        {
+            "id": "Swiftness and Concealment",
+            "icon": "hunter/abyssal-siphon.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, Abyssal Siphon duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Enhanced Concealment",
+                "to": "Swiftness and Concealment"
+            }
+        },
+        {
+            "id": "Archery Mastery",
+            "icon": "hunter/master-archery.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Bow, weapon's M-ATK +3%."
+        },
+        {
+            "id": "Poison Arrow Knowledge",
+            "icon": "hunter/poison-arrow-science.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Hunting Knowledge",
+            "icon": "hunter/hunting-knowledge.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Precursor",
+            "icon": "hunter/dark-harbinger.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Dark Harbinger, M-ATK bonus +20% and DMG from Desecration +6%.",
+            "dependency": {
+                "level": 5,
+                "from": "Hunting Knowledge",
+                "to": "Precursor"
+            }
+
+        },
+        {
+            "id": "Archery Target",
+            "icon": "hunter/shooting-mark.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Shooting Mark, it will also reduce Move SPD -10%."
+        }
+    ],
+    "mecha ares": [
+        {
+            "id": "Gun Training",
+            "icon": "engineer/gun-training.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Artillery Gun, weapon's M-ATK +2%."
+        },
+        {
+            "id": "Forging Knowledge",
+            "icon": "engineer/forging-knowledge.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, all Physical Resistances +1%."
+        },
+        {
+            "id": "Alloy Knowledge",
+            "icon": "engineer/alloy-knowledge.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, DEF +1%."
+        },
+        {
+            "id": "Armor Improvement",
+            "icon": "engineer/armor-improvement.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, CRIT DMG taken -2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Alloy Knowledge",
+                "to": "Armor Improvement"
+            }
+        },
+        {
+            "id": "Improved Output System",
+            "icon": "engineer/improved-output-system2.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, INT +1%."
+        },
+        {
+            "id": "Radiation Sensing",
+            "icon": "engineer/total-annihilation.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Total Annihilation +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Improved Output System",
+                "to": "Radiation Sensing"
+            }
+        },
+        {
+            "id": "Smelter",
+            "icon": "engineer/smelter.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, Max HP +1%."
+        },
+        {
+            "id": "Bearing Efficiency",
+            "icon": "engineer/improved-firing-system.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 5,
+            "description": "For each level up, Move SPD +1%."
+        },
+        {
+            "id": "Iron Fist Improvement",
+            "icon": "engineer/mechanical-fist.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Mechanical Fist +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Bearing Efficiency",
+                "to": "Iron Fist Improvement"
+            }
+        },
+        {
+            "id": "Electromagnetism Radiation",
+            "icon": "engineer/collapsing-gamma-ray.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Collapsing Gamma Ray +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Iron Fist Improvement",
+                "to": "Electromagnetism Radiation"
+            }
+        },
+        {
+            "id": "Mine Burst",
+            "icon": "engineer/robot-grenade.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Robot Grenade +2%."
+        },
+        {
+            "id": "Energy",
+            "icon": "engineer/energy.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, MP consumption -2%."
+        },
+        {
+            "id": "Maintenance Technology",
+            "icon": "engineer/pcc0-protection-program.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 10,
+            "description": "For each level up, PCC0 Protection Program duration +0.5 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Energy",
+                "to": "Maintenance Technology"
+            }
+        },
+        {
+            "id": "Wave Dynamics",
+            "icon": "engineer/wave-mechanics.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT Rate & M-CRIT Rate +1%."
+        },
+        {
+            "id": "Electromagnetism",
+            "icon": "engineer/electromagnetism.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CRIT DMG & M-CRIT DMG +2%."
+        },
+        {
+            "id": "Radar Improvement",
+            "icon": "engineer/improved-radar.webp",
+            "row": 3,
+            "col": 4,
+            "maxLevel": 10,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Output Power",
+            "icon": "engineer/automatic-missiles.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Automatic Missiles +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Radar Improvement",
+                "to": "Output Power"
+            }
+        },
+        {
+            "id": "Steel Barrier",
+            "icon": "engineer/invincible-iron-bulwark.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "When using Invincible Iron Bulwark, the Move SPD penalty is halved, and when hit, increase the damage dealt by spells to 12% per stack."
+        }
+    ],
     "druid": [
         {
             "id": "Astrology",
@@ -5042,6 +5400,182 @@
             "col": 7,
             "maxLevel": 5,
             "description": "For each level up, DMG from Polarity Field +3%."
+        }
+    ],
+    "chronologist": [
+        {
+            "id": "Pyrotechnics",
+            "icon": "illusionist/pyrotechnics.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Psychology",
+            "icon": "illusionist/psychology.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 10,
+            "description": "For each level up, INT +1%."
+        },
+        {
+            "id": "Condensation",
+            "icon": "illusionist/thin-ice.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Thin Ice +2%.",
+            "dependency": {
+                "level": 5,
+                "from": "Psychology",
+                "to": "Condensation"
+            }
+        },
+        {
+            "id": "Physical Domination",
+            "icon": "illusionist/physical-domination.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, Max HP +2%."
+        },
+        {
+            "id": "Transfiguration",
+            "icon": "illusionist/transfiguration.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 5,
+            "description": "For each level up, Malice -2%."
+        },
+        {
+            "id": "Fast Forward",
+            "icon": "illusionist/time-warp.webp",
+            "row": 1,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Time Warp duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Transfiguration",
+                "to": "Fast Forward"
+            }
+        },
+        {
+            "id": "Avid Reader",
+            "icon": "illusionist/avid-reader.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, when equipped with a Grimoire, weapon's P-ATK & M-ATK +1%."
+        },
+        {
+            "id": "Legerdemain",
+            "icon": "illusionist/legerdemain.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Drowsiness",
+            "icon": "illusionist/time-hypnosis.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Time Hypnosis +3%.",
+            "dependency": {
+                "level": 10,
+                "from": "Legerdemain",
+                "to": "Drowsiness"
+            }
+        },
+        {
+            "id": "Time Collapse",
+            "icon": "illusionist/entropic-anchor.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 1,
+            "description": "When using Entropic Anchor, it will also grant a certain amount of M-CRIT Rate."
+        },
+        {
+            "id": "Spiritual Domination",
+            "icon": "illusionist/spiritual-domination.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 10,
+            "description": "For each level up, Max MP +1%."
+        },
+        {
+            "id": "Reverse",
+            "icon": "illusionist/null-interval.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 1,
+            "description": "For each level up, Null Interval cooldown -3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Spiritual Domination",
+                "to": "Reverse"
+            }
+        },
+        {
+            "id": "Showmanship",
+            "icon": "illusionist/showmanship.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "High Level Illusion",
+            "icon": "illusionist/high-level-illusion.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, EVA +1%."
+        },
+        {
+            "id": "Read Minds",
+            "icon": "illusionist/read-minds.webp",
+            "row": 3,
+            "col": 3,
+            "maxLevel": 20,
+            "description": "For each level up, ACC +2%."
+        },
+        {
+            "id": "Slow Speed",
+            "icon": "illusionist/entropy-freeze.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Entropy Freeze +2%.",
+            "dependency": {
+                "level": 10,
+                "from": "Read Minds",
+                "to": "Slow Speed"
+            }
+        },
+        {
+            "id": "Special Relativity",
+            "icon": "illusionist/time-dilator.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "When using Time Dilator, it will also reduce Time Hypnosis cooldown by 50%.",
+            "dependency": {
+                "level": 5,
+                "from": "Slow Speed",
+                "to": "Special Relativity"
+            }
+        },
+        {
+            "id": "Golden Years",
+            "icon": "illusionist/chrono-decay.webp",
+            "row": 3,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Chrono Decay cooldown -3%."
         }
     ]
 }
