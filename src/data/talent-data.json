@@ -5248,6 +5248,182 @@
             }
         }
     ],
+    "adjudicator": [
+        {
+            "id": "Religious Knowledge",
+            "icon": "cleric/religious-knowledge.webp",
+            "row": 1,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, WIS +1%."
+        },
+        {
+            "id": "Evangelical Theology",
+            "icon": "cleric/evangelical-theology.webp",
+            "row": 1,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, G-Healing +1%."
+        },
+        {
+            "id": "Shield Proficiency",
+            "icon": "cleric/shield-proficiency.webp",
+            "row": 1,
+            "col": 3,
+            "maxLevel": 10,
+            "description": "For each level up, Block +1%."
+        },
+        {
+            "id": "Sacred Dragon Control",
+            "icon": "cleric/holy-dragon-strike.webp",
+            "row": 1,
+            "col": 4,
+            "maxLevel": 5,
+            "description": "For each level up, DMG from Holy Dragon Strike +2%."
+        },
+        {
+            "id": "Sacred Duty",
+            "icon": "cleric/sacred-duty.webp",
+            "row": 1,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Malice -3%."
+        },
+        {
+            "id": "God Trail",
+            "icon": "cleric/relics-of-life.webp",
+            "row": 1,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Relics of Life cooldown -1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Sacred Duty",
+                "to": "God Trail"
+            }
+        },
+        {
+            "id": "Hymnal",
+            "icon": "cleric/hymnal.webp",
+            "row": 2,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT DMG +2%."
+        },
+        {
+            "id": "Zealot Doctrine",
+            "icon": "cleric/zealot-doctrine.webp",
+            "row": 2,
+            "col": 2,
+            "maxLevel": 20,
+            "description": "For each level up, CAST SPD +1%."
+        },
+        {
+            "id": "Holy Code",
+            "icon": "cleric/sacred-grace.webp",
+            "row": 2,
+            "col": 4,
+            "maxLevel": 1,
+            "description": "When using Sacred Grace, the effect of increasing Max HP, Max MP, INT, WIS and LCK will be increased by 20%.",
+            "dependency": {
+                "level": 10,
+                "from": "Zealot Doctrine",
+                "to": "Holy Code"
+            }
+        },
+        {
+            "id": "Sacred Light Ridge",
+            "icon": "cleric/light-of-truth.webp",
+            "row": 2,
+            "col": 5,
+            "maxLevel": 5,
+            "description": "For each level up, Light of Truth's healing effect +2%."
+        },
+        {
+            "id": "Holy Water Blessing",
+            "icon": "cleric/purification-water.webp",
+            "row": 2,
+            "col": 6,
+            "maxLevel": 1,
+            "description": "After learning, transforms Purification Water into a placeable area skill, but the area of effect is reduced to 20 meters.",
+            "dependency": {
+                "level": 5,
+                "from": "Sacred Light Ridge",
+                "to": "Holy Water Blessing"
+            }
+        },
+        {
+            "id": "Healing Soul",
+            "icon": "cleric/holy-fire.webp",
+            "row": 2,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, Holy Fire's healing effect +3%."
+        },
+        {
+            "id": "The Eye of Examining",
+            "icon": "cleric/waterspout.webp",
+            "row": 2,
+            "col": 8,
+            "maxLevel": 5,
+            "description": "For each level up, Waterspout's healing effect +3%.",
+            "dependency": {
+                "level": 5,
+                "from": "Healing Soul",
+                "to": "The Eye of Examining"
+            }
+        },
+        {
+            "id": "Exegesis",
+            "icon": "cleric/exegesis.webp",
+            "row": 3,
+            "col": 1,
+            "maxLevel": 20,
+            "description": "For each level up, M-CRIT Rate +1%."
+        },
+        {
+            "id": "Poem of Life",
+            "icon": "cleric/insight.webp",
+            "row": 3,
+            "col": 2,
+            "maxLevel": 1,
+            "description": "When using Insight, the damage reduction effect will be increased to 20% and will now recover 3% HP per second.",
+            "dependency": {
+                "level": 10,
+                "from": "Exegesis",
+                "to": "Poem of Life"
+            }
+        },
+        {
+            "id": "Meditation",
+            "icon": "cleric/meditation.webp",
+            "row": 3,
+            "col": 5,
+            "maxLevel": 10,
+            "description": "For each level up, Max MP +2%."
+        },
+        {
+            "id": "Psionic Transfer",
+            "icon": "cleric/power-infusion.webp",
+            "row": 3,
+            "col": 6,
+            "maxLevel": 10,
+            "description": "For each level up, Power Infusion duration +1 sec.",
+            "dependency": {
+                "level": 5,
+                "from": "Meditation",
+                "to": "Psionic Transfer"
+            }
+        },
+        {
+            "id": "Sincerity",
+            "icon": "cleric/sincerity.webp",
+            "row": 3,
+            "col": 7,
+            "maxLevel": 5,
+            "description": "For each level up, all Elemental Resistance +1%."
+        }
+    ],
     "stormcaster": [
         {
             "id": "Staff Master",

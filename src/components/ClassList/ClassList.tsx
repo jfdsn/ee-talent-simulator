@@ -34,6 +34,7 @@ const classes = [
     { id: 39, name: 'mecha ares', icon: 'assets/engineer/mecha-ares-icon.webp', type: 'awakened' },
     { id: 45, name: 'druid', icon: 'assets/shaman/druid-icon.webp', type: 'awakened' },
     { id: 46, name: 'life worshipper', icon: 'assets/bard/life-worshipper-icon.webp', type: 'awakened' },
+    { id: 47, name: 'adjudicator', icon: 'assets/cleric/adjudicator-icon.webp', type: 'awakened' },
     { id: 53, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
     { id: 54, name: 'chronologist', icon: 'assets/illusionist/chronologist-icon.webp', type: 'awakened' },
 
