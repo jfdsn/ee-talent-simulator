@@ -37,7 +37,7 @@ const classes = [
     { id: 47, name: 'adjudicator', icon: 'assets/cleric/adjudicator-icon.webp', type: 'awakened' },
     { id: 53, name: 'stormcaster', icon: 'assets/magician/stormcaster-icon.webp', type: 'awakened' },
     { id: 54, name: 'chronologist', icon: 'assets/illusionist/chronologist-icon.webp', type: 'awakened' },
-
+    { id: 55, name: 'conjurer', icon: 'assets/warlock/conjurer-icon.webp', type: 'awakened' },
 ];  
 
 type Props = {
